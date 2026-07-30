@@ -301,6 +301,94 @@
             margin-bottom: 20px;
         }
 
+        /* --- BANNER DE PRECIOS --- */
+        .pricing-banner {
+            background: linear-gradient(145deg, #111 0%, #0a0a0a 100%);
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 2rem;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+        }
+
+        .pricing-banner h3 {
+            font-family: 'Oswald', sans-serif;
+            color: var(--accent-red);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .price-item {
+            background: #1a1a1a;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #2a2a2a;
+        }
+
+        .price-item.highlight {
+            background: rgba(136, 34, 34, 0.15);
+            border-color: var(--accent-red);
+            box-shadow: inset 0 0 15px rgba(136, 34, 34, 0.2);
+        }
+
+        .price-item h4 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 5px;
+        }
+
+        .price-item .price {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        .price-item .price span {
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .price-item .note {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.2;
+        }
+
+        .pricing-note {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 15px;
+            font-style: italic;
+        }
+        
+        /* Estilos internos del carrito */
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #1a1a1a;
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            border: 1px solid #333;
+        }
+        .cart-item img { width: 40px; height: 40px; object-fit: contain; margin-right: 10px; }
+        .cart-item-info { flex-grow: 1; }
+        .cart-item-title { font-family: 'Oswald', sans-serif; font-size: 0.9rem; }
+        .cart-controls { display: flex; align-items: center; gap: 8px; }
+        .cart-btn { background: #333; color: white; border: none; width: 25px; height: 25px; border-radius: 4px; cursor: pointer; }
+        .cart-btn:hover { background: var(--accent-red); }
     </style>
 </head>
 <body>
@@ -361,30 +449,31 @@
             </div>
         </div>
 
+        <!-- Banner de Precios -->
+        <div class="pricing-banner">
+            <h3>🔥 PROMOCIONES DE FÁBRICA 🔥</h3>
+            <div class="pricing-cards">
+                <div class="price-item">
+                    <h4>1 PIN (UNIDAD)</h4>
+                    <p class="price">$10.000 <span>COP</span></p>
+                </div>
+                <div class="price-item highlight">
+                    <h4>DOCENA SURTIDA</h4>
+                    <p class="price">$60.000 <span>COP</span></p>
+                    <p class="note">($5.000 c/u - Llevas 12 diseños diferentes)</p>
+                </div>
+                <div class="price-item">
+                    <h4>DOCENA X1 MODELO</h4>
+                    <p class="price">$25.000 <span>COP</span></p>
+                    <p class="note">(12 pines idénticos. Ideal para bandas)</p>
+                </div>
+            </div>
+            <p class="pricing-note">*Los descuentos se calculan automáticamente al añadir al carrito. No incluye costos de envío.</p>
+        </div>
         <!-- Cuadrícula de Pines (Muestra temporal de Fase 1) -->
         <div class="catalog-grid" id="catalogGrid">
             
-            <!-- Tarjeta de Ejemplo 1 -->
-            <div class="pin-card">
-                <img src="https://via.placeholder.com/200x200/222222/ffffff?text=Iron+Maiden" alt="Iron Maiden" loading="lazy">
-                <h3 class="pin-title">Iron Maiden</h3>
-                <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Añadir</button>
-            </div>
-
-            <!-- Tarjeta de Ejemplo 2 -->
-            <div class="pin-card">
-                <img src="https://via.placeholder.com/200x200/222222/ffffff?text=Gorgoroth" alt="Gorgoroth" loading="lazy">
-                <h3 class="pin-title">Gorgoroth</h3>
-                <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Añadir</button>
-            </div>
-
-            <!-- Tarjeta de Ejemplo 3 -->
-            <div class="pin-card">
-                <img src="https://via.placeholder.com/200x200/222222/ffffff?text=Autopsy" alt="Autopsy" loading="lazy">
-                <h3 class="pin-title">Autopsy</h3>
-                <button class="add-to-cart-btn"><i class="fas fa-cart-plus"></i> Añadir</button>
-            </div>
-
+        
         </div>
     </div>
 
@@ -405,7 +494,7 @@
             <p style="display: flex; justify-content: space-between; font-size: 1.2rem; margin-bottom: 15px;">
                 <strong>TOTAL:</strong> <span id="cartTotal">$0 COP</span>
             </p>
-            <button class="add-to-cart-btn" style="background: #25D366; color: #111; font-size: 1.1rem; padding: 12px; border: none;">
+            <button class="add-to-cart-btn" onclick="finalizarCompra()" style="background: #25D366; color: #111; font-size: 1.1rem; padding: 12px; border: none;">
                 <i class="fab fa-whatsapp"></i> FINALIZAR COMPRA
             </button>
         </div>
@@ -413,31 +502,27 @@
 
     <script>
         let pines = [];
+        let carrito = JSON.parse(localStorage.getItem('triquetaCarrito')) || {};
+        
         const grid = document.getElementById('catalogGrid');
         const searchInput = document.getElementById('searchInput');
         const letterBtns = document.querySelectorAll('.letter-btn');
-        
-        // Leer la memoria del navegador para ver si el usuario ya tenía una letra seleccionada
         let letraSeleccionada = localStorage.getItem('ultimaLetraCatalogo') || 'TODOS';
 
-        // 1. Cargar el inventario JSON
+        // 1. Inicializar catálogo
         fetch('catalogo.json')
             .then(response => response.json())
             .then(data => {
                 pines = data;
-                // Ordenar alfabéticamente por defecto
                 pines.sort((a, b) => a.banda.localeCompare(b.banda));
-                
                 marcarBotonActivo(letraSeleccionada);
                 filtrarPorLetra(letraSeleccionada);
+                actualizarCarritoUI();
             })
             .catch(error => console.error("Error cargando el catálogo:", error));
 
-        // 2. Función para dibujar las tarjetas en la pantalla
         function renderizarCatalogo(lista, limite = null) {
             grid.innerHTML = ''; 
-            
-            // Si hay un límite (ej. al cargar "TODOS"), cortamos la lista
             const itemsAMostrar = limite ? lista.slice(0, limite) : lista;
 
             if (itemsAMostrar.length === 0) {
@@ -451,7 +536,7 @@
                 card.innerHTML = `
                     <img src="pines/${pin.imagen}" alt="${pin.banda}" loading="lazy">
                     <h3 class="pin-title">${pin.banda}</h3>
-                    <button class="add-to-cart-btn" onclick="agregarAlCarrito('${pin.banda}', '${pin.imagen}')">
+                    <button class="add-to-cart-btn" onclick="agregarAlCarrito('${pin.banda.replace(/'/g, "\\'")}', '${pin.imagen}')">
                         <i class="fas fa-cart-plus"></i> Añadir
                     </button>
                 `;
@@ -459,14 +544,12 @@
             });
         }
 
-        // 3. Lógica del Filtro A-Z
         function filtrarPorLetra(letra) {
             letraSeleccionada = letra;
-            localStorage.setItem('ultimaLetraCatalogo', letra); // Guardar en memoria
-            searchInput.value = ''; // Limpiar buscador si se usa una letra
+            localStorage.setItem('ultimaLetraCatalogo', letra); 
+            searchInput.value = ''; 
 
             if (letra === 'TODOS') {
-                // Mostrar los primeros 30 por defecto para no saturar móviles
                 renderizarCatalogo(pines, 30); 
             } else {
                 const filtrados = pines.filter(pin => pin.banda.toUpperCase().startsWith(letra));
@@ -474,23 +557,17 @@
             }
         }
 
-        // 4. Lógica del Buscador de texto
         searchInput.addEventListener('input', (e) => {
             const termino = e.target.value.toLowerCase();
-            
             if (termino === '') {
                 filtrarPorLetra(letraSeleccionada);
                 return;
             }
-
-            // Quitar clase activa de los botones de letras
             letterBtns.forEach(b => b.classList.remove('active'));
-            
             const filtrados = pines.filter(pin => pin.banda.toLowerCase().includes(termino));
             renderizarCatalogo(filtrados);
         });
 
-        // 5. Asignar eventos a los botones de la A a la Z
         letterBtns.forEach(btn => {
             btn.addEventListener('click', (e) => {
                 const letra = e.target.innerText;
@@ -501,20 +578,126 @@
 
         function marcarBotonActivo(letra) {
             letterBtns.forEach(btn => {
-                if (btn.innerText === letra) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
+                if (btn.innerText === letra) btn.classList.add('active');
+                else btn.classList.remove('active');
             });
         }
 
-        // Función vacía temporal para el carrito (Fase 3)
-        function agregarAlCarrito(nombreBanda, imagen) {
-            alert("Agregaste " + nombreBanda + ". (El carrito se programará en la Fase 3)");
+        // --- SISTEMA DEL CARRITO ---
+        
+        function agregarAlCarrito(banda, imagen) {
+            if(carrito[banda]) {
+                carrito[banda].cantidad++;
+            } else {
+                carrito[banda] = { imagen: imagen, cantidad: 1 };
+            }
+            guardarCarrito();
+            actualizarCarritoUI();
+            
+            // Animación del botón flotante
+            const btn = document.getElementById('openCartBtn');
+            btn.style.transform = 'scale(1.2)';
+            setTimeout(() => btn.style.transform = '', 200);
         }
 
-        // Funciones del panel lateral
+        function modificarCantidad(banda, delta) {
+            if(carrito[banda]) {
+                carrito[banda].cantidad += delta;
+                if(carrito[banda].cantidad <= 0) {
+                    delete carrito[banda];
+                }
+                guardarCarrito();
+                actualizarCarritoUI();
+            }
+        }
+
+        function guardarCarrito() {
+            localStorage.setItem('triquetaCarrito', JSON.stringify(carrito));
+        }
+
+        function calcularTotal() {
+            let costoTotal = 0;
+            let poolSurtidos = 0;
+
+            for (let banda in carrito) {
+                let cant = carrito[banda].cantidad;
+                
+                // Agrupar docenas idénticas
+                let docenasIdenticas = Math.floor(cant / 12);
+                costoTotal += (docenasIdenticas * 25000);
+                
+                // Los que no alcanzaron docena idéntica, van a la bolsa de surtidos
+                poolSurtidos += (cant % 12);
+            }
+
+            // Agrupar docenas surtidas
+            let docenasSurtidas = Math.floor(poolSurtidos / 12);
+            costoTotal += (docenasSurtidas * 60000);
+
+            // Cobrar los sobrantes a precio normal
+            let sueltos = poolSurtidos % 12;
+            costoTotal += (sueltos * 10000);
+
+            return costoTotal;
+        }
+
+        function actualizarCarritoUI() {
+            const container = document.getElementById('cartItemsContainer');
+            const totalElement = document.getElementById('cartTotal');
+            const badge = document.getElementById('cartCount');
+            
+            container.innerHTML = '';
+            let totalItems = 0;
+
+            for (let banda in carrito) {
+                let item = carrito[banda];
+                totalItems += item.cantidad;
+                
+                container.innerHTML += `
+                    <div class="cart-item">
+                        <img src="pines/${item.imagen}" alt="${banda}">
+                        <div class="cart-item-info">
+                            <div class="cart-item-title">${banda}</div>
+                        </div>
+                        <div class="cart-controls">
+                            <button class="cart-btn" onclick="modificarCantidad('${banda.replace(/'/g, "\\'")}', -1)">-</button>
+                            <span>${item.cantidad}</span>
+                            <button class="cart-btn" onclick="modificarCantidad('${banda.replace(/'/g, "\\'")}', 1)">+</button>
+                        </div>
+                    </div>
+                `;
+            }
+
+            badge.innerText = totalItems;
+            
+            let totalNumerico = calcularTotal();
+            // Formatear a pesos colombianos
+            totalElement.innerText = "$" + totalNumerico.toLocaleString('es-CO') + " COP";
+        }
+
+        function finalizarCompra() {
+            if (Object.keys(carrito).length === 0) {
+                alert("Tu pedido está vacío.");
+                return;
+            }
+
+            let mensaje = "¡Hola Triqueta Lunar! Quiero confirmar mi pedido de pines del catálogo:\n\n";
+            
+            for (let banda in carrito) {
+                mensaje += `- ${carrito[banda].cantidad}x ${banda}\n`;
+            }
+
+            let total = calcularTotal();
+            mensaje += `\n*TOTAL: $${total.toLocaleString('es-CO')} COP* (Sin envío)\n\n`;
+            mensaje += "Por favor indíquenme el valor del envío y los datos para transferir por Bre-B (Nequi/Daviplata/Transfiya) para enviarles el comprobante. ¡Gracias!";
+
+            const numeroWhatsApp = "573125935222";
+            const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+            
+            window.open(url, '_blank');
+        }
+
+        // Panel lateral
         document.getElementById('openCartBtn').addEventListener('click', () => {
             document.getElementById('cartSidebar').classList.add('open');
         });
