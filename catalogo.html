@@ -35,7 +35,6 @@
             overflow-x: hidden;
         }
 
-        /* --- NEBLINA EN TONOS ROJOS (Heredado de index.html) --- */
         .smoke-container {
             position: fixed;
             top: 0;
@@ -211,6 +210,7 @@
             color: #fff;
             margin-bottom: 10px;
             letter-spacing: 1px;
+            text-transform: capitalize; 
         }
 
         .add-to-cart-btn {
@@ -391,7 +391,11 @@
         }
         .cart-item img { width: 40px; height: 40px; object-fit: contain; margin-right: 10px; }
         .cart-item-info { flex-grow: 1; }
-        .cart-item-title { font-family: 'Oswald', sans-serif; font-size: 0.9rem; }
+        .cart-item-title { 
+            font-family: 'Oswald', sans-serif; 
+            font-size: 0.9rem; 
+            text-transform: capitalize; 
+        }
         .cart-controls { display: flex; align-items: center; gap: 8px; }
         .cart-btn { background: #333; color: white; border: none; width: 25px; height: 25px; border-radius: 4px; cursor: pointer; }
         .cart-btn:hover { background: var(--accent-red); }
@@ -399,7 +403,7 @@
 </head>
 <body>
 
-    <!-- Fondo Animado -->
+    
     <div class="smoke-container">
         <div class="smoke-blob smoke-1"></div>
         <div class="smoke-blob smoke-2"></div>
@@ -407,7 +411,7 @@
     </div>
 
     <div class="container">
-        <!-- Cabecera -->
+        
         <header class="header">
             <a href="index.html">
                 <img src="logo.png" alt="Triqueta Lunar Logo" class="logo-img">
@@ -422,14 +426,14 @@
 
         
 
-        <!-- Herramientas: Buscador y Filtro A-Z -->
+       
         <div class="tools-panel">
             <input type="text" class="search-bar" id="searchInput" placeholder="Buscar banda o diseño...">
 
-            <!-- Filtro por Género -->
+           
             <select id="genreFilter" class="search-bar" style="margin-top: -5px; cursor: pointer; font-family: 'Oswald', sans-serif; text-transform: uppercase;">
                 <option value="TODOS">🤘 TODOS LOS GÉNEROS</option>
-                <!-- Las opciones se inyectarán automáticamente desde JS -->
+                
             </select>   
             
             <div class="alphabet-filter" id="alphabetContainer">
@@ -463,7 +467,7 @@
             </div>
         </div>
 
-        <!-- Banner de Precios -->
+       
         <div class="pricing-banner">
             <h3>🔥 PROMOCIONES DE FÁBRICA 🔥</h3>
             <div class="pricing-cards">
@@ -476,7 +480,7 @@
                     <p class="price">$60.000 <span>COP</span></p>
                     <p class="note">($5.000 c/u - Llevas 12 diseños diferentes)</p>
                 </div>
-                <!-- Tarjeta 3 convertida en Botón -->
+                
                 <div class="price-item" style="cursor: pointer; border-color: #882222; transition: all 0.3s;" onclick="agregarPromoPersonalizada()" onmouseover="this.style.background='rgba(136,34,34,0.1)'" onmouseout="this.style.background='#1a1a1a'">
                     <h4>DOCENA X1 MODELO</h4>
                     <p class="price">$25.000 <span>COP</span></p>
@@ -488,25 +492,25 @@
             </div>
             <p class="pricing-note">*Los descuentos se calculan automáticamente al añadir al carrito. No incluye costos de envío.</p>
         </div>
-        <!-- Cuadrícula de Pines (Muestra temporal de Fase 1) -->
+        
         <div class="catalog-grid" id="catalogGrid">
             
         
         </div>
     </div>
 
-    <!-- Botón Flotante del Carrito -->
+    
     <div class="floating-cart" id="openCartBtn">
         <i class="fas fa-shopping-cart"></i>
         <div class="cart-badge" id="cartCount">0</div>
     </div>
 
-    <!-- Panel del Carrito Oculto (Se programará en Fase 3) -->
+    
     <div class="cart-sidebar" id="cartSidebar">
         <button class="close-cart" id="closeCartBtn"><i class="fas fa-times"></i></button>
         <h2 style="font-family: 'Oswald'; text-align: center; border-bottom: 1px solid #333; padding-bottom: 15px; margin-bottom: 20px;">TU PEDIDO</h2>
         <div id="cartItemsContainer" style="flex-grow: 1; overflow-y: auto;">
-            <!-- Aquí irán los items agregados -->
+            
         </div>
         <div style="border-top: 1px solid #333; padding-top: 20px;">
             <p style="display: flex; justify-content: space-between; font-size: 1.2rem; margin-bottom: 15px; align-items: baseline;">
@@ -528,45 +532,65 @@
         const grid = document.getElementById('catalogGrid');
         const searchInput = document.getElementById('searchInput');
         const letterBtns = document.querySelectorAll('.letter-btn');
-        let letraSeleccionada = localStorage.getItem('ultimaLetraCatalogo') || 'NUEVOS'; // <-- CAMBIO AQUÍ
+        let letraSeleccionada = localStorage.getItem('ultimaLetraCatalogo') || 'NUEVOS'; 
 
-        // 1. Inicializar catálogo
+        
         fetch('catalogo.json')
             .then(response => response.json())
             .then(data => {
                 pines = data;
                 
-                // Función mejorada para clasificar los géneros de forma más precisa
                 pines.forEach(pin => {
                     let cat = (pin.categoria || "").toLowerCase();
+                    pin.macroCategorias = []; 
                     
                     if (cat.includes('rock en español')) {
-                        pin.macroCategoria = 'Rock en Español';
-                    } else if (cat.includes('gothic') || cat.includes('goth') || cat.includes('doom') || cat.includes('post-punk')) {
-                        pin.macroCategoria = 'Gótico, Doom & Post-Punk';
-                    } else if (cat.includes('nu metal') || cat.includes('industrial') || cat.includes('alternative') || cat.includes('metalcore') || cat.includes('grunge')) {
-                        pin.macroCategoria = 'Nu Metal & Alternativo';
-                    } else if (cat.includes('heavy') || cat.includes('hard rock') || cat.includes('glam')) {
-                        pin.macroCategoria = 'Heavy & Hard Rock';
-                    } else if (cat.includes('thrash') || cat.includes('groove') || cat.includes('speed') || cat.includes('crossover')) {
-                        pin.macroCategoria = 'Thrash & Speed Metal';
-                    } else if (cat.includes('black')) {
-                        pin.macroCategoria = 'Black Metal';
-                    } else if (cat.includes('death') || cat.includes('grindcore') || cat.includes('brutal')) {
-                        pin.macroCategoria = 'Death Metal & Grindcore';
-                    } else if (cat.includes('power') || cat.includes('progressive') || cat.includes('symphonic') || cat.includes('folk')) {
-                        pin.macroCategoria = 'Power, Prog & Folk Metal';
-                    } else if (cat.includes('punk') || cat.includes('hardcore') || cat.includes('ska') || cat.includes('oi!')) {
-                        pin.macroCategoria = 'Punk & Hardcore';
-                    } else if (cat.includes('rock')) {
-                        pin.macroCategoria = 'Rock Clásico & General';
+                        pin.macroCategorias.push('Rock en Español');
+                    } 
+                    if (cat.includes('gothic') || cat.includes('goth') || cat.includes('doom') || cat.includes('post-punk')) {
+                        pin.macroCategorias.push('Gótico, Doom & Post-Punk');
+                    } 
+                    if (cat.includes('nu metal') || cat.includes('industrial') || cat.includes('alternative') || cat.includes('metalcore') || cat.includes('grunge')) {
+                        pin.macroCategorias.push('Nu Metal & Alternativo');
+                    } 
+                    if (cat.includes('heavy') || cat.includes('hard rock') || cat.includes('glam')) {
+                        pin.macroCategorias.push('Heavy & Hard Rock');
+                    } 
+                    if (cat.includes('thrash') || cat.includes('groove') || cat.includes('speed') || cat.includes('crossover')) {
+                        pin.macroCategorias.push('Thrash & Speed Metal');
+                    } 
+                    if (cat.includes('black')) {
+                        pin.macroCategorias.push('Black Metal');
+                    } 
+                    if (cat.includes('death') || cat.includes('grindcore') || cat.includes('brutal')) {
+                        pin.macroCategorias.push('Death Metal & Grindcore');
+                    } 
+                    if (cat.includes('power') || cat.includes('progressive') || cat.includes('symphonic') || cat.includes('folk')) {
+                        pin.macroCategorias.push('Power, Prog & Folk Metal');
+                    } 
+                    if (cat.includes('punk') || cat.includes('hardcore') || cat.includes('ska') || cat.includes('oi!')) {
+                        pin.macroCategorias.push('Punk & Hardcore');
+                    } 
+                    if (cat.includes('rock') && !cat.includes('hard rock') && !cat.includes('punk rock') && !cat.includes('rock en español')) {
+                        pin.macroCategorias.push('Rock Clásico & General');
+                    }
+                    
+                    if (pin.macroCategorias.length === 0) {
+                        pin.macroCategorias.push('Metal & Variantes');
                     }
                 });
 
-                pines.sort((a, b) => a.banda.localeCompare(b.banda));
                 pinesRecientes = [...pines].reverse();
-                // Extraer macro-géneros únicos y llenar el select de forma limpia
-                const generosUnicos = [...new Set(pines.map(pin => pin.macroCategoria))].sort();
+
+                pines.sort((a, b) => a.banda.localeCompare(b.banda));
+                
+                let todosLosGeneros = [];
+                pines.forEach(pin => {
+                    todosLosGeneros.push(...pin.macroCategorias);
+                });
+                
+                const generosUnicos = [...new Set(todosLosGeneros)].sort();
+                
                 generosUnicos.forEach(genero => {
                     const option = document.createElement('option');
                     option.value = genero;
@@ -607,10 +631,10 @@
             letraSeleccionada = letra;
             localStorage.setItem('ultimaLetraCatalogo', letra); 
             searchInput.value = ''; 
-            genreFilter.value = 'TODOS'; // Reinicia el filtro de género
+            genreFilter.value = 'TODOS'; 
 
             if (letra === 'NUEVOS') {
-                renderizarCatalogo(pinesRecientes, 30); // Muestra los 30 más recientes
+                renderizarCatalogo(pinesRecientes, 30); 
             } else {
                 const filtrados = pines.filter(pin => pin.banda.toUpperCase().startsWith(letra));
                 renderizarCatalogo(filtrados);
@@ -618,7 +642,7 @@
         }
 
         searchInput.addEventListener('input', (e) => {
-            genreFilter.value = 'TODOS'; // Reinicia el filtro de género
+            genreFilter.value = 'TODOS'; 
             const termino = e.target.value.toLowerCase();
             if (termino === '') {
                 filtrarPorLetra(letraSeleccionada);
@@ -629,17 +653,16 @@
             renderizarCatalogo(filtrados);
         });
 
-        
         genreFilter.addEventListener('change', (e) => {
             const genero = e.target.value;
-            searchInput.value = ''; // Limpiamos la barra de texto
+            searchInput.value = ''; 
             
             if (genero === 'TODOS') {
                 marcarBotonActivo('NUEVOS');
                 filtrarPorLetra('NUEVOS');
             } else {
-                marcarBotonActivo(''); // Quitamos el color rojo de las letras
-                const filtrados = pines.filter(pin => pin.macroCategoria === genero);
+                marcarBotonActivo(''); 
+                const filtrados = pines.filter(pin => pin.macroCategorias.includes(genero));
                 renderizarCatalogo(filtrados);
             }
         });
