@@ -198,8 +198,10 @@
 
         .pin-card img {
             width: 100%;
-            height: auto;
-            margin-bottom: 15px;
+            height: 160px; /* Forzamos una altura estándar para todas las tarjetas */
+            object-fit: contain; /* Encoge la imagen para que encaje sin deformarse */
+            padding: 10px; /* Le da respiración a los logos horizontales contra los bordes */
+            margin-bottom: 10px;
             filter: drop-shadow(0px 8px 12px rgba(0, 0, 0, 0.6)); 
         }
 
