@@ -420,9 +420,17 @@
             </a>
         </header>
 
+        
+
         <!-- Herramientas: Buscador y Filtro A-Z -->
         <div class="tools-panel">
             <input type="text" class="search-bar" id="searchInput" placeholder="Buscar banda o diseño...">
+
+            <!-- Filtro por Género -->
+            <select id="genreFilter" class="search-bar" style="margin-top: -5px; cursor: pointer; font-family: 'Oswald', sans-serif; text-transform: uppercase;">
+                <option value="TODOS">🤘 TODOS LOS GÉNEROS</option>
+                <!-- Las opciones se inyectarán automáticamente desde JS -->
+            </select>   
             
             <div class="alphabet-filter" id="alphabetContainer">
                 <button class="letter-btn active">TODOS</button>
@@ -515,17 +523,30 @@
         let pines = [];
         let carrito = JSON.parse(localStorage.getItem('triquetaCarrito')) || {};
         
+        const genreFilter = document.getElementById('genreFilter');
         const grid = document.getElementById('catalogGrid');
         const searchInput = document.getElementById('searchInput');
         const letterBtns = document.querySelectorAll('.letter-btn');
         let letraSeleccionada = localStorage.getItem('ultimaLetraCatalogo') || 'TODOS';
 
         // 1. Inicializar catálogo
+        // 1. Inicializar catálogo
         fetch('catalogo.json')
             .then(response => response.json())
             .then(data => {
                 pines = data;
                 pines.sort((a, b) => a.banda.localeCompare(b.banda));
+                
+                // --- NUEVO: Extraer géneros únicos y llenar el select ---
+                const generosUnicos = [...new Set(pines.map(pin => pin.categoria))].filter(Boolean).sort();
+                generosUnicos.forEach(genero => {
+                    const option = document.createElement('option');
+                    option.value = genero;
+                    option.innerText = genero;
+                    genreFilter.appendChild(option);
+                });
+                // --------------------------------------------------------
+
                 marcarBotonActivo(letraSeleccionada);
                 filtrarPorLetra(letraSeleccionada);
                 actualizarCarritoUI();
@@ -559,6 +580,7 @@
             letraSeleccionada = letra;
             localStorage.setItem('ultimaLetraCatalogo', letra); 
             searchInput.value = ''; 
+            genreFilter.value = 'TODOS'; // Reinicia el filtro de género
 
             if (letra === 'TODOS') {
                 renderizarCatalogo(pines, 30); 
@@ -569,6 +591,7 @@
         }
 
         searchInput.addEventListener('input', (e) => {
+            genreFilter.value = 'TODOS'; // Reinicia el filtro de género
             const termino = e.target.value.toLowerCase();
             if (termino === '') {
                 filtrarPorLetra(letraSeleccionada);
@@ -577,6 +600,21 @@
             letterBtns.forEach(b => b.classList.remove('active'));
             const filtrados = pines.filter(pin => pin.banda.toLowerCase().includes(termino));
             renderizarCatalogo(filtrados);
+        });
+
+        // --- NUEVO LÓGICA: Evento del filtro de géneros ---
+        genreFilter.addEventListener('change', (e) => {
+            const genero = e.target.value;
+            searchInput.value = ''; // Limpiamos la barra de texto
+            
+            if (genero === 'TODOS') {
+                marcarBotonActivo('TODOS');
+                filtrarPorLetra('TODOS');
+            } else {
+                marcarBotonActivo(''); // Quitamos el color rojo de las letras
+                const filtrados = pines.filter(pin => pin.categoria === genero);
+                renderizarCatalogo(filtrados);
+            }
         });
 
         letterBtns.forEach(btn => {
