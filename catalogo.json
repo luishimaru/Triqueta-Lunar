@@ -1,1038 +1,1297 @@
 [
   {
     "banda": "Anihilator",
-    "imagen": "Anihilator.png"
+    "imagen": "Anihilator.png",
+    "categoria": "Thrash Metal"
   },
   {
     "banda": "ACDC",
-    "imagen": "ACDC.png"
+    "imagen": "ACDC.png",
+    "categoria": "Hard Rock"
   },
   {
     "banda": "Anthrax",
-    "imagen": "Anthrax.png"
+    "imagen": "Anthrax.png",
+    "categoria": "Thrash Metal"
   },
   {
     "banda": "Arch Enemy",
-    "imagen": "Arch%20Enemy.png"
+    "imagen": "Arch-Enemy.png",
+    "categoria": "Melodic Death Metal"
   },
   {
     "banda": "Black Sabbath",
-    "imagen": "Black%20Sabbath.png"
+    "imagen": "Black-Sabbath.png",
+    "categoria": "Heavy Metal"
   },
   {
     "banda": "Blind Guardian",
-    "imagen": "Blind%20Guardian.png"
+    "imagen": "Blind-Guardian.png",
+    "categoria": "Power Metal"
   },
   {
     "banda": "Burzum",
-    "imagen": "Burzum.png"
+    "imagen": "Burzum.png",
+    "categoria": "Black Metal"
   },
   {
     "banda": "Deep purple",
-    "imagen": "Deep%20purple.png"
+    "imagen": "Deep-purple.png",
+    "categoria": "Hard Rock"
   },
   {
     "banda": "Dimmu Borgir",
-    "imagen": "Dimmu%20Borgir.png"
+    "imagen": "Dimmu-Borgir.png",
+    "categoria": "Symphonic Black Metal"
   },
   {
     "banda": "Dokken",
-    "imagen": "Dokken.png"
+    "imagen": "Dokken.png",
+    "categoria": "Heavy Metal"
   },
   {
     "banda": "Gamma Ray",
-    "imagen": "Gamma%20Ray.png"
+    "imagen": "Gamma-Ray.png",
+    "categoria": "Power Metal"
   },
   {
     "banda": "Judas Priest",
-    "imagen": "Judas%20Priest.png"
+    "imagen": "Judas-Priest.png",
+    "categoria": "Heavy Metal"
   },
   {
     "banda": "mago de oz",
-    "imagen": "mago%20de%20oz.png"
+    "imagen": "mago-de-oz.png",
+    "categoria": "Folk Metal"
   },
   {
     "banda": "megadeth",
-    "imagen": "megadeth.png"
+    "imagen": "megadeth.png",
+    "categoria": "Thrash Metal"
   },
   {
     "banda": "motorhead",
-    "imagen": "motorhead.png"
+    "imagen": "motorhead.png",
+    "categoria": "Speed Metal"
   },
   {
     "banda": "Opeth",
-    "imagen": "Opeth.png"
+    "imagen": "Opeth.png",
+    "categoria": "Progressive Metal"
   },
   {
     "banda": "Behmoth",
-    "imagen": "Behmoth.png"
+    "imagen": "Behmoth.png",
+    "categoria": "Black/Death Metal"
   },
   {
     "banda": "Obituary",
-    "imagen": "Obituary.png"
+    "imagen": "Obituary.png",
+    "categoria": "Death Metal"
   },
   {
     "banda": "Hellripper",
-    "imagen": "Hellripper.png"
+    "imagen": "Hellripper.png",
+    "categoria": "Black/Speed Metal"
   },
   {
     "banda": "Deicide",
-    "imagen": "Deicide.png"
+    "imagen": "Deicide.png",
+    "categoria": "Death Metal"
   },
   {
     "banda": "Cradle od filth",
-    "imagen": "Cradle%20od%20filth.png"
+    "imagen": "Cradle-od-filth.png",
+    "categoria": "Symphonic Black Metal"
   },
   {
     "banda": "Possessed",
-    "imagen": "Possessed.png"
+    "imagen": "Possessed.png",
+    "categoria": "Death/Thrash Metal"
   },
   {
     "banda": "Sodom",
-    "imagen": "Sodom.png"
+    "imagen": "Sodom.png",
+    "categoria": "Thrash Metal"
   },
   {
     "banda": "Exodus",
-    "imagen": "Exodus.png"
+    "imagen": "Exodus.png",
+    "categoria": "Thrash Metal"
   },
   {
     "banda": "Abbath",
-    "imagen": "Abbath.png"
+    "imagen": "Abbath.png",
+    "categoria": "Black Metal"
   },
   {
     "banda": "Venom",
-    "imagen": "Venom.png"
+    "imagen": "Venom.png",
+    "categoria": "Black/Speed Metal"
   },
   {
     "banda": "Testament",
-    "imagen": "Testament.png"
+    "imagen": "Testament.png",
+    "categoria": "Thrash Metal"
   },
   {
     "banda": "Pantera",
-    "imagen": "Pantera.png"
+    "imagen": "Pantera.png",
+    "categoria": "Groove Metal"
   },
   {
     "banda": "Sepultura",
-    "imagen": "Sepultura.png"
+    "imagen": "Sepultura.png",
+    "categoria": "Groove Metal"
   },
   {
     "banda": "Death",
-    "imagen": "Death.png"
+    "imagen": "Death.png",
+    "categoria": "Death Metal"
   },
   {
     "banda": "Dismember",
-    "imagen": "Dismember.png"
+    "imagen": "Dismember.png",
+    "categoria": "Death Metal"
   },
   {
     "banda": "Helloween",
-    "imagen": "Helloween.png"
+    "imagen": "Helloween.png",
+    "categoria": "Power Metal"
   },
   {
     "banda": "Guns and roses",
-    "imagen": "Guns%20and%20roses.png"
+    "imagen": "Guns-and-roses.png",
+    "categoria": "Hard Rock"
   },
   {
     "banda": "Led Zeppelin",
-    "imagen": "Led%20Zeppelin.png"
+    "imagen": "Led-Zeppelin.png",
+    "categoria": "Hard Rock"
   },
   {
     "banda": "The Rolling Stones",
-    "imagen": "The%20Rolling%20Stones.png"
+    "imagen": "The-Rolling-Stones.png",
+    "categoria": "Classic Rock"
   },
   {
     "banda": "Queen",
-    "imagen": "Queen.png"
+    "imagen": "Queen.png",
+    "categoria": "Classic Rock"
   },
   {
     "banda": "Pink Floyd",
-    "imagen": "Pink%20Floyd.png"
+    "imagen": "Pink-Floyd.png",
+    "categoria": "Progressive Rock"
   },
   {
     "banda": "Aerosmith",
-    "imagen": "Aerosmith.png"
+    "imagen": "Aerosmith.png",
+    "categoria": "Hard Rock"
   },
   {
     "banda": "Kiss",
-    "imagen": "Kiss.png"
+    "imagen": "Kiss.png",
+    "categoria": "Hard Rock"
   },
   {
     "banda": "Bon Jovi",
-    "imagen": "Bon%20Jovi.png"
+    "imagen": "Bon-Jovi.png",
+    "categoria": "Hard Rock"
   },
   {
     "banda": "Def Leppard",
-    "imagen": "Def%20Leppard.png"
+    "imagen": "Def-Leppard.png",
+    "categoria": "Hard Rock"
   },
   {
     "banda": "Whitesnake",
-    "imagen": "Whitesnake.png"
+    "imagen": "Whitesnake.png",
+    "categoria": "Hard Rock"
   },
   {
     "banda": "Scorpions",
-    "imagen": "Scorpions.png"
+    "imagen": "Scorpions.png",
+    "categoria": "Hard Rock"
   },
   {
     "banda": "Van Halen",
-    "imagen": "Van%20Halen.png"
+    "imagen": "Van-Halen.png",
+    "categoria": "Hard Rock"
   },
   {
     "banda": "The Who",
-    "imagen": "The%20Who.png"
+    "imagen": "The-Who.png",
+    "categoria": "Classic Rock"
   },
   {
     "banda": "The Doors",
-    "imagen": "The%20Doors.png"
+    "imagen": "The-Doors.png",
+    "categoria": "Classic Rock"
   },
   {
     "banda": "Jimi Hendrix",
-    "imagen": "Jimi%20Hendrix.png"
+    "imagen": "Jimi-Hendrix.png",
+    "categoria": "Psychedelic Rock"
   },
   {
     "banda": "Alice Cooper",
-    "imagen": "Alice%20Cooper.png"
+    "imagen": "Alice-Cooper.png",
+    "categoria": "Hard Rock"
   },
   {
     "banda": "ZZ Top",
-    "imagen": "ZZ%20Top.png"
+    "imagen": "ZZ-Top.png",
+    "categoria": "Hard Rock"
   },
   {
     "banda": "Dio",
-    "imagen": "Dio.png"
+    "imagen": "Dio.png",
+    "categoria": "Heavy Metal"
   },
   {
     "banda": "Ozzy Osbourne",
-    "imagen": "Ozzy%20Osbourne.png"
+    "imagen": "Ozzy-Osbourne.png",
+    "categoria": "Heavy Metal"
   },
   {
     "banda": "Nightwish",
-    "imagen": "Nightwish.png"
+    "imagen": "Nightwish.png",
+    "categoria": "Symphonic Metal"
   },
   {
     "banda": "Stratovarius",
-    "imagen": "Stratovarius.png"
+    "imagen": "Stratovarius.png",
+    "categoria": "Power Metal"
   },
   {
     "banda": "Sabaton",
-    "imagen": "Sabaton.png"
+    "imagen": "Sabaton.png",
+    "categoria": "Power Metal"
   },
   {
     "banda": "Santa",
-    "imagen": "Santa.png"
+    "imagen": "Santa.png",
+    "categoria": "Heavy Metal"
   },
   {
     "banda": "DragonForce",
-    "imagen": "DragonForce.png"
+    "imagen": "DragonForce.png",
+    "categoria": "Power Metal"
   },
   {
     "banda": "Ghost",
-    "imagen": "Ghost.png"
+    "imagen": "Ghost.png",
+    "categoria": "Hard Rock/Heavy Metal"
   },
   {
     "banda": "Mercyful Fate",
-    "imagen": "Mercyful%20Fate.png"
+    "imagen": "Mercyful-Fate.png",
+    "categoria": "Heavy Metal"
   },
   {
     "banda": "King Diamond",
-    "imagen": "King%20Diamond.png"
+    "imagen": "King-Diamond.png",
+    "categoria": "Heavy Metal"
   },
   {
     "banda": "Accept",
-    "imagen": "Accept.png"
+    "imagen": "Accept.png",
+    "categoria": "Heavy Metal"
   },
   {
     "banda": "Saxon",
-    "imagen": "Saxon.png"
+    "imagen": "Saxon.png",
+    "categoria": "Heavy Metal"
   },
   {
     "banda": "Metallica",
-    "imagen": "Metallica.png"
+    "imagen": "Metallica.png",
+    "categoria": "Thrash Metal"
   },
   {
     "banda": "Lamb of God",
-    "imagen": "Lamb%20of%20God.png"
+    "imagen": "Lamb-of-God.png",
+    "categoria": "Groove Metal"
   },
   {
     "banda": "Machine Head",
-    "imagen": "Machine%20Head.png"
+    "imagen": "Machine-Head.png",
+    "categoria": "Groove Metal"
   },
   {
     "banda": "Overkill",
-    "imagen": "Overkill.png"
+    "imagen": "Overkill.png",
+    "categoria": "Thrash Metal"
   },
   {
     "banda": "Municipal Waste",
-    "imagen": "Municipal%20Waste.png"
+    "imagen": "Municipal-Waste.png",
+    "categoria": "Crossover Thrash"
   },
   {
     "banda": "Cannibal Corpse",
-    "imagen": "Cannibal%20Corpse.png"
+    "imagen": "Cannibal-Corpse.png",
+    "categoria": "Death Metal"
   },
   {
     "banda": "Mayhem",
-    "imagen": "Mayhem.png"
+    "imagen": "Mayhem.png",
+    "categoria": "Black Metal"
   },
   {
     "banda": "MayhemLogo",
-    "imagen": "MayhemLogo.png"
+    "imagen": "MayhemLogo.png",
+    "categoria": "Black Metal"
   },
   {
     "banda": "Emperor",
-    "imagen": "Emperor.png"
+    "imagen": "Emperor.png",
+    "categoria": "Black Metal"
   },
   {
     "banda": "Morbid Angel",
-    "imagen": "Morbid%20Angel.png"
+    "imagen": "Morbid-Angel.png",
+    "categoria": "Death Metal"
   },
   {
     "banda": "Amon Amarth",
-    "imagen": "Amon%20Amarth.png"
+    "imagen": "Amon-Amarth.png",
+    "categoria": "Melodic Death Metal"
   },
   {
     "banda": "Children of Bodom",
-    "imagen": "Children%20of%20Bodom.png"
+    "imagen": "Children-of-Bodom.png",
+    "categoria": "Melodic Death Metal"
   },
   {
     "banda": "Meshuggah",
-    "imagen": "Meshuggah.png"
+    "imagen": "Meshuggah.png",
+    "categoria": "Progressive/Extreme Metal"
   },
   {
     "banda": "Gojira",
-    "imagen": "Gojira.png"
+    "imagen": "Gojira.png",
+    "categoria": "Progressive Metal"
   },
   {
     "banda": "Destruction",
-    "imagen": "Destruction.png"
+    "imagen": "Destruction.png",
+    "categoria": "Thrash Metal"
   },
   {
     "banda": "Type O Negative",
-    "imagen": "Type%20O%20Negative.png"
+    "imagen": "Type-O-Negative.png",
+    "categoria": "Gothic Metal"
   },
   {
     "banda": "Carcass",
-    "imagen": "Carcass.png"
+    "imagen": "Carcass.png",
+    "categoria": "Death Metal / Grindcore"
   },
   {
     "banda": "Slipknot",
-    "imagen": "Slipknot.png"
+    "imagen": "Slipknot.png",
+    "categoria": "Nu Metal"
   },
   {
     "banda": "Korn",
-    "imagen": "Korn.png"
+    "imagen": "Korn.png",
+    "categoria": "Nu Metal"
   },
   {
     "banda": "System of a Down",
-    "imagen": "System%20of%20a%20Down.png"
+    "imagen": "System-of-a-Down.png",
+    "categoria": "Nu Metal"
   },
   {
     "banda": "Linkin Park",
-    "imagen": "Linkin%20Park.png"
+    "imagen": "Linkin-Park.png",
+    "categoria": "Nu Metal"
   },
   {
     "banda": "Linkin park 2",
-    "imagen": "Linkin%20park%202.png"
+    "imagen": "Linkin-park-2.png",
+    "categoria": "Nu Metal"
   },
   {
     "banda": "Nine Inch Nails",
-    "imagen": "Nine%20Inch%20Nails.png"
+    "imagen": "Nine-Inch-Nails.png",
+    "categoria": "Industrial Metal"
   },
   {
     "banda": "Marilyn Manson",
-    "imagen": "Marilyn%20Manson.png"
+    "imagen": "Marilyn-Manson.png",
+    "categoria": "Industrial Metal"
   },
   {
     "banda": "Evanescence",
-    "imagen": "Evanescence.png"
+    "imagen": "Evanescence.png",
+    "categoria": "Alternative Metal"
   },
   {
     "banda": "Tool",
-    "imagen": "Tool.png"
+    "imagen": "Tool.png",
+    "categoria": "Progressive Metal"
   },
   {
     "banda": "Limp Bizkit",
-    "imagen": "Limp%20Bizkit.png"
+    "imagen": "Limp-Bizkit.png",
+    "categoria": "Nu Metal"
   },
   {
     "banda": "Papa Roach",
-    "imagen": "Papa%20Roach.png"
+    "imagen": "Papa-Roach.png",
+    "categoria": "Nu Metal"
   },
   {
     "banda": "Rage Against the Machine",
-    "imagen": "Rage%20Against%20the%20Machine.png"
+    "imagen": "Rage-Against-the-Machine.png",
+    "categoria": "Alternative Metal"
   },
   {
     "banda": "Rob Zombie",
-    "imagen": "Rob%20Zombie.png"
+    "imagen": "Rob-Zombie.png",
+    "categoria": "Industrial Metal"
   },
   {
     "banda": "Nirvana",
-    "imagen": "Nirvana.png"
+    "imagen": "Nirvana.png",
+    "categoria": "Grunge"
   },
   {
     "banda": "Ramones",
-    "imagen": "Ramones.png"
+    "imagen": "Ramones.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Green Day",
-    "imagen": "Green%20Day.png"
+    "imagen": "Green-Day.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Blink-182",
-    "imagen": "Blink-182.png"
+    "imagen": "Blink-182.png",
+    "categoria": "Pop Punk"
   },
   {
     "banda": "The Clash",
-    "imagen": "The%20Clash.png"
+    "imagen": "The-Clash.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "The Cure",
-    "imagen": "The%20Cure.png"
+    "imagen": "The-Cure.png",
+    "categoria": "Post-Punk"
   },
   {
     "banda": "The Sisters of Mercy",
-    "imagen": "The%20Sisters%20of%20Mercy.png"
+    "imagen": "The-Sisters-of-Mercy.png",
+    "categoria": "Gothic Rock"
   },
   {
     "banda": "Bring Me The Horizon",
-    "imagen": "Bring%20Me%20The%20Horizon.png"
+    "imagen": "Bring-Me-The-Horizon.png",
+    "categoria": "Metalcore"
   },
   {
     "banda": "Avenged Sevenfold",
-    "imagen": "Avenged%20Sevenfold.png"
+    "imagen": "Avenged-Sevenfold.png",
+    "categoria": "Metalcore"
   },
   {
     "banda": "Bullet for My Valentine",
-    "imagen": "Bullet%20for%20My%20Valentine.png"
+    "imagen": "Bullet-for-My-Valentine.png",
+    "categoria": "Metalcore"
   },
   {
     "banda": "Parkway Drive",
-    "imagen": "Parkway%20Drive.png"
+    "imagen": "Parkway-Drive.png",
+    "categoria": "Metalcore"
   },
   {
     "banda": "Bad Religion",
-    "imagen": "Bad%20Religion.png"
+    "imagen": "Bad-Religion.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Rata Blanca",
-    "imagen": "Rata%20Blanca.png"
+    "imagen": "Rata-Blanca.png",
+    "categoria": "Heavy Metal"
   },
   {
     "banda": "Héroes del Silencio",
-    "imagen": "H%C3%A9roes%20del%20Silencio.png"
+    "imagen": "Héroes-del-Silencio.png",
+    "categoria": "Hard Rock"
   },
   {
     "banda": "Soda Stereo",
-    "imagen": "Soda%20Stereo.png"
+    "imagen": "Soda-Stereo.png",
+    "categoria": "Rock en Español"
   },
   {
     "banda": "Brujería",
-    "imagen": "Brujer%C3%ADa.png"
+    "imagen": "Brujería.png",
+    "categoria": "Death Metal / Grindcore"
   },
   {
     "banda": "Kraken",
-    "imagen": "Kraken.png"
+    "imagen": "Kraken.png",
+    "categoria": "Heavy Metal"
   },
   {
     "banda": "Black Flag",
-    "imagen": "Black%20Flag.png"
+    "imagen": "Black-Flag.png",
+    "categoria": "Hardcore Punk"
   },
   {
     "banda": "Dead Kennedys",
-    "imagen": "Dead%20Kennedys.png"
+    "imagen": "Dead-Kennedys.png",
+    "categoria": "Hardcore Punk"
   },
   {
     "banda": "The Offspring",
-    "imagen": "The%20Offspring.png"
+    "imagen": "The-Offspring.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Sex Pistols",
-    "imagen": "Sex%20Pistols.png"
+    "imagen": "Sex-Pistols.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Pennywise",
-    "imagen": "Pennywise.png"
+    "imagen": "Pennywise.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Mötley Crüe",
-    "imagen": "M%C3%B6tley%20Cr%C3%BCe.png"
+    "imagen": "Mötley-Crüe.png",
+    "categoria": "Glam Metal"
   },
   {
     "banda": "Pantera2",
-    "imagen": "Pantera2.png"
+    "imagen": "Pantera2.png",
+    "categoria": "Groove Metal"
   },
   {
     "banda": "Ramones2",
-    "imagen": "Ramones2.png"
+    "imagen": "Ramones2.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Watain",
-    "imagen": "Watain.png"
+    "imagen": "Watain.png",
+    "categoria": "Black Metal"
   },
   {
     "banda": "Bathory",
-    "imagen": "Bathory.png"
+    "imagen": "Bathory.png",
+    "categoria": "Black Metal"
   },
   {
     "banda": "Rammstein Cruz",
-    "imagen": "Rammstein%20Cruz.png"
+    "imagen": "Rammstein-Cruz.png",
+    "categoria": "Industrial Metal"
   },
   {
     "banda": "Rammstein caras",
-    "imagen": "Rammstein%20caras.png"
+    "imagen": "Rammstein-caras.png",
+    "categoria": "Industrial Metal"
   },
   {
     "banda": "The Casualties",
-    "imagen": "The%20Casualties.png"
+    "imagen": "The-Casualties.png",
+    "categoria": "Street Punk"
   },
   {
     "banda": "Fiskales Ad-Hok",
-    "imagen": "Fiskales%20Ad-Hok.png"
+    "imagen": "Fiskales-Ad-Hok.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Triple X (XXX)",
-    "imagen": "Triple%20X%20%28XXX%29.png"
+    "imagen": "Triple-X-(XXX).png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Fértil Miseria",
-    "imagen": "F%C3%A9rtil%20Miseria.png"
+    "imagen": "Fértil-Miseria.png",
+    "categoria": "Hardcore Punk"
   },
   {
     "banda": "La Polla Records",
-    "imagen": "La%20Polla%20Records.png"
+    "imagen": "La-Polla-Records.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Ska-P",
-    "imagen": "Ska-P.png"
+    "imagen": "Ska-P.png",
+    "categoria": "Ska Punk"
   },
   {
     "banda": "Eskorbuto",
-    "imagen": "Eskorbuto.png"
+    "imagen": "Eskorbuto.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Kortatu",
-    "imagen": "Kortatu.png"
+    "imagen": "Kortatu.png",
+    "categoria": "Ska Punk"
   },
   {
     "banda": "Cicatriz",
-    "imagen": "Cicatriz.png"
+    "imagen": "Cicatriz.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Reincidentes",
-    "imagen": "Reincidentes.png"
+    "imagen": "Reincidentes.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Attaque 77",
-    "imagen": "Attaque%2077.png"
+    "imagen": "Attaque-77.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Konsumo Respeto",
-    "imagen": "Konsumo%20Respeto.png"
+    "imagen": "Konsumo-Respeto.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "2 Minutos",
-    "imagen": "2%20Minutos.png"
+    "imagen": "2-Minutos.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Flema",
-    "imagen": "Flema.png"
+    "imagen": "Flema.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Los Violadores",
-    "imagen": "Los%20Violadores.png"
+    "imagen": "Los-Violadores.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Bulldog",
-    "imagen": "Bulldog.png"
+    "imagen": "Bulldog.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Angra",
-    "imagen": "Angra.png"
+    "imagen": "Angra.png",
+    "categoria": "Power Metal"
   },
   {
     "banda": "Almah",
-    "imagen": "Almah.png"
+    "imagen": "Almah.png",
+    "categoria": "Power Metal"
   },
   {
     "banda": "Mr big",
-    "imagen": "Mr%20big.png"
+    "imagen": "Mr-big.png",
+    "categoria": "Hard Rock"
   },
   {
     "banda": "Judas2",
-    "imagen": "Judas2.png"
+    "imagen": "Judas2.png",
+    "categoria": "Heavy Metal"
   },
   {
     "banda": "Judas jugulator",
-    "imagen": "Judas%20jugulator.png"
+    "imagen": "Judas-jugulator.png",
+    "categoria": "Heavy Metal"
   },
   {
     "banda": "Judas letras",
-    "imagen": "Judas%20letras.png"
+    "imagen": "Judas-letras.png",
+    "categoria": "Heavy Metal"
   },
   {
     "banda": "Judas british steel",
-    "imagen": "Judas%20british%20steel.png"
+    "imagen": "Judas-british-steel.png",
+    "categoria": "Heavy Metal"
   },
   {
     "banda": "Iced Earth",
-    "imagen": "Iced%20Earth.png"
+    "imagen": "Iced-Earth.png",
+    "categoria": "Power/Thrash Metal"
   },
   {
     "banda": "Talisman",
-    "imagen": "Talisman.png"
+    "imagen": "Talisman.png",
+    "categoria": "Hard Rock"
   },
   {
     "banda": "Journey",
-    "imagen": "Journey.png"
+    "imagen": "Journey.png",
+    "categoria": "Hard Rock"
   },
   {
     "banda": "Tempest",
-    "imagen": "Tempest.png"
+    "imagen": "Tempest.png",
+    "categoria": "Hard Rock"
   },
   {
     "banda": "Shaman",
-    "imagen": "Shaman.png"
+    "imagen": "Shaman.png",
+    "categoria": "Power Metal"
   },
   {
     "banda": "Soto",
-    "imagen": "Soto.png"
+    "imagen": "Soto.png",
+    "categoria": "Heavy Metal"
   },
   {
     "banda": "Spektra",
-    "imagen": "Spektra.png"
+    "imagen": "Spektra.png",
+    "categoria": "Hard Rock"
   },
   {
     "banda": "kk priest",
-    "imagen": "kk%20priest.png"
+    "imagen": "kk-priest.png",
+    "categoria": "Heavy Metal"
   },
   {
     "banda": "Ripper",
-    "imagen": "Ripper.png"
+    "imagen": "Ripper.png",
+    "categoria": "Heavy Metal"
   },
   {
     "banda": "Necrophagist",
-    "imagen": "Necrophagist.png"
+    "imagen": "Necrophagist.png",
+    "categoria": "Technical Death Metal"
   },
   {
     "banda": "Bathory Goat",
-    "imagen": "Bathory%20Goat.png"
+    "imagen": "Bathory-Goat.png",
+    "categoria": "Black Metal"
   },
   {
     "banda": "Adramelech",
-    "imagen": "Adramelech.png"
+    "imagen": "Adramelech.png",
+    "categoria": "Death Metal"
   },
   {
     "banda": "Deceased",
-    "imagen": "Deceased.png"
+    "imagen": "Deceased.png",
+    "categoria": "Death/Thrash Metal"
   },
   {
     "banda": "Wombbath",
-    "imagen": "Wombbath.png"
+    "imagen": "Wombbath.png",
+    "categoria": "Death Metal"
   },
   {
     "banda": "Left to die",
-    "imagen": "Left%20to%20die.png"
+    "imagen": "Left-to-die.png",
+    "categoria": "Death Metal"
   },
   {
     "banda": "Hulder",
-    "imagen": "Hulder.png"
+    "imagen": "Hulder.png",
+    "categoria": "Black Metal"
   },
   {
     "banda": "Inmortal",
-    "imagen": "Inmortal.png"
+    "imagen": "Inmortal.png",
+    "categoria": "Black Metal"
   },
   {
     "banda": "Dark throne",
-    "imagen": "Dark%20throne.png"
+    "imagen": "Dark-throne.png",
+    "categoria": "Black Metal"
   },
   {
     "banda": "Dark Tranquility",
-    "imagen": "Dark%20Tranquility.png"
+    "imagen": "Dark-Tranquility.png",
+    "categoria": "Melodic Death Metal"
   },
   {
     "banda": "Heat",
-    "imagen": "Heat.png"
+    "imagen": "Heat.png",
+    "categoria": "Hard Rock"
   },
   {
     "banda": "Poison",
-    "imagen": "Poison.png"
+    "imagen": "Poison.png",
+    "categoria": "Glam Metal"
   },
   {
     "banda": "Static x",
-    "imagen": "Static%20x.png"
+    "imagen": "Static-x.png",
+    "categoria": "Industrial Metal"
   },
   {
     "banda": "Non Servium",
-    "imagen": "Non%20Servium.png"
+    "imagen": "Non-Servium.png",
+    "categoria": "Street Punk / Oi!"
   },
   {
     "banda": "nachtblut",
-    "imagen": "nachtblut.png"
+    "imagen": "nachtblut.png",
+    "categoria": "Gothic / Black Metal"
   },
   {
     "banda": "NOFX",
-    "imagen": "NOFX.png"
+    "imagen": "NOFX.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Rancid",
-    "imagen": "Rancid.png"
+    "imagen": "Rancid.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "DECENDENTS",
-    "imagen": "DECENDENTS.png"
+    "imagen": "DECENDENTS.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "R.I.P.",
-    "imagen": "R.I.P..png"
+    "imagen": "R.I.P..png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Minor Threat",
-    "imagen": "Minor%20Threat.png"
+    "imagen": "Minor-Threat.png",
+    "categoria": "Hardcore Punk"
   },
   {
     "banda": "M.C.D.",
-    "imagen": "M.C.D..png"
+    "imagen": "M.C.D..png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Boikot",
-    "imagen": "Boikot.png"
+    "imagen": "Boikot.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Los Muertos de Cristo",
-    "imagen": "Los%20Muertos%20de%20Cristo.png"
+    "imagen": "Los-Muertos-de-Cristo.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "El Último Ke Zierre",
-    "imagen": "El%20%C3%9Altimo%20Ke%20Zierre.png"
+    "imagen": "El-Último-Ke-Zierre.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Sin Dios",
-    "imagen": "Sin%20Dios.png"
+    "imagen": "Sin-Dios.png",
+    "categoria": "Hardcore Punk"
   },
   {
     "banda": "Kaotiko",
-    "imagen": "Kaotiko.png"
+    "imagen": "Kaotiko.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Segismundo Toxicómano",
-    "imagen": "Segismundo%20Toxic%C3%B3mano.png"
+    "imagen": "Segismundo-Toxicómano.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Porretas",
-    "imagen": "Porretas.png"
+    "imagen": "Porretas.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Lendakaris Muertos",
-    "imagen": "Lendakaris%20Muertos.png"
+    "imagen": "Lendakaris-Muertos.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Gatillazo",
-    "imagen": "Gatillazo.png"
+    "imagen": "Gatillazo.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Parabellum",
-    "imagen": "Parabellum.png"
+    "imagen": "Parabellum.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Grito",
-    "imagen": "Grito.png"
+    "imagen": "Grito.png",
+    "categoria": "Hardcore Punk"
   },
   {
     "banda": "K-rroña",
-    "imagen": "K-rro%C3%B1a.png"
+    "imagen": "K-rroña.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "El Noi Del Sucre",
-    "imagen": "El%20Noi%20Del%20Sucre.png"
+    "imagen": "El-Noi-Del-Sucre.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "B.S.N. (Bastardos Sin Nombre)",
-    "imagen": "B.S.N.%20%28Bastardos%20Sin%20Nombre%29.png"
+    "imagen": "B.S.N.-(Bastardos-Sin-Nombre).png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Desadaptadoz",
-    "imagen": "Desadaptadoz.png"
+    "imagen": "Desadaptadoz.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Cadena Perpetua",
-    "imagen": "Cadena%20Perpetua.png"
+    "imagen": "Cadena-Perpetua.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Todos Tus Muertos",
-    "imagen": "Todos%20Tus%20Muertos.png"
+    "imagen": "Todos-Tus-Muertos.png",
+    "categoria": "Punk Rock / Reggae"
   },
   {
     "banda": "Mal Momento",
-    "imagen": "Mal%20Momento.png"
+    "imagen": "Mal-Momento.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Expulsados",
-    "imagen": "Expulsados.png"
+    "imagen": "Expulsados.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Fun People",
-    "imagen": "Fun%20People.png"
+    "imagen": "Fun-People.png",
+    "categoria": "Hardcore Punk"
   },
   {
     "banda": "Sin Ley",
-    "imagen": "Sin%20Ley.png"
+    "imagen": "Sin-Ley.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Katarro Vandaliko",
-    "imagen": "Katarro%20Vandaliko.png"
+    "imagen": "Katarro-Vandaliko.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Bien Desocupados",
-    "imagen": "Bien%20Desocupados.png"
+    "imagen": "Bien-Desocupados.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Espécimen",
-    "imagen": "Esp%C3%A9cimen.png"
+    "imagen": "Espécimen.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Atoxxxico",
-    "imagen": "Atoxxxico.png"
+    "imagen": "Atoxxxico.png",
+    "categoria": "Hardcore Punk"
   },
   {
     "banda": "Seguimos Perdiendo",
-    "imagen": "Seguimos%20Perdiendo.png"
+    "imagen": "Seguimos-Perdiendo.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Síndrome del Punk",
-    "imagen": "S%C3%ADndrome%20del%20Punk.png"
+    "imagen": "Síndrome-del-Punk.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Acidez",
-    "imagen": "Acidez.png"
+    "imagen": "Acidez.png",
+    "categoria": "Street Punk"
   },
   {
     "banda": "Leusemia",
-    "imagen": "Leusemia.png"
+    "imagen": "Leusemia.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Narcosis",
-    "imagen": "Narcosis.png"
+    "imagen": "Narcosis.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Arpaviejas",
-    "imagen": "Arpaviejas.png"
+    "imagen": "Arpaviejas.png",
+    "categoria": "Punk Rock"
   },
   {
     "banda": "Nuclear Assault",
-    "imagen": "Nuclear%20Assault.png"
+    "imagen": "Nuclear-Assault.png",
+    "categoria": "Thrash Metal"
   },
   {
     "banda": "V8",
-    "imagen": "V8.png"
+    "imagen": "V8.png",
+    "categoria": "Heavy Metal"
   },
   {
     "banda": "Acutor",
-    "imagen": "Acutor.png"
+    "imagen": "Acutor.png",
+    "categoria": "Thrash Metal"
   },
   {
     "banda": "Sobibor",
-    "imagen": "Sobibor.png"
+    "imagen": "Sobibor.png",
+    "categoria": "Thrash/Death Metal"
   },
   {
     "banda": "Tugsteno",
-    "imagen": "Tugsteno.png"
+    "imagen": "Tugsteno.png",
+    "categoria": "Thrash Metal"
   },
   {
     "banda": "Old man's child",
-    "imagen": "Old%20man%27s%20child.png"
+    "imagen": "Old-man's-child.png",
+    "categoria": "Symphonic Black Metal"
   },
   {
     "banda": "Witchtrap",
-    "imagen": "Witchtrap.png"
+    "imagen": "Witchtrap.png",
+    "categoria": "Thrash Metal"
   },
   {
     "banda": "Sorceress",
-    "imagen": "Sorceress.png"
+    "imagen": "Sorceress.png",
+    "categoria": "Doom Metal"
   },
   {
     "banda": "Nameless",
-    "imagen": "Nameless.png"
+    "imagen": "Nameless.png",
+    "categoria": "Death Metal"
   },
   {
     "banda": "morbid saint",
-    "imagen": "morbid%20saint.png"
+    "imagen": "morbid-saint.png",
+    "categoria": "Thrash Metal"
   },
   {
     "banda": "Dark funeral",
-    "imagen": "Dark%20funeral.png"
+    "imagen": "Dark-funeral.png",
+    "categoria": "Black Metal"
   },
   {
     "banda": "Logos",
-    "imagen": "Logos.png"
+    "imagen": "Logos.png",
+    "categoria": "Heavy Metal"
   },
   {
     "banda": "Stryper",
-    "imagen": "Stryper.png"
+    "imagen": "Stryper.png",
+    "categoria": "Heavy Metal"
   },
   {
     "banda": "Doom",
-    "imagen": "Doom.png"
+    "imagen": "Doom.png",
+    "categoria": "Crust Punk / Doom"
   },
   {
     "banda": "Nargaroth",
-    "imagen": "Nargaroth.png"
+    "imagen": "Nargaroth.png",
+    "categoria": "Black Metal"
   },
   {
     "banda": "Satirycon",
-    "imagen": "Satirycon.png"
+    "imagen": "Satirycon.png",
+    "categoria": "Black Metal"
   },
   {
     "banda": "Tankard",
-    "imagen": "Tankard.png"
+    "imagen": "Tankard.png",
+    "categoria": "Thrash Metal"
   },
   {
     "banda": "Pentagram",
-    "imagen": "Pentagram.png"
+    "imagen": "Pentagram.png",
+    "categoria": "Doom Metal"
   },
   {
     "banda": "Celtic frost",
-    "imagen": "Celtic%20frost.png"
+    "imagen": "Celtic-frost.png",
+    "categoria": "Extreme Metal"
   },
   {
     "banda": "U.D.O.",
-    "imagen": "U.D.O..png"
+    "imagen": "U.D.O..png",
+    "categoria": "Heavy Metal"
   },
   {
     "banda": "Soulfly",
-    "imagen": "Soulfly.png"
+    "imagen": "Soulfly.png",
+    "categoria": "Groove Metal"
   },
   {
     "banda": "Fear Factory",
-    "imagen": "Fear%20Factory.png"
+    "imagen": "Fear-Factory.png",
+    "categoria": "Industrial Metal"
   },
   {
     "banda": "Death Angel",
-    "imagen": "Death%20Angel.png"
+    "imagen": "Death-Angel.png",
+    "categoria": "Thrash Metal"
   },
   {
     "banda": "Coroner",
-    "imagen": "Coroner.png"
+    "imagen": "Coroner.png",
+    "categoria": "Technical Thrash Metal"
   },
   {
     "banda": "Prong",
-    "imagen": "Prong.png"
+    "imagen": "Prong.png",
+    "categoria": "Groove Metal"
   },
   {
     "banda": "HammerFall",
-    "imagen": "HammerFall.png"
+    "imagen": "HammerFall.png",
+    "categoria": "Power Metal"
   },
   {
     "banda": "Running Wild",
-    "imagen": "Running%20Wild.png"
+    "imagen": "Running-Wild.png",
+    "categoria": "Speed / Power Metal"
   },
   {
     "banda": "Rhapsody of Fire",
-    "imagen": "Rhapsody%20of%20Fire.png"
+    "imagen": "Rhapsody-of-Fire.png",
+    "categoria": "Symphonic Power Metal"
   },
   {
     "banda": "Kamelot",
-    "imagen": "Kamelot.png"
+    "imagen": "Kamelot.png",
+    "categoria": "Power Metal"
   },
   {
     "banda": "Symphony X",
-    "imagen": "Symphony%20X.png"
+    "imagen": "Symphony-X.png",
+    "categoria": "Progressive Metal"
   },
   {
     "banda": "Avantasia",
-    "imagen": "Avantasia.png"
+    "imagen": "Avantasia.png",
+    "categoria": "Symphonic Power Metal"
   },
   {
     "banda": "W.A.S.P.",
-    "imagen": "W.A.S.P..png"
+    "imagen": "W.A.S.P..png",
+    "categoria": "Heavy Metal"
   },
   {
     "banda": "Savatage",
-    "imagen": "Savatage.png"
+    "imagen": "Savatage.png",
+    "categoria": "Heavy / Progressive Metal"
   },
   {
     "banda": "Queensrÿche",
-    "imagen": "Queensr%C3%BFche.png"
+    "imagen": "Queensrÿche.png",
+    "categoria": "Progressive Metal"
   },
   {
     "banda": "Warlock",
-    "imagen": "Warlock.png"
+    "imagen": "Warlock.png",
+    "categoria": "Heavy Metal"
   },
   {
     "banda": "Primal Fear",
-    "imagen": "Primal%20Fear.png"
+    "imagen": "Primal-Fear.png",
+    "categoria": "Power Metal"
   },
   {
     "banda": "Ángeles del Infierno",
-    "imagen": "%C3%81ngeles%20del%20Infierno.png"
+    "imagen": "Ángeles-del-Infierno.png",
+    "categoria": "Heavy Metal"
   },
   {
     "banda": "WarCry",
-    "imagen": "WarCry.png"
+    "imagen": "WarCry.png",
+    "categoria": "Power Metal"
   },
   {
     "banda": "Unmerciful",
-    "imagen": "Unmerciful.png"
+    "imagen": "Unmerciful.png",
+    "categoria": "Technical Death Metal"
   },
   {
     "banda": "Origin",
-    "imagen": "Origin.png"
+    "imagen": "Origin.png",
+    "categoria": "Technical Death Metal"
   },
   {
     "banda": "Canibal Corpse Logo",
-    "imagen": "Canibal%20Corpse%20Logo.png"
+    "imagen": "Canibal-Corpse-Logo.png",
+    "categoria": "Death Metal"
   },
   {
     "banda": "Suffocation",
-    "imagen": "Suffocation.png"
+    "imagen": "Suffocation.png",
+    "categoria": "Technical Death Metal"
   },
   {
     "banda": "Cryptopsy",
-    "imagen": "Cryptopsy.png"
+    "imagen": "Cryptopsy.png",
+    "categoria": "Technical Death Metal"
   },
   {
     "banda": "Dying Fetus",
-    "imagen": "Dying%20Fetus.png"
+    "imagen": "Dying-Fetus.png",
+    "categoria": "Brutal Death Metal"
   },
   {
     "banda": "Nile logo",
-    "imagen": "Nile%20logo.png"
+    "imagen": "Nile-logo.png",
+    "categoria": "Technical Death Metal"
   },
   {
     "banda": "Nile",
-    "imagen": "Nile.png"
+    "imagen": "Nile.png",
+    "categoria": "Technical Death Metal"
   },
   {
     "banda": "Masacre Logo",
-    "imagen": "Masacre%20Logo.png"
+    "imagen": "Masacre-Logo.png",
+    "categoria": "Death Metal"
   },
   {
     "banda": "Goretrade",
-    "imagen": "Goretrade.png"
+    "imagen": "Goretrade.png",
+    "categoria": "Brutal Death Metal"
   },
   {
     "banda": "Carnivore Diprosopus",
-    "imagen": "Carnivore%20Diprosopus.png"
+    "imagen": "Carnivore-Diprosopus.png",
+    "categoria": "Brutal Death Metal"
   },
   {
     "banda": "Blast Beats",
-    "imagen": "Blast%20Beats.png"
+    "imagen": "Blast-Beats.png",
+    "categoria": "Death Metal"
   },
   {
     "banda": "Archspire",
-    "imagen": "Archspire.png"
+    "imagen": "Archspire.png",
+    "categoria": "Technical Death Metal"
   },
   {
     "banda": "Devourment",
-    "imagen": "Devourment.png"
+    "imagen": "Devourment.png",
+    "categoria": "Brutal Death Metal"
   },
   {
     "banda": "Deeds of Flesh",
-    "imagen": "Deeds%20of%20Flesh.png"
+    "imagen": "Deeds-of-Flesh.png",
+    "categoria": "Technical Death Metal"
   },
   {
     "banda": "Obscura",
-    "imagen": "Obscura.png"
+    "imagen": "Obscura.png",
+    "categoria": "Technical Death Metal"
   },
   {
     "banda": "Decapitated",
-    "imagen": "Decapitated.png"
+    "imagen": "Decapitated.png",
+    "categoria": "Technical Death Metal"
   }
 ]
