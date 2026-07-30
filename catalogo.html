@@ -329,9 +329,14 @@
 
         .price-item {
             background: #1a1a1a;
-            padding: 15px;
+            padding: 20px 15px;
             border-radius: 8px;
             border: 1px solid #2a2a2a;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centra verticalmente el contenido */
+            align-items: center; /* Centra horizontalmente el contenido */
+            text-align: center;
         }
 
         .price-item.highlight {
@@ -344,32 +349,33 @@
             font-family: 'Oswald', sans-serif;
             font-size: 1.1rem;
             color: #ccc;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            width: 100%;
         }
 
         .price-item .price {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             font-weight: bold;
             color: white;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            width: 100%;
         }
 
         .price-item .price span {
-            font-size: 0.9rem;
+            font-size: 1rem;
             color: #888;
         }
 
         .price-item .note {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            line-height: 1.2;
-        }
-
-        .pricing-note {
             font-size: 0.85rem;
-            color: #666;
-            margin-top: 15px;
-            font-style: italic;
+            color: var(--text-muted);
+            line-height: 1.3;
+            margin-bottom: 15px; /* Empuja el botón hacia abajo si lo hay */
+            width: 100%;
+            flex-grow: 1; /* Permite que la nota ocupe el espacio vacío para igualar alturas */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         /* Estilos internos del carrito */
@@ -495,8 +501,9 @@
             <!-- Aquí irán los items agregados -->
         </div>
         <div style="border-top: 1px solid #333; padding-top: 20px;">
-            <p style="display: flex; justify-content: space-between; font-size: 1.2rem; margin-bottom: 15px;">
-                <strong>TOTAL:</strong> <span id="cartTotal">$0 COP</span>
+            <p style="display: flex; justify-content: space-between; font-size: 1.2rem; margin-bottom: 15px; align-items: baseline;">
+                <strong>TOTAL <span id="cartTotalItems" style="font-size: 0.9rem; color: #888; font-weight: normal;">(0 pines)</span>:</strong> 
+                <span id="cartTotal">$0 COP</span>
             </p>
             <button class="add-to-cart-btn" onclick="finalizarCompra()" style="background: #25D366; color: #111; font-size: 1.1rem; padding: 12px; border: none;">
                 <i class="fab fa-whatsapp"></i> FINALIZAR COMPRA
@@ -723,7 +730,7 @@
             } else {
                 promoSurtidaMsg.style.display = "none";
             }
-
+            document.getElementById('cartTotalItems').innerText = `(${totalItems} pines)`;
             totalElement.innerText = "$" + calculo.total.toLocaleString('es-CO') + " COP";
         }
 
