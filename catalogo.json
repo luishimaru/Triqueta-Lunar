@@ -851,7 +851,7 @@
   },
   {
     "banda": "R.I.P.",
-    "imagen": "R.I.P..png",
+    "imagen": "R.I.P.png",
     "categoria": "Punk Rock"
   },
   {
@@ -861,7 +861,7 @@
   },
   {
     "banda": "M.C.D.",
-    "imagen": "M.C.D..png",
+    "imagen": "M.C.D.png",
     "categoria": "Punk Rock"
   },
   {
@@ -1116,7 +1116,7 @@
   },
   {
     "banda": "U.D.O.",
-    "imagen": "U.D.O..png",
+    "imagen": "U.D.O.png",
     "categoria": "Heavy Metal"
   },
   {
@@ -1176,7 +1176,7 @@
   },
   {
     "banda": "W.A.S.P.",
-    "imagen": "W.A.S.P..png",
+    "imagen": "W.A.S.P.png",
     "categoria": "Heavy Metal"
   },
   {
@@ -1293,5 +1293,65 @@
     "banda": "Decapitated",
     "imagen": "Decapitated.png",
     "categoria": "Technical Death Metal"
+  },
+  {
+    "banda": "IronMaiden_EddieFaces",
+    "imagen": "IronMaiden_EddieFaces.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "IronMaiden_Trooper",
+    "imagen": "IronMaiden_Trooper.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "IronMaiden_FearEddie",
+    "imagen": "IronMaiden_FearEddie.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "IronMaiden_YellowFace",
+    "imagen": "IronMaiden_YellowFace.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "IronMaiden_KillersCircle",
+    "imagen": "IronMaiden_KillersCircle.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "IronMaiden_MummyEddie",
+    "imagen": "IronMaiden_MummyEddie.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "IronMaiden_ClassicLogo",
+    "imagen": "IronMaiden_ClassicLogo.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "IronMaiden_EddiePharaoh",
+    "imagen": "IronMaiden_EddiePharaoh.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "Slayer_Classic",
+    "imagen": "Slayer_Classic.png",
+    "categoria": "Thrash Metal"
+  },
+  {
+    "banda": "Slayer_BoneRing",
+    "imagen": "Slayer_BoneRing.png",
+    "categoria": "Thrash Metal"
+  },
+  {
+    "banda": "Slayer_Circle",
+    "imagen": "Slayer_Circle.png",
+    "categoria": "Thrash Metal"
+  },
+  {
+    "banda": "Slayer_Hell",
+    "imagen": "Slayer_Hell.png",
+    "categoria": "Thrash Metal"
   }
 ]
