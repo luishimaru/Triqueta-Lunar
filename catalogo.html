@@ -462,10 +462,14 @@
                     <p class="price">$60.000 <span>COP</span></p>
                     <p class="note">($5.000 c/u - Llevas 12 diseños diferentes)</p>
                 </div>
-                <div class="price-item">
+                <!-- Tarjeta 3 convertida en Botón -->
+                <div class="price-item" style="cursor: pointer; border-color: #882222; transition: all 0.3s;" onclick="agregarPromoPersonalizada()" onmouseover="this.style.background='rgba(136,34,34,0.1)'" onmouseout="this.style.background='#1a1a1a'">
                     <h4>DOCENA X1 MODELO</h4>
                     <p class="price">$25.000 <span>COP</span></p>
-                    <p class="note">(12 pines idénticos. Ideal para bandas)</p>
+                    <p class="note" style="margin-bottom: 10px;">(12 pines idénticos. Ideal para merch de bandas y empresas. Debes enviarnos tu logo o diseño al finalizar compra en el carrito)</p>
+                    <button style="width: 100%; padding: 8px; background: #882222; color: white; border: none; border-radius: 4px; cursor: pointer; font-family: 'Oswald', sans-serif; font-size: 1rem;">
+                        <i class="fas fa-cart-plus"></i> AÑADIR AL CARRITO
+                    </button>
                 </div>
             </div>
             <p class="pricing-note">*Los descuentos se calculan automáticamente al añadir al carrito. No incluye costos de envío.</p>
@@ -594,10 +598,27 @@
             guardarCarrito();
             actualizarCarritoUI();
             
-            // Animación del botón flotante
             const btn = document.getElementById('openCartBtn');
             btn.style.transform = 'scale(1.2)';
             setTimeout(() => btn.style.transform = '', 200);
+        }
+
+        // Nueva función para el botón del Banner
+        function agregarPromoPersonalizada() {
+            const banda = 'Diseño Personalizado';
+            // Usamos una imagen de relleno estandar genérica
+            const imagen = 'https://via.placeholder.com/200x200/882222/ffffff?text=Tu+Logo';
+            
+            if(carrito[banda]) {
+                carrito[banda].cantidad += 12; // Suma 12 de golpe
+            } else {
+                carrito[banda] = { imagen: imagen, cantidad: 12 };
+            }
+            guardarCarrito();
+            actualizarCarritoUI();
+            
+            // Abrir automáticamente el carrito para confirmar la acción
+            document.getElementById('cartSidebar').classList.add('open');
         }
 
         function modificarCantidad(banda, delta) {
@@ -615,6 +636,7 @@
             localStorage.setItem('triquetaCarrito', JSON.stringify(carrito));
         }
 
+        // Función matemática actualizada
         function calcularTotal() {
             let costoTotal = 0;
             let poolSurtidos = 0;
@@ -622,23 +644,23 @@
             for (let banda in carrito) {
                 let cant = carrito[banda].cantidad;
                 
-                // Agrupar docenas idénticas
+                // Agrupar bloques de 12 idénticos
                 let docenasIdenticas = Math.floor(cant / 12);
                 costoTotal += (docenasIdenticas * 25000);
                 
-                // Los que no alcanzaron docena idéntica, van a la bolsa de surtidos
+                // Lo que sobra de esos bloques, va a la bolsa de surtidos
                 poolSurtidos += (cant % 12);
             }
 
-            // Agrupar docenas surtidas
-            let docenasSurtidas = Math.floor(poolSurtidos / 12);
-            costoTotal += (docenasSurtidas * 60000);
+            // NUEVA LÓGICA: Si superas los 12 surtidos, TODOS mantienen el precio de 5k
+            if (poolSurtidos >= 12) {
+                costoTotal += (poolSurtidos * 5000);
+            } else {
+                costoTotal += (poolSurtidos * 10000);
+            }
 
-            // Cobrar los sobrantes a precio normal
-            let sueltos = poolSurtidos % 12;
-            costoTotal += (sueltos * 10000);
-
-            return costoTotal;
+            // Devolvemos tanto el dinero como la cantidad de surtidos para usarla en los mensajes visuales
+            return { total: costoTotal, surtidos: poolSurtidos }; 
         }
 
         function actualizarCarritoUI() {
@@ -653,11 +675,22 @@
                 let item = carrito[banda];
                 totalItems += item.cantidad;
                 
+                // Inyectar mensaje de descuento por 1 modelo en la tarjeta individual
+                let descuentoModeloHtml = '';
+                if (item.cantidad >= 12) {
+                    let multiplicador = Math.floor(item.cantidad / 12);
+                    descuentoModeloHtml = `<span style="color: #25D366; font-size: 0.75rem; font-weight: bold; display: block; margin-top: 3px;">✅ ¡Promo x1 Modelo aplicada! (${multiplicador}x)</span>`;
+                }
+
+                // Asegurar que las imágenes que vienen de internet (como el logo personalizado) se carguen bien
+                let imgPath = item.imagen.startsWith('http') ? item.imagen : `pines/${item.imagen}`;
+                
                 container.innerHTML += `
                     <div class="cart-item">
-                        <img src="pines/${item.imagen}" alt="${banda}">
+                        <img src="${imgPath}" alt="${banda}">
                         <div class="cart-item-info">
                             <div class="cart-item-title">${banda}</div>
+                            ${descuentoModeloHtml}
                         </div>
                         <div class="cart-controls">
                             <button class="cart-btn" onclick="modificarCantidad('${banda.replace(/'/g, "\\'")}', -1)">-</button>
@@ -670,9 +703,28 @@
 
             badge.innerText = totalItems;
             
-            let totalNumerico = calcularTotal();
-            // Formatear a pesos colombianos
-            totalElement.innerText = "$" + totalNumerico.toLocaleString('es-CO') + " COP";
+            let calculo = calcularTotal();
+            
+            // Manejar el aviso global de Docena Surtida
+            let promoSurtidaMsg = document.getElementById('cartPromoMsg');
+            if (!promoSurtidaMsg) {
+                promoSurtidaMsg = document.createElement('div');
+                promoSurtidaMsg.id = 'cartPromoMsg';
+                promoSurtidaMsg.style = "color: #25D366; font-size: 0.95rem; text-align: center; margin-bottom: 15px; font-weight: bold; font-family: 'Oswald', sans-serif;";
+                
+                const footerCarrito = document.getElementById('cartTotal').parentElement.parentElement;
+                footerCarrito.insertBefore(promoSurtidaMsg, footerCarrito.firstChild);
+            }
+
+            // Mostrar el mensaje solo si la cantidad en la bolsa supera las 12 unidades
+            if (calculo.surtidos >= 12) {
+                promoSurtidaMsg.innerHTML = "✨ ¡Oferta aplicada! Docena surtida. Pines a $5.000 c/u ✨";
+                promoSurtidaMsg.style.display = "block";
+            } else {
+                promoSurtidaMsg.style.display = "none";
+            }
+
+            totalElement.innerText = "$" + calculo.total.toLocaleString('es-CO') + " COP";
         }
 
         function finalizarCompra() {
@@ -687,8 +739,8 @@
                 mensaje += `- ${carrito[banda].cantidad}x ${banda}\n`;
             }
 
-            let total = calcularTotal();
-            mensaje += `\n*TOTAL: $${total.toLocaleString('es-CO')} COP* (Sin envío)\n\n`;
+            let calculo = calcularTotal();
+            mensaje += `\n*TOTAL: $${calculo.total.toLocaleString('es-CO')} COP* (Sin envío)\n\n`;
             mensaje += "Por favor indíquenme el valor del envío y los datos para transferir por Bre-B (Nequi/Daviplata/Transfiya) para enviarles el comprobante. ¡Gracias!";
 
             const numeroWhatsApp = "573125935222";
@@ -697,7 +749,6 @@
             window.open(url, '_blank');
         }
 
-        // Panel lateral
         document.getElementById('openCartBtn').addEventListener('click', () => {
             document.getElementById('cartSidebar').classList.add('open');
         });
