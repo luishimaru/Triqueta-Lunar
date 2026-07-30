@@ -410,7 +410,109 @@
     </div>
 
     <script>
-        // Funcionalidad básica para la Fase 1 (Abrir y cerrar el carrito visualmente)
+        let pines = [];
+        const grid = document.getElementById('catalogGrid');
+        const searchInput = document.getElementById('searchInput');
+        const letterBtns = document.querySelectorAll('.letter-btn');
+        
+        // Leer la memoria del navegador para ver si el usuario ya tenía una letra seleccionada
+        let letraSeleccionada = localStorage.getItem('ultimaLetraCatalogo') || 'TODOS';
+
+        // 1. Cargar el inventario JSON
+        fetch('catalogo.json')
+            .then(response => response.json())
+            .then(data => {
+                pines = data;
+                // Ordenar alfabéticamente por defecto
+                pines.sort((a, b) => a.banda.localeCompare(b.banda));
+                
+                marcarBotonActivo(letraSeleccionada);
+                filtrarPorLetra(letraSeleccionada);
+            })
+            .catch(error => console.error("Error cargando el catálogo:", error));
+
+        // 2. Función para dibujar las tarjetas en la pantalla
+        function renderizarCatalogo(lista, limite = null) {
+            grid.innerHTML = ''; 
+            
+            // Si hay un límite (ej. al cargar "TODOS"), cortamos la lista
+            const itemsAMostrar = limite ? lista.slice(0, limite) : lista;
+
+            if (itemsAMostrar.length === 0) {
+                grid.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: #888;">No se encontraron diseños.</p>';
+                return;
+            }
+
+            itemsAMostrar.forEach(pin => {
+                const card = document.createElement('div');
+                card.className = 'pin-card';
+                card.innerHTML = `
+                    <img src="pines/${pin.imagen}" alt="${pin.banda}" loading="lazy">
+                    <h3 class="pin-title">${pin.banda}</h3>
+                    <button class="add-to-cart-btn" onclick="agregarAlCarrito('${pin.banda}', '${pin.imagen}')">
+                        <i class="fas fa-cart-plus"></i> Añadir
+                    </button>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // 3. Lógica del Filtro A-Z
+        function filtrarPorLetra(letra) {
+            letraSeleccionada = letra;
+            localStorage.setItem('ultimaLetraCatalogo', letra); // Guardar en memoria
+            searchInput.value = ''; // Limpiar buscador si se usa una letra
+
+            if (letra === 'TODOS') {
+                // Mostrar los primeros 30 por defecto para no saturar móviles
+                renderizarCatalogo(pines, 30); 
+            } else {
+                const filtrados = pines.filter(pin => pin.banda.toUpperCase().startsWith(letra));
+                renderizarCatalogo(filtrados);
+            }
+        }
+
+        // 4. Lógica del Buscador de texto
+        searchInput.addEventListener('input', (e) => {
+            const termino = e.target.value.toLowerCase();
+            
+            if (termino === '') {
+                filtrarPorLetra(letraSeleccionada);
+                return;
+            }
+
+            // Quitar clase activa de los botones de letras
+            letterBtns.forEach(b => b.classList.remove('active'));
+            
+            const filtrados = pines.filter(pin => pin.banda.toLowerCase().includes(termino));
+            renderizarCatalogo(filtrados);
+        });
+
+        // 5. Asignar eventos a los botones de la A a la Z
+        letterBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const letra = e.target.innerText;
+                marcarBotonActivo(letra);
+                filtrarPorLetra(letra);
+            });
+        });
+
+        function marcarBotonActivo(letra) {
+            letterBtns.forEach(btn => {
+                if (btn.innerText === letra) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+
+        // Función vacía temporal para el carrito (Fase 3)
+        function agregarAlCarrito(nombreBanda, imagen) {
+            alert("Agregaste " + nombreBanda + ". (El carrito se programará en la Fase 3)");
+        }
+
+        // Funciones del panel lateral
         document.getElementById('openCartBtn').addEventListener('click', () => {
             document.getElementById('cartSidebar').classList.add('open');
         });
