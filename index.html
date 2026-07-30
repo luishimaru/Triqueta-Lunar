@@ -227,6 +227,19 @@
             box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 0 20px rgba(37, 211, 102, 0.4), 0 6px 15px rgba(0, 0, 0, 0.8);
         }
 
+/* --- BOTÓN DEL CATÁLOGO --- */
+        .catalog-btn {
+            background: linear-gradient(145deg, #3a0d0d 0%, #1a0505 50%, #0a0202 100%);
+            border: 1px solid #661818;
+            color: #ffffff;
+        }
+
+        .catalog-btn:hover {
+            background: linear-gradient(145deg, #551111 0%, #882222 50%, #3a0d0d 100%);
+            border-color: #ff4444;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 0 20px rgba(136, 34, 34, 0.5), 0 6px 15px rgba(0, 0, 0, 0.8);
+        }
+
         footer {
             color: #444;
             font-size: 0.8rem;
@@ -258,8 +271,14 @@
         </div>
 
         <div class="links-container">
+            <!-- NUEVO BOTÓN DE CATÁLOGO -->
+            <a href="catalogo.html" class="link-btn catalog-btn">
+                <i class="fas fa-store"></i> VER CATÁLOGO DE PINES
+            </a>
+
+            <!-- BOTONES EXISTENTES -->
             <a href="https://wa.me/573125935222?text=¡Hola%20Triqueta%20Lunar!%20Vengo%20de%20su%20página%20y%20quiero%20cotizar%20un%20producto%20personalizado." 
-               class="link-btn wsp-btn" target="_blank" rel="noopener noreferrer">
+                class="link-btn wsp-btn" target="_blank" rel="noopener noreferrer">
                 <i class="fab fa-whatsapp"></i> COTIZAR POR WHATSAPP
             </a>
             <a href="https://www.instagram.com/triquetalunar/" class="link-btn" target="_blank" rel="noopener noreferrer">
