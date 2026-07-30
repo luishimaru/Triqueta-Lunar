@@ -529,23 +529,43 @@
         const letterBtns = document.querySelectorAll('.letter-btn');
         let letraSeleccionada = localStorage.getItem('ultimaLetraCatalogo') || 'TODOS';
 
+    
         // 1. Inicializar catálogo
-        // 1. Inicializar catálogo
+        // 1. Inicializar catálogo y agrupar géneros generales
         fetch('catalogo.json')
             .then(response => response.json())
             .then(data => {
                 pines = data;
+                
+                // Función para simplificar subgéneros en macro-géneros generales
+                pines.forEach(pin => {
+                    let cat = (pin.categoria || "").toLowerCase();
+                    
+                    if (cat.includes('heavy') || cat.includes('hard rock') || cat.includes('classic rock') || cat.includes('glam') || cat.includes('psychedelic')) {
+                        pin.macroCategoria = 'Heavy & Hard Rock';
+                    } else if (cat.includes('thrash') || cat.includes('groove') || cat.includes('crossover')) {
+                        pin.macroCategoria = 'Thrash & Groove Metal';
+                    } else if (cat.includes('death') || cat.includes('black') || cat.includes('grindcore') || cat.includes('extreme')) {
+                        pin.macroCategoria = 'Death & Extreme Metal';
+                    } else if (cat.includes('power') || cat.includes('progressive') || cat.includes('symphonic') || cat.includes('speed')) {
+                        pin.macroCategoria = 'Power & Prog Metal';
+                    } else if (cat.includes('punk') || cat.includes('hardcore') || cat.includes('grunge') || cat.includes('ska')) {
+                        pin.macroCategoria = 'Punk & Hardcore';
+                    } else {
+                        pin.macroCategoria = 'Rock en Español & Otros';
+                    }
+                });
+
                 pines.sort((a, b) => a.banda.localeCompare(b.banda));
                 
-                // --- NUEVO: Extraer géneros únicos y llenar el select ---
-                const generosUnicos = [...new Set(pines.map(pin => pin.categoria))].filter(Boolean).sort();
+                // Extraer macro-géneros únicos y llenar el select de forma limpia
+                const generosUnicos = [...new Set(pines.map(pin => pin.macroCategoria))].sort();
                 generosUnicos.forEach(genero => {
                     const option = document.createElement('option');
                     option.value = genero;
-                    option.innerText = genero;
+                    option.innerText = `🤘 ${genero}`;
                     genreFilter.appendChild(option);
                 });
-                // --------------------------------------------------------
 
                 marcarBotonActivo(letraSeleccionada);
                 filtrarPorLetra(letraSeleccionada);
@@ -603,6 +623,7 @@
         });
 
         // --- NUEVO LÓGICA: Evento del filtro de géneros ---
+        // Evento del filtro de macro-géneros
         genreFilter.addEventListener('change', (e) => {
             const genero = e.target.value;
             searchInput.value = ''; // Limpiamos la barra de texto
@@ -612,7 +633,7 @@
                 filtrarPorLetra('TODOS');
             } else {
                 marcarBotonActivo(''); // Quitamos el color rojo de las letras
-                const filtrados = pines.filter(pin => pin.categoria === genero);
+                const filtrados = pines.filter(pin => pin.macroCategoria === genero);
                 renderizarCatalogo(filtrados);
             }
         });
