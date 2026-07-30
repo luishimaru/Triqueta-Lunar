@@ -433,7 +433,7 @@
             </select>   
             
             <div class="alphabet-filter" id="alphabetContainer">
-                <button class="letter-btn active">TODOS</button>
+                <button class="letter-btn active">NUEVOS</button>
                 <button class="letter-btn">A</button>
                 <button class="letter-btn">B</button>
                 <button class="letter-btn">C</button>
@@ -521,15 +521,16 @@
 
     <script>
         let pines = [];
+        let pinesRecientes = []; // <-- NUEVA MEMORIA PARA LOS RECIENTES
         let carrito = JSON.parse(localStorage.getItem('triquetaCarrito')) || {};
         
         const genreFilter = document.getElementById('genreFilter');
         const grid = document.getElementById('catalogGrid');
         const searchInput = document.getElementById('searchInput');
         const letterBtns = document.querySelectorAll('.letter-btn');
-        let letraSeleccionada = localStorage.getItem('ultimaLetraCatalogo') || 'TODOS';
+        let letraSeleccionada = localStorage.getItem('ultimaLetraCatalogo') || 'NUEVOS'; // <-- CAMBIO AQUÍ
 
-    // 1. Inicializar catálogo y agrupar géneros generales (Mejorado)
+        // 1. Inicializar catálogo
         fetch('catalogo.json')
             .then(response => response.json())
             .then(data => {
@@ -563,7 +564,7 @@
                 });
 
                 pines.sort((a, b) => a.banda.localeCompare(b.banda));
-                
+                pinesRecientes = [...pines].reverse();
                 // Extraer macro-géneros únicos y llenar el select de forma limpia
                 const generosUnicos = [...new Set(pines.map(pin => pin.macroCategoria))].sort();
                 generosUnicos.forEach(genero => {
@@ -608,8 +609,8 @@
             searchInput.value = ''; 
             genreFilter.value = 'TODOS'; // Reinicia el filtro de género
 
-            if (letra === 'TODOS') {
-                renderizarCatalogo(pines, 30); 
+            if (letra === 'NUEVOS') {
+                renderizarCatalogo(pinesRecientes, 30); // Muestra los 30 más recientes
             } else {
                 const filtrados = pines.filter(pin => pin.banda.toUpperCase().startsWith(letra));
                 renderizarCatalogo(filtrados);
@@ -628,15 +629,14 @@
             renderizarCatalogo(filtrados);
         });
 
-        // --- NUEVO LÓGICA: Evento del filtro de géneros ---
-        // Evento del filtro de macro-géneros
+        
         genreFilter.addEventListener('change', (e) => {
             const genero = e.target.value;
             searchInput.value = ''; // Limpiamos la barra de texto
             
             if (genero === 'TODOS') {
-                marcarBotonActivo('TODOS');
-                filtrarPorLetra('TODOS');
+                marcarBotonActivo('NUEVOS');
+                filtrarPorLetra('NUEVOS');
             } else {
                 marcarBotonActivo(''); // Quitamos el color rojo de las letras
                 const filtrados = pines.filter(pin => pin.macroCategoria === genero);
