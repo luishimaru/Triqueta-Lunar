@@ -1353,5 +1353,95 @@
     "banda": "Slayer_Hell",
     "imagen": "Slayer_Hell.png",
     "categoria": "Thrash Metal"
+  },
+  {
+    "banda": "Tristania",
+    "imagen": "Tristania.png",
+    "categoria": "Gothic Metal"
+  },
+  {
+    "banda": "Sirenia",
+    "imagen": "Sirenia.png",
+    "categoria": "Gothic Metal"
+  },
+  {
+    "banda": "Tarja",
+    "imagen": "Tarja.png",
+    "categoria": "Symphonic Metal"
+  },
+  {
+    "banda": "Epica",
+    "imagen": "Epica.png",
+    "categoria": "Symphonic Metal"
+  },
+  {
+    "banda": "Within Temptation",
+    "imagen": "Within-Temptation.png",
+    "categoria": "Symphonic Metal"
+  },
+  {
+    "banda": "Moonspell",
+    "imagen": "Moonspell.png",
+    "categoria": "Gothic Metal"
+  },
+  {
+    "banda": "Lacuna Coil",
+    "imagen": "Lacuna-Coil.png",
+    "categoria": "Gothic Metal"
+  },
+  {
+    "banda": "Therion",
+    "imagen": "Therion.png",
+    "categoria": "Symphonic Metal"
+  },
+  {
+    "banda": "Tiamat",
+    "imagen": "Tiamat.png",
+    "categoria": "Gothic Metal"
+  },
+  {
+    "banda": "Paradise Lost",
+    "imagen": "Paradise-Lost.png",
+    "categoria": "Doom / Gothic Metal"
+  },
+  {
+    "banda": "My Dying Bride",
+    "imagen": "My-Dying-Bride.png",
+    "categoria": "Doom Metal"
+  },
+  {
+    "banda": "Draconian",
+    "imagen": "Draconian.png",
+    "categoria": "Doom / Gothic Metal"
+  },
+  {
+    "banda": "The Sins of Thy Beloved",
+    "imagen": "The-Sins-of-Thy-Beloved.png",
+    "categoria": "Gothic Metal"
+  },
+  {
+    "banda": "Xandria",
+    "imagen": "Xandria.png",
+    "categoria": "Symphonic Metal"
+  },
+  {
+    "banda": "Delain",
+    "imagen": "Delain.png",
+    "categoria": "Symphonic Metal"
+  },
+  {
+    "banda": "Katatonia",
+    "imagen": "Katatonia.png",
+    "categoria": "Doom / Gothic Metal"
+  },
+  {
+    "banda": "Crematory",
+    "imagen": "Crematory.png",
+    "categoria": "Gothic Metal"
+  },
+  {
+    "banda": "Deathstars",
+    "imagen": "Deathstars.png",
+    "categoria": "Industrial / Gothic Metal"
   }
 ]
