@@ -1578,5 +1578,95 @@
     "banda": "Tetragramaton",
     "imagen": "Tetragramaton.png",
     "categoria": "Gothic / Ocultismo"
+  },
+  {
+    "banda": "Candlemass",
+    "imagen": "Candlemass.png",
+    "categoria": "Doom Metal"
+  },
+  {
+    "banda": "Belphegor",
+    "imagen": "Belphegor.png",
+    "categoria": "Black / Death Metal"
+  },
+  {
+    "banda": "Taake",
+    "imagen": "Taake.png",
+    "categoria": "Black Metal"
+  },
+  {
+    "banda": "Enslaved",
+    "imagen": "Enslaved.png",
+    "categoria": "Black / Progressive Metal"
+  },
+  {
+    "banda": "Rotting Christ",
+    "imagen": "Rotting-Christ.png",
+    "categoria": "Black / Extreme Metal"
+  },
+  {
+    "banda": "Septicflesh",
+    "imagen": "Septicflesh.png",
+    "categoria": "Symphonic Death Metal"
+  },
+  {
+    "banda": "Bolt Thrower",
+    "imagen": "Bolt-Thrower.png",
+    "categoria": "Death Metal"
+  },
+  {
+    "banda": "At the Gates",
+    "imagen": "At-the-Gates.png",
+    "categoria": "Death Metal"
+  },
+  {
+    "banda": "In Flames",
+    "imagen": "In-Flames.png",
+    "categoria": "Death Metal"
+  },
+  {
+    "banda": "Entombed",
+    "imagen": "Entombed.png",
+    "categoria": "Death Metal"
+  },
+  {
+    "banda": "Gorguts",
+    "imagen": "Gorguts.png",
+    "categoria": "Death Metal"
+  },
+  {
+    "banda": "Vader",
+    "imagen": "Vader.png",
+    "categoria": "Death Metal"
+  },
+  {
+    "banda": "Krisiun",
+    "imagen": "Krisiun.png",
+    "categoria": "Death Metal"
+  },
+  {
+    "banda": "Bloodbath",
+    "imagen": "Bloodbath.png",
+    "categoria": "Death Metal"
+  },
+  {
+    "banda": "Hypocrisy",
+    "imagen": "Hypocrisy.png",
+    "categoria": "Death Metal"
+  },
+  {
+    "banda": "Autopsy",
+    "imagen": "Autopsy.png",
+    "categoria": "Death Metal"
+  },
+  {
+    "banda": "Gorgoroth",
+    "imagen": "Gorgoroth.png",
+    "categoria": "Black Metal"
+  },
+  {
+    "banda": "Marduk",
+    "imagen": "Marduk.png",
+    "categoria": "Black Metal"
   }
 ]
