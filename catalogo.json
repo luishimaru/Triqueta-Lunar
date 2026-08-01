@@ -1668,5 +1668,25 @@
     "banda": "Marduk",
     "imagen": "Marduk.png",
     "categoria": "Black Metal"
+  },
+  {
+    "banda": "Manowar Fighting the World",
+    "imagen": "Manowar-Fighting-the-World.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "Manowar Hammer",
+    "imagen": "Manowar-Hammer.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "Manowar Sign of the Hammer",
+    "imagen": "Manowar-Sign-of-the-Hammer.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "Manowar Classic Logo",
+    "imagen": "Manowar-Classic-Logo.png",
+    "categoria": "Heavy Metal"
   }
 ]
