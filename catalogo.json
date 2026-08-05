@@ -805,8 +805,12 @@
     "categoria": "Black Metal"
   },
   {
-    "banda": "Dark Tranquility",
-    "imagen": "Dark-Tranquility.png",
+    "banda": "Dark Tranquillity Classic Logo",
+    "imagen": "Dark-Tranquillity-Classic-Logo.png",
+    "categoria": "Melodic Death Metal"
+  },{
+    "banda": "Dark Tranquillity Modern Logo",
+    "imagen": "Dark-Tranquillity-Modern-Logo.png",
     "categoria": "Melodic Death Metal"
   },
   {
