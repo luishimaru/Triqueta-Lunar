@@ -1719,7 +1719,7 @@
     "categoria": "Punk Rock"
   },
   {
-    "banda": "D.R.I",
+    "banda": "D.R.I.",
     "imagen": "D.R.I.png",
     "categoria": "Crossover Thrash"
   },
@@ -1779,23 +1779,23 @@
     "categoria": "Hardcore Punk"
   },
   {
-    "banda": "Anarquia logo",
+    "banda": "Anarquia Logo",
     "imagen": "Anarquia-logo.png",
     "categoria": "Punk Rock"
   },
   {
-    "banda": "OI boots",
+    "banda": "Oi! Boots",
     "imagen": "OI-boots.png",
     "categoria": "Street Punk / Oi!"
   },
   {
-    "banda": "Anarquia logo 2",
+    "banda": "Anarquia Logo 2",
     "imagen": "Anarquia-logo-2.png",
     "categoria": "Punk Rock"
   },
   {
     "banda": "Liege Lord",
-    "imagen": "Liege-Lord.png",
+    "imagen": "LiegeLord.png",
     "categoria": "Speed Metal"
   },
   {
@@ -1810,7 +1810,7 @@
   },
   {
     "banda": "Voïvod",
-    "imagen": "Voïvod.png",
+    "imagen": "Voivod.png",
     "categoria": "Progressive Thrash Metal"
   },
   {
@@ -1830,12 +1830,12 @@
   },
   {
     "banda": "Infernal Majesty",
-    "imagen": "Infernal-Majesty.png",
+    "imagen": "infernal-majesty.png",
     "categoria": "Thrash Metal"
   },
   {
     "banda": "Onslaught",
-    "imagen": "Onslaught.png",
+    "imagen": "onslaught.png",
     "categoria": "Thrash Metal"
   },
   {
@@ -1845,7 +1845,7 @@
   },
   {
     "banda": "Apocalyptica",
-    "imagen": "Apocalyptica.png",
+    "imagen": "apocalyptica.png",
     "categoria": "Symphonic Metal"
   },
   {
@@ -1905,7 +1905,7 @@
   },
   {
     "banda": "Accept Classic Logo",
-    "imagen": "Accept-Classic-Logo.png",
+    "imagen": "Accept-classic-logo.png",
     "categoria": "Heavy Metal"
   },
   {
@@ -1915,7 +1915,7 @@
   },
   {
     "banda": "La Pestilencia Buitre 2",
-    "imagen": "La-Pestilencia-Buitre-2.png",
+    "imagen": "la-pestilencia-buitre-2.png",
     "categoria": "Hardcore Punk"
   },
   {
@@ -1925,12 +1925,12 @@
   },
   {
     "banda": "Mercyful Fate Classic Logo",
-    "imagen": "Mercyful-Fate-Classic-Logo.png",
+    "imagen": "Mercyful-Fate-classic-logo.png",
     "categoria": "Heavy Metal"
   },
   {
-    "banda": "Pantera Vulgar Display of Power Skull",
-    "imagen": "Pantera-Vulgar-Display-of-Power-Skull.png",
+    "banda": "Pantera Vulgar Display Of Power Skull",
+    "imagen": "Pantera-vulgar-dispaly-of-power-skull.png",
     "categoria": "Groove Metal"
   },
   {
@@ -1950,27 +1950,27 @@
   },
   {
     "banda": "Sonata Arctica Classic",
-    "imagen": "Sonata-Arctica-Classic.png",
+    "imagen": "Sonata-arctica-classic.png",
     "categoria": "Power Metal"
   },
   {
     "banda": "Sonata Arctica Logo",
-    "imagen": "Sonata-Arctica-Logo.png",
+    "imagen": "Sonata-arctica-logo.png",
     "categoria": "Power Metal"
   },
   {
     "banda": "Exodus Classic Logo",
-    "imagen": "Exodus-Classic-Logo.png",
+    "imagen": "Exodus-classic-logo.png",
     "categoria": "Thrash Metal"
   },
   {
     "banda": "Children of Bodom Classic Logo",
-    "imagen": "Children-of-Bodom-Classic-Logo.png",
+    "imagen": "Children-of-Bodom-classic-logo.png",
     "categoria": "Melodic Death Metal"
   },
   {
     "banda": "HellRipper Classic Logo",
-    "imagen": "HellRipper-Classic-Logo.png",
+    "imagen": "HellRipper-classic-logo.png",
     "categoria": "Black/Speed Metal"
   },
   {
@@ -1980,12 +1980,12 @@
   },
   {
     "banda": "Stratovarius Classic Logo",
-    "imagen": "Stratovarius-Classic-Logo.png",
+    "imagen": "Stratovarius-classic-logo.png",
     "categoria": "Power Metal"
   },
   {
     "banda": "Stratovarius Logo",
-    "imagen": "Stratovarius-Logo.png",
+    "imagen": "Stratovarius-logo.png",
     "categoria": "Power Metal"
   }
 ]
