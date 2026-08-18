@@ -1692,5 +1692,300 @@
     "banda": "Manowar Classic Logo",
     "imagen": "Manowar-Classic-Logo.png",
     "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "Circle Jerks",
+    "imagen": "Circle-Jerks.png",
+    "categoria": "Punk Rock"
+  },
+  {
+    "banda": "Operation Ivy",
+    "imagen": "Operation-Ivy.png",
+    "categoria": "Ska Punk"
+  },
+  {
+    "banda": "Gorilla Biscuits",
+    "imagen": "Gorilla-Biscuits.png",
+    "categoria": "Hardcore Punk"
+  },
+  {
+    "banda": "Descendents Milo",
+    "imagen": "Descendents-Milo.png",
+    "categoria": "Punk Rock"
+  },
+  {
+    "banda": "Social Distortion",
+    "imagen": "Social-Distortion.png",
+    "categoria": "Punk Rock"
+  },
+  {
+    "banda": "D.R.I",
+    "imagen": "D.R.I.png",
+    "categoria": "Crossover Thrash"
+  },
+  {
+    "banda": "The Adicts",
+    "imagen": "The-Adicts.png",
+    "categoria": "Punk Rock"
+  },
+  {
+    "banda": "The Exploited",
+    "imagen": "The-Exploited.png",
+    "categoria": "Punk Rock"
+  },
+  {
+    "banda": "Screeching Weasel",
+    "imagen": "Screeching-Weasel.png",
+    "categoria": "Punk Rock"
+  },
+  {
+    "banda": "The Toy Dolls",
+    "imagen": "The-Toy-Dolls.png",
+    "categoria": "Punk Rock"
+  },
+  {
+    "banda": "Suicidal Tendencies",
+    "imagen": "Suicidal-Tendencies.png",
+    "categoria": "Crossover Thrash"
+  },
+  {
+    "banda": "Agnostic Front",
+    "imagen": "Agnostic-Front.png",
+    "categoria": "Hardcore Punk"
+  },
+  {
+    "banda": "BBS Paranoicos",
+    "imagen": "BBS-Paranoicos.png",
+    "categoria": "Punk Rock"
+  },
+  {
+    "banda": "La Pestilencia Buitre",
+    "imagen": "La-Pestilencia-Buitre.png",
+    "categoria": "Hardcore Punk"
+  },
+  {
+    "banda": "Los Peores de Chile",
+    "imagen": "Los-Peores-de-Chile.png",
+    "categoria": "Punk Rock"
+  },
+  {
+    "banda": "Bad Brains",
+    "imagen": "Bad-Brains.png",
+    "categoria": "Hardcore Punk"
+  },
+  {
+    "banda": "Discharge",
+    "imagen": "Discharge.png",
+    "categoria": "Hardcore Punk"
+  },
+  {
+    "banda": "Anarquia logo",
+    "imagen": "Anarquia-logo.png",
+    "categoria": "Punk Rock"
+  },
+  {
+    "banda": "OI boots",
+    "imagen": "OI-boots.png",
+    "categoria": "Street Punk / Oi!"
+  },
+  {
+    "banda": "Anarquia logo 2",
+    "imagen": "Anarquia-logo-2.png",
+    "categoria": "Punk Rock"
+  },
+  {
+    "banda": "Liege Lord",
+    "imagen": "Liege-Lord.png",
+    "categoria": "Speed Metal"
+  },
+  {
+    "banda": "Razor",
+    "imagen": "Razor.png",
+    "categoria": "Thrash Metal"
+  },
+  {
+    "banda": "Sacrifice",
+    "imagen": "Sacrifice.png",
+    "categoria": "Thrash Metal"
+  },
+  {
+    "banda": "Voïvod",
+    "imagen": "Voïvod.png",
+    "categoria": "Progressive Thrash Metal"
+  },
+  {
+    "banda": "Atrophy",
+    "imagen": "Atrophy.png",
+    "categoria": "Thrash Metal"
+  },
+  {
+    "banda": "Slaughter",
+    "imagen": "Slaughter.png",
+    "categoria": "Thrash / Death Metal"
+  },
+  {
+    "banda": "Living Death",
+    "imagen": "Living-Death.png",
+    "categoria": "Thrash Metal"
+  },
+  {
+    "banda": "Infernal Majesty",
+    "imagen": "Infernal-Majesty.png",
+    "categoria": "Thrash Metal"
+  },
+  {
+    "banda": "Onslaught",
+    "imagen": "Onslaught.png",
+    "categoria": "Thrash Metal"
+  },
+  {
+    "banda": "Viking",
+    "imagen": "Viking.png",
+    "categoria": "Thrash Metal"
+  },
+  {
+    "banda": "Apocalyptica",
+    "imagen": "Apocalyptica.png",
+    "categoria": "Symphonic Metal"
+  },
+  {
+    "banda": "Metallica Snake",
+    "imagen": "Metallica-Snake.png",
+    "categoria": "Thrash Metal"
+  },
+  {
+    "banda": "Metallica Star",
+    "imagen": "Metallica-Star.png",
+    "categoria": "Thrash Metal"
+  },
+  {
+    "banda": "Metallica Master Of Puppets",
+    "imagen": "Metallica-Master-Of-Puppets.png",
+    "categoria": "Thrash Metal"
+  },
+  {
+    "banda": "Metallica Classic Logo",
+    "imagen": "Metallica-Classic-Logo.png",
+    "categoria": "Thrash Metal"
+  },
+  {
+    "banda": "Kreator Skulls",
+    "imagen": "Kreator-Skulls.png",
+    "categoria": "Thrash Metal"
+  },
+  {
+    "banda": "Kreator Snakes",
+    "imagen": "Kreator-Snakes.png",
+    "categoria": "Thrash Metal"
+  },
+  {
+    "banda": "Kreator Coma Of Souls",
+    "imagen": "Kreator-Coma-Of-Souls.png",
+    "categoria": "Thrash Metal"
+  },
+  {
+    "banda": "Kreator Classic Logo",
+    "imagen": "Kreator-Classic-Logo.png",
+    "categoria": "Thrash Metal"
+  },
+  {
+    "banda": "Lucifera",
+    "imagen": "Lucifera.png",
+    "categoria": "Black / Thrash Metal"
+  },
+  {
+    "banda": "Lucifera Classic Logo",
+    "imagen": "Lucifera-Classic-Logo.png",
+    "categoria": "Black / Thrash Metal"
+  },
+  {
+    "banda": "Lacrimosa",
+    "imagen": "Lacrimosa.png",
+    "categoria": "Gothic Metal"
+  },
+  {
+    "banda": "Accept Classic Logo",
+    "imagen": "Accept-Classic-Logo.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "King Diamond Classic Logo",
+    "imagen": "King-Diamond-Classic-Logo.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "La Pestilencia Buitre 2",
+    "imagen": "La-Pestilencia-Buitre-2.png",
+    "categoria": "Hardcore Punk"
+  },
+  {
+    "banda": "Testament Classic Logo",
+    "imagen": "Testament-Classic-Logo.png",
+    "categoria": "Thrash Metal"
+  },
+  {
+    "banda": "Mercyful Fate Classic Logo",
+    "imagen": "Mercyful-Fate-Classic-Logo.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "Pantera Vulgar Display of Power Skull",
+    "imagen": "Pantera-Vulgar-Display-of-Power-Skull.png",
+    "categoria": "Groove Metal"
+  },
+  {
+    "banda": "Pantera Smoking Skull",
+    "imagen": "Pantera-Smoking-Skull.png",
+    "categoria": "Groove Metal"
+  },
+  {
+    "banda": "Pantera Skeleton Cowboy",
+    "imagen": "Pantera-Skeleton-Cowboy.png",
+    "categoria": "Groove Metal"
+  },
+  {
+    "banda": "Saratoga",
+    "imagen": "Saratoga.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "Sonata Arctica Classic",
+    "imagen": "Sonata-Arctica-Classic.png",
+    "categoria": "Power Metal"
+  },
+  {
+    "banda": "Sonata Arctica Logo",
+    "imagen": "Sonata-Arctica-Logo.png",
+    "categoria": "Power Metal"
+  },
+  {
+    "banda": "Exodus Classic Logo",
+    "imagen": "Exodus-Classic-Logo.png",
+    "categoria": "Thrash Metal"
+  },
+  {
+    "banda": "Children of Bodom Classic Logo",
+    "imagen": "Children-of-Bodom-Classic-Logo.png",
+    "categoria": "Melodic Death Metal"
+  },
+  {
+    "banda": "HellRipper Classic Logo",
+    "imagen": "HellRipper-Classic-Logo.png",
+    "categoria": "Black/Speed Metal"
+  },
+  {
+    "banda": "Hirax Classic Logo",
+    "imagen": "Hirax-Classic-Logo.png",
+    "categoria": "Thrash Metal"
+  },
+  {
+    "banda": "Stratovarius Classic Logo",
+    "imagen": "Stratovarius-Classic-Logo.png",
+    "categoria": "Power Metal"
+  },
+  {
+    "banda": "Stratovarius Logo",
+    "imagen": "Stratovarius-Logo.png",
+    "categoria": "Power Metal"
   }
 ]
