@@ -173,7 +173,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
             gap: 15px;
-            margin-bottom: 4rem;
+            margin-bottom: 2rem; 
         }
 
         .pin-card {
@@ -273,6 +273,41 @@
             align-items: center;
             justify-content: center;
             box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 5rem;
+            width: 100%;
+        }
+
+        .page-btn {
+            background: #1a1a1a;
+            color: white;
+            border: 1px solid #333;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: 'Oswald', sans-serif;
+            transition: all 0.3s;
+        }
+
+        .page-btn:hover:not(:disabled) {
+            background: var(--accent-red);
+            border-color: #ff4444;
+        }
+
+        .page-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .page-indicator {
+            font-family: 'Oswald', sans-serif;
+            color: var(--text-muted);
+            font-size: 1.1rem;
         }
 
         /* --- PANEL LATERAL CARRITO (Oculto por ahora) --- */
@@ -500,9 +535,11 @@
         </div>
         
         <div class="catalog-grid" id="catalogGrid">
-            
-        
+            <!-- Los pines se inyectan aquí -->
         </div>
+
+        <!-- NUEVO CONTENEDOR DE PAGINACIÓN -->
+        <div class="pagination" id="paginationControls"></div>
     </div>
 
     
@@ -531,8 +568,13 @@
 
     <script>
         let pines = [];
-        let pinesRecientes = []; // <-- NUEVA MEMORIA PARA LOS RECIENTES
+        let pinesRecientes = []; 
         let carrito = JSON.parse(localStorage.getItem('triquetaCarrito')) || {};
+        
+        // --- NUEVAS VARIABLES DE PAGINACIÓN ---
+        let paginaActual = 1;
+        const pinesPorPagina = 30;
+        let listaFiltroActual = []; // Guarda la lista que estamos viendo en este momento
         
         const genreFilter = document.getElementById('genreFilter');
         const grid = document.getElementById('catalogGrid');
@@ -540,7 +582,6 @@
         const letterBtns = document.querySelectorAll('.letter-btn');
         let letraSeleccionada = localStorage.getItem('ultimaLetraCatalogo') || 'NUEVOS'; 
 
-        
         fetch('catalogo.json')
             .then(response => response.json())
             .then(data => {
@@ -550,54 +591,27 @@
                     let cat = (pin.categoria || "").toLowerCase();
                     pin.macroCategorias = []; 
                     
-                    if (cat.includes('rock en español')) {
-                        pin.macroCategorias.push('Rock en Español');
-                    } 
-                    if (cat.includes('gothic') || cat.includes('goth') || cat.includes('doom') || cat.includes('post-punk')) {
-                        pin.macroCategorias.push('Gótico, Doom & Post-Punk');
-                    } 
-                    if (cat.includes('ocultismo') || cat.includes('occult')) {
-                        pin.macroCategorias.push('Ocultismo & Estética');
-                    }
-                    if (cat.includes('nu metal') || cat.includes('industrial') || cat.includes('alternative') || cat.includes('metalcore') || cat.includes('grunge')) {
-                        pin.macroCategorias.push('Nu Metal & Alternativo');
-                    } 
-                    if (cat.includes('heavy') || cat.includes('hard rock') || cat.includes('glam')) {
-                        pin.macroCategorias.push('Heavy & Hard Rock');
-                    } 
-                    if (cat.includes('thrash') || cat.includes('groove') || cat.includes('speed') || cat.includes('crossover')) {
-                        pin.macroCategorias.push('Thrash & Speed Metal');
-                    } 
-                    if (cat.includes('black')) {
-                        pin.macroCategorias.push('Black Metal');
-                    } 
-                    if (cat.includes('death') || cat.includes('grindcore') || cat.includes('brutal')) {
-                        pin.macroCategorias.push('Death Metal & Grindcore');
-                    } 
-                    if (cat.includes('power') || cat.includes('progressive') || cat.includes('symphonic') || cat.includes('folk')) {
-                        pin.macroCategorias.push('Power, Prog & Folk Metal');
-                    } 
-                    if (cat.includes('punk') || cat.includes('hardcore') || cat.includes('ska') || cat.includes('oi!')) {
-                        pin.macroCategorias.push('Punk & Hardcore');
-                    } 
-                    if (cat.includes('rock') && !cat.includes('hard rock') && !cat.includes('punk rock') && !cat.includes('rock en español')) {
-                        pin.macroCategorias.push('Rock Clásico & General');
-                    }
-                    
-                    if (pin.macroCategorias.length === 0) {
-                        pin.macroCategorias.push('Metal & Variantes');
-                    }
+                    if (cat.includes('rock en español')) pin.macroCategorias.push('Rock en Español');
+                    if (cat.includes('gothic') || cat.includes('goth') || cat.includes('doom') || cat.includes('post-punk')) pin.macroCategorias.push('Gótico, Doom & Post-Punk');
+                    if (cat.includes('ocultismo') || cat.includes('occult')) pin.macroCategorias.push('Ocultismo & Estética');
+                    if (cat.includes('nu metal') || cat.includes('industrial') || cat.includes('alternative') || cat.includes('metalcore') || cat.includes('grunge')) pin.macroCategorias.push('Nu Metal & Alternativo');
+                    if (cat.includes('heavy') || cat.includes('hard rock') || cat.includes('glam')) pin.macroCategorias.push('Heavy & Hard Rock');
+                    if (cat.includes('thrash') || cat.includes('groove') || cat.includes('speed') || cat.includes('crossover')) pin.macroCategorias.push('Thrash & Speed Metal');
+                    if (cat.includes('black')) pin.macroCategorias.push('Black Metal');
+                    if (cat.includes('death') || cat.includes('grindcore') || cat.includes('brutal')) pin.macroCategorias.push('Death Metal & Grindcore');
+                    if (cat.includes('power') || cat.includes('progressive') || cat.includes('symphonic') || cat.includes('folk')) pin.macroCategorias.push('Power, Prog & Folk Metal');
+                    if (cat.includes('punk') || cat.includes('hardcore') || cat.includes('ska') || cat.includes('oi!')) pin.macroCategorias.push('Punk & Hardcore');
+                    if (cat.includes('rock') && !cat.includes('hard rock') && !cat.includes('punk rock') && !cat.includes('rock en español')) pin.macroCategorias.push('Rock Clásico & General');
+                    if (pin.macroCategorias.length === 0) pin.macroCategorias.push('Metal & Variantes');
                 });
 
+                // Los más recientes conservan el orden inverso
                 pinesRecientes = [...pines].reverse();
-
+                // El resto del catálogo se organiza alfabéticamente
                 pines.sort((a, b) => a.banda.localeCompare(b.banda));
                 
                 let todosLosGeneros = [];
-                pines.forEach(pin => {
-                    todosLosGeneros.push(...pin.macroCategorias);
-                });
-                
+                pines.forEach(pin => todosLosGeneros.push(...pin.macroCategorias));
                 const generosUnicos = [...new Set(todosLosGeneros)].sort();
                 
                 generosUnicos.forEach(genero => {
@@ -613,16 +627,70 @@
             })
             .catch(error => console.error("Error cargando el catálogo:", error));
 
-        function renderizarCatalogo(lista, limite = null) {
-            grid.innerHTML = ''; 
-            const itemsAMostrar = limite ? lista.slice(0, limite) : lista;
+        // --- SISTEMA DE PAGINACIÓN ---
+        function actualizarPaginacion() {
+            // Calcular los índices de los 30 logos correspondientes a la página actual
+            const inicio = (paginaActual - 1) * pinesPorPagina;
+            const fin = inicio + pinesPorPagina;
+            const pinesAMostrar = listaFiltroActual.slice(inicio, fin);
+            
+            renderizarCatalogo(pinesAMostrar);
+            renderizarControlesPaginacion();
+        }
 
-            if (itemsAMostrar.length === 0) {
+        function renderizarControlesPaginacion() {
+            const container = document.getElementById('paginationControls');
+            container.innerHTML = ''; 
+            
+            const totalPaginas = Math.ceil(listaFiltroActual.length / pinesPorPagina);
+            
+            if (totalPaginas <= 1) return; // Si no hay suficientes para 2 páginas, no mostrar botones
+
+            // Botón Anterior
+            const btnPrev = document.createElement('button');
+            btnPrev.className = 'page-btn';
+            btnPrev.innerHTML = '<i class="fas fa-chevron-left"></i> Anterior';
+            btnPrev.disabled = paginaActual === 1;
+            btnPrev.onclick = () => {
+                if (paginaActual > 1) {
+                    paginaActual--;
+                    actualizarPaginacion();
+                    // Hace scroll automático suave hacia arriba al cambiar de página
+                    document.querySelector('.tools-panel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            };
+            container.appendChild(btnPrev);
+
+            // Indicador de texto
+            const indicador = document.createElement('span');
+            indicador.className = 'page-indicator';
+            indicador.innerText = `Página ${paginaActual} de ${totalPaginas}`;
+            container.appendChild(indicador);
+
+            // Botón Siguiente
+            const btnNext = document.createElement('button');
+            btnNext.className = 'page-btn';
+            btnNext.innerHTML = 'Siguiente <i class="fas fa-chevron-right"></i>';
+            btnNext.disabled = paginaActual === totalPaginas;
+            btnNext.onclick = () => {
+                if (paginaActual < totalPaginas) {
+                    paginaActual++;
+                    actualizarPaginacion();
+                    document.querySelector('.tools-panel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            };
+            container.appendChild(btnNext);
+        }
+
+        function renderizarCatalogo(lista) {
+            grid.innerHTML = ''; 
+
+            if (lista.length === 0) {
                 grid.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: #888;">No se encontraron diseños.</p>';
                 return;
             }
 
-            itemsAMostrar.forEach(pin => {
+            lista.forEach(pin => {
                 const card = document.createElement('div');
                 card.className = 'pin-card';
                 card.innerHTML = `
@@ -636,18 +704,20 @@
             });
         }
 
+        // --- FILTROS ---
         function filtrarPorLetra(letra) {
             letraSeleccionada = letra;
             localStorage.setItem('ultimaLetraCatalogo', letra); 
             searchInput.value = ''; 
             genreFilter.value = 'TODOS'; 
+            paginaActual = 1; // Reinicia a la página 1
 
             if (letra === 'NUEVOS') {
-                renderizarCatalogo(pinesRecientes, 30); 
+                listaFiltroActual = pinesRecientes;
             } else {
-                const filtrados = pines.filter(pin => pin.banda.toUpperCase().startsWith(letra));
-                renderizarCatalogo(filtrados);
+                listaFiltroActual = pines.filter(pin => pin.banda.toUpperCase().startsWith(letra));
             }
+            actualizarPaginacion();
         }
 
         searchInput.addEventListener('input', (e) => {
@@ -658,21 +728,23 @@
                 return;
             }
             letterBtns.forEach(b => b.classList.remove('active'));
-            const filtrados = pines.filter(pin => pin.banda.toLowerCase().includes(termino));
-            renderizarCatalogo(filtrados);
+            listaFiltroActual = pines.filter(pin => pin.banda.toLowerCase().includes(termino));
+            paginaActual = 1;
+            actualizarPaginacion();
         });
 
         genreFilter.addEventListener('change', (e) => {
             const genero = e.target.value;
             searchInput.value = ''; 
+            paginaActual = 1;
             
             if (genero === 'TODOS') {
                 marcarBotonActivo('NUEVOS');
                 filtrarPorLetra('NUEVOS');
             } else {
                 marcarBotonActivo(''); 
-                const filtrados = pines.filter(pin => pin.macroCategorias.includes(genero));
-                renderizarCatalogo(filtrados);
+                listaFiltroActual = pines.filter(pin => pin.macroCategorias.includes(genero));
+                actualizarPaginacion();
             }
         });
 
@@ -690,6 +762,7 @@
                 else btn.classList.remove('active');
             });
         }
+
 
         // --- SISTEMA DEL CARRITO ---
         
