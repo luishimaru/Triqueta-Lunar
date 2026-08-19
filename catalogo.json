@@ -1987,5 +1987,105 @@
     "banda": "Stratovarius Logo",
     "imagen": "Stratovarius-logo.png",
     "categoria": "Power Metal"
+  },
+  {
+    "banda": "Pearl Jam Alive",
+    "imagen": "pearl-jam-alive.png",
+    "categoria": "Grunge"
+  },
+  {
+    "banda": "Alice in Chains",
+    "imagen": "alice-in-chains.png",
+    "categoria": "Grunge"
+  },
+  {
+    "banda": "The Beatles",
+    "imagen": "the-beatles.png",
+    "categoria": "Classic Rock"
+  },
+  {
+    "banda": "David Bowie",
+    "imagen": "david-bowie.png",
+    "categoria": "Classic Rock"
+  },
+  {
+    "banda": "Rush",
+    "imagen": "rush.png",
+    "categoria": "Progressive Rock"
+  },
+  {
+    "banda": "Rush Starman",
+    "imagen": "rush-starman.png",
+    "categoria": "Progressive Rock"
+  },
+  {
+    "banda": "Barón Rojo",
+    "imagen": "barón-rojo.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "Caifanes",
+    "imagen": "caifanes-seeklogo.png",
+    "categoria": "Rock en Español"
+  },
+  {
+    "banda": "Los Fabulosos Cadillacs",
+    "imagen": "los-fabulosos-cadillacs.png",
+    "categoria": "Rock en Español"
+  },
+  {
+    "banda": "Red Hot Chili Peppers",
+    "imagen": "red-hot-chili-peppers.png",
+    "categoria": "Alternative Rock"
+  },
+  {
+    "banda": "Foo Fighters",
+    "imagen": "foo-fighters.png",
+    "categoria": "Alternative Rock"
+  },
+  {
+    "banda": "Radiohead",
+    "imagen": "radiohead.png",
+    "categoria": "Alternative Rock"
+  },
+  {
+    "banda": "Gorillaz",
+    "imagen": "gorillaz-hoz.png",
+    "categoria": "Alternative Rock"
+  },
+  {
+    "banda": "The Smashing Pumpkins",
+    "imagen": "the-smashing-pumpkins.png",
+    "categoria": "Alternative Rock"
+  },
+  {
+    "banda": "Soundgarden",
+    "imagen": "soundgarden.png",
+    "categoria": "Grunge"
+  },
+  {
+    "banda": "Stone Temple Pilots",
+    "imagen": "stone-temple-pilots.png",
+    "categoria": "Grunge"
+  },
+  {
+    "banda": "Faith No More",
+    "imagen": "faith-no-more.png",
+    "categoria": "Alternative Metal"
+  },
+  {
+    "banda": "Disturbed",
+    "imagen": "disturbed.png",
+    "categoria": "Nu Metal"
+  },
+  {
+    "banda": "Five Finger Death Punch",
+    "imagen": "five-finger-death-punch.png",
+    "categoria": "Groove Metal"
+  },
+  {
+    "banda": "Trivium",
+    "imagen": "trivium.png",
+    "categoria": "Metalcore"
   }
 ]
