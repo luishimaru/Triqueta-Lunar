@@ -2165,7 +2165,7 @@
   },
   {
     "banda": "Killswitch Engage",
-    "imagen": "Killswitch-engage.png",
+    "imagen": "Killswitch-Engage.png",
     "categoria": "Metalcore"
   },
   {
@@ -2188,7 +2188,6 @@
     "imagen": "Obus.png",
     "categoria": "Heavy Metal"
   },
-  [
   {
     "banda": "Europe",
     "imagen": "Europe.png",
@@ -2304,5 +2303,4 @@
     "imagen": "GWAR.png",
     "categoria": "Thrash Metal"
   }
-]
 ]
