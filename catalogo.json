@@ -2165,7 +2165,7 @@
   },
   {
     "banda": "Killswitch Engage",
-    "imagen": "Killswitch-Engage.png",
+    "imagen": "Killswitch-engage.png",
     "categoria": "Metalcore"
   },
   {
@@ -2187,5 +2187,122 @@
     "banda": "Obús",
     "imagen": "Obus.png",
     "categoria": "Heavy Metal"
+  },
+  [
+  {
+    "banda": "Europe",
+    "imagen": "Europe.png",
+    "categoria": "Hard Rock"
+  },
+  {
+    "banda": "Animal",
+    "imagen": "Animal.png",
+    "categoria": "Groove Metal"
+  },
+  {
+    "banda": "Dark Angel",
+    "imagen": "Dark-Angel.png",
+    "categoria": "Thrash Metal"
+  },
+  {
+    "banda": "Transmetal",
+    "imagen": "Transmetal.png",
+    "categoria": "Thrash Metal"
+  },
+  {
+    "banda": "Strike Master",
+    "imagen": "Strike-Master.png",
+    "categoria": "Thrash Metal"
+  },
+  {
+    "banda": "Saurom",
+    "imagen": "Saurom.png",
+    "categoria": "Folk Metal"
+  },
+  {
+    "banda": "Hellhammer",
+    "imagen": "Hellhammer.png",
+    "categoria": "Black Metal"
+  },
+  {
+    "banda": "Edguy",
+    "imagen": "Edguy.png",
+    "categoria": "Power Metal"
+  },
+  {
+    "banda": "Rainbow",
+    "imagen": "Rainbow.png",
+    "categoria": "Hard Rock"
+  },
+  {
+    "banda": "Nervosa",
+    "imagen": "Nervosa.png",
+    "categoria": "Thrash Metal"
+  },
+  {
+    "banda": "Doro",
+    "imagen": "Doro.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "Mudvayne",
+    "imagen": "Mudvayne.png",
+    "categoria": "Nu Metal"
+  },
+  {
+    "banda": "Electric Wizard",
+    "imagen": "Electric-Wizard.png",
+    "categoria": "Doom Metal"
+  },
+  {
+    "banda": "HIM",
+    "imagen": "Him.png",
+    "categoria": "Gothic Metal"
+  },
+  {
+    "banda": "Sleep",
+    "imagen": "Sleep.png",
+    "categoria": "Doom Metal"
+  },
+  {
+    "banda": "Melvins",
+    "imagen": "melvins.png",
+    "categoria": "Sludge Metal"
+  },
+  {
+    "banda": "AFI",
+    "imagen": "AFI.png",
+    "categoria": "Punk Rock"
+  },
+  {
+    "banda": "Alkaline Trio",
+    "imagen": "Alkaline-Trio.png",
+    "categoria": "Punk Rock"
+  },
+  {
+    "banda": "The Damned",
+    "imagen": "The-Damned.png",
+    "categoria": "Punk Rock"
+  },
+  {
+    "banda": "Ministry",
+    "imagen": "Ministry.png",
+    "categoria": "Industrial Metal"
+  },
+  {
+    "banda": "Ministry Classic Logo",
+    "imagen": "Ministry-Classic-Logo.png",
+    "categoria": "Industrial Metal"
+  },
+  {
+    "banda": "Kittie",
+    "imagen": "Kittie.png",
+    "categoria": "Nu Metal"
+  },
+  {
+    "banda": "GWAR",
+    "imagen": "GWAR.png",
+    "categoria": "Thrash Metal"
   }
+]
 ]
