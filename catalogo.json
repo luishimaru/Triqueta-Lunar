@@ -1990,7 +1990,7 @@
   },
   {
     "banda": "Pearl Jam",
-    "imagen": "Pearl-Jam.png",
+    "imagen": "Pearl-Jam-Alive.png",
     "categoria": "Grunge"
   },
   {
@@ -2025,7 +2025,7 @@
   },
   {
     "banda": "Caifanes",
-    "imagen": "Caifanes.png",
+    "imagen": "Caifanes-seeklogo.png",
     "categoria": "Rock en Español"
   },
   {
@@ -2050,7 +2050,7 @@
   },
   {
     "banda": "Gorillaz",
-    "imagen": "Gorillaz.png",
+    "imagen": "Gorillaz-hoz.png",
     "categoria": "Alternative Rock"
   },
   {
@@ -2179,8 +2179,8 @@
     "categoria": "Black / Industrial Metal"
   },
   {
-    "banda": "Behemoth Classic Logo",
-    "imagen": "Behemoth-Classic-Logo.png",
+    "banda": "Behemoth",
+    "imagen": "behemoth-classic-logo.png",
     "categoria": "Black/Death Metal"
   },
   {
