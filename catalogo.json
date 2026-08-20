@@ -1990,182 +1990,182 @@
   },
   {
     "banda": "Pearl Jam",
-    "imagen": "Pearl Jam Alive.png",
+    "imagen": "pearl-jam-alive.png",
     "categoria": "Grunge"
   },
   {
     "banda": "Alice in Chains",
-    "imagen": "Alice in Chains.png",
+    "imagen": "alice-in-chains.png",
     "categoria": "Grunge"
   },
   {
     "banda": "The Beatles",
-    "imagen": "The Beatles.png",
+    "imagen": "the-beatles.png",
     "categoria": "Classic Rock"
   },
   {
     "banda": "David Bowie",
-    "imagen": "David Bowie.png",
+    "imagen": "david-bowie.png",
     "categoria": "Classic Rock"
   },
   {
     "banda": "Rush",
-    "imagen": "Rush.png",
+    "imagen": "rush.png",
     "categoria": "Progressive Rock"
   },
   {
     "banda": "Rush Starman",
-    "imagen": "Rush Starman.png",
+    "imagen": "rush-starman.png",
     "categoria": "Progressive Rock"
   },
   {
     "banda": "Barón Rojo",
-    "imagen": "Barón Rojo.png",
+    "imagen": "baron-rojo.png",
     "categoria": "Heavy Metal"
   },
   {
     "banda": "Caifanes",
-    "imagen": "Caifanes seeklogo.png",
+    "imagen": "caifanes-seeklogo.png",
     "categoria": "Rock en Español"
   },
   {
     "banda": "Los Fabulosos Cadillacs",
-    "imagen": "Los Fabulosos Cadillacs.png",
+    "imagen": "los-fabulosos-cadillacs.png",
     "categoria": "Rock en Español"
   },
   {
     "banda": "Red Hot Chili Peppers",
-    "imagen": "Red Hot Chili Peppers.png",
+    "imagen": "red-hot-chili-peppers.png",
     "categoria": "Alternative Rock"
   },
   {
     "banda": "Foo Fighters",
-    "imagen": "Foo Fighters.png",
+    "imagen": "foo-fighters.png",
     "categoria": "Alternative Rock"
   },
   {
     "banda": "Radiohead",
-    "imagen": "Radiohead.png",
+    "imagen": "radiohead.png",
     "categoria": "Alternative Rock"
   },
   {
     "banda": "Gorillaz",
-    "imagen": "Gorillaz hoz.png",
+    "imagen": "gorillaz-hoz.png",
     "categoria": "Alternative Rock"
   },
   {
     "banda": "The Smashing Pumpkins",
-    "imagen": "The Smashing Pumpkins.png",
+    "imagen": "the-smashing-pumpkins.png",
     "categoria": "Alternative Rock"
   },
   {
     "banda": "Soundgarden",
-    "imagen": "Soundgarden.png",
+    "imagen": "soundgarden.png",
     "categoria": "Grunge"
   },
   {
     "banda": "Stone Temple Pilots",
-    "imagen": "Stone Temple Pilots.png",
+    "imagen": "stone-temple-pilots.png",
     "categoria": "Grunge"
   },
   {
     "banda": "Faith No More",
-    "imagen": "Faith No More.png",
+    "imagen": "faith-no-more.png",
     "categoria": "Alternative Metal"
   },
   {
     "banda": "Disturbed",
-    "imagen": "Disturbed.png",
+    "imagen": "disturbed.png",
     "categoria": "Nu Metal"
   },
   {
     "banda": "Five Finger Death Punch",
-    "imagen": "Five Finger Death Punch.png",
+    "imagen": "five-finger-death-punch.png",
     "categoria": "Groove Metal"
   },
   {
     "banda": "Trivium",
-    "imagen": "Trivium.png",
+    "imagen": "trivium.png",
     "categoria": "Metalcore"
   },
   {
     "banda": "Danzig",
-    "imagen": "Danzig.png",
+    "imagen": "danzig.png",
     "categoria": "Heavy Metal"
   },
   {
     "banda": "Madball",
-    "imagen": "Madball.png",
+    "imagen": "madball.png",
     "categoria": "Hardcore Punk"
   },
   {
     "banda": "Sick of It All",
-    "imagen": "Sick of It All.png",
+    "imagen": "sick-of-it-all.png",
     "categoria": "Hardcore Punk"
   },
   {
     "banda": "Biohazard",
-    "imagen": "Biohazard.png",
+    "imagen": "biohazard.png",
     "categoria": "Hardcore Punk"
   },
   {
     "banda": "Dropkick Murphys",
-    "imagen": "Dropkick Murphys.png",
+    "imagen": "dropkick-murphys.png",
     "categoria": "Punk Rock"
   },
   {
     "banda": "My Chemical Romance",
-    "imagen": "My Chemical Romance.png",
+    "imagen": "my-chemical-romance.png",
     "categoria": "Alternative Rock"
   },
   {
     "banda": "Twisted Sister",
-    "imagen": "Twisted Sister.png",
+    "imagen": "twisted-sister.png",
     "categoria": "Glam Metal"
   },
   {
     "banda": "Quiet Riot",
-    "imagen": "Quiet Riot.png",
+    "imagen": "quiet-riot.png",
     "categoria": "Glam Metal"
   },
   {
     "banda": "Skid Row",
-    "imagen": "Skid Row.png",
+    "imagen": "skid-row.png",
     "categoria": "Glam Metal"
   },
   {
     "banda": "Napalm Death",
-    "imagen": "Napalm Death.png",
+    "imagen": "napalm-death.png",
     "categoria": "Death Metal / Grindcore"
   },
   {
     "banda": "Terrorizer",
-    "imagen": "Terrorizer.png",
+    "imagen": "terrorizer.png",
     "categoria": "Death Metal / Grindcore"
   },
   {
     "banda": "Whitechapel",
-    "imagen": "Whitechapel.png",
+    "imagen": "whitechapel.png",
     "categoria": "Death Metal"
   },
   {
     "banda": "Cattle Decapitation",
-    "imagen": "Cattle Decapitation.png",
+    "imagen": "cattle-decapitation.png",
     "categoria": "Death Metal / Grindcore"
   },
   {
     "banda": "Suicide Silence",
-    "imagen": "Suicide Silence.png",
+    "imagen": "suicide-silence.png",
     "categoria": "Death Metal"
   },
   {
     "banda": "Mastodon",
-    "imagen": "Mastodon.png",
+    "imagen": "mastodon.png",
     "categoria": "Progressive Metal"
   },
   {
     "banda": "Killswitch Engage",
-    "imagen": "Killswitch Engage.png",
+    "imagen": "killswitch-engage.png",
     "categoria": "Metalcore"
   },
   {
@@ -2175,17 +2175,17 @@
   },
   {
     "banda": "Samael",
-    "imagen": "Samael.png",
+    "imagen": "samael.png",
     "categoria": "Black / Industrial Metal"
   },
   {
     "banda": "Behemoth",
-    "imagen": "Behemoth classic logo.png",
+    "imagen": "behemoth-classic-logo.png",
     "categoria": "Black/Death Metal"
   },
   {
     "banda": "Obús",
-    "imagen": "Obus.png",
+    "imagen": "obus.png",
     "categoria": "Heavy Metal"
   }
 ]
