@@ -2087,5 +2087,105 @@
     "banda": "Trivium",
     "imagen": "trivium.png",
     "categoria": "Metalcore"
+  },
+  {
+    "banda": "Danzig",
+    "imagen": "danzig.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "Madball",
+    "imagen": "madball.png",
+    "categoria": "Hardcore Punk"
+  },
+  {
+    "banda": "Sick of It All",
+    "imagen": "sick-of-it-all.png",
+    "categoria": "Hardcore Punk"
+  },
+  {
+    "banda": "Biohazard",
+    "imagen": "biohazard.png",
+    "categoria": "Hardcore Punk"
+  },
+  {
+    "banda": "Dropkick Murphys",
+    "imagen": "dropkick-murphys.png",
+    "categoria": "Punk Rock"
+  },
+  {
+    "banda": "My Chemical Romance",
+    "imagen": "my-chemical-romance.png",
+    "categoria": "Alternative Rock"
+  },
+  {
+    "banda": "Twisted Sister",
+    "imagen": "twisted-sister.png",
+    "categoria": "Glam Metal"
+  },
+  {
+    "banda": "Quiet Riot",
+    "imagen": "quiet-riot.png",
+    "categoria": "Glam Metal"
+  },
+  {
+    "banda": "Skid Row",
+    "imagen": "skid-row.png",
+    "categoria": "Glam Metal"
+  },
+  {
+    "banda": "Napalm Death",
+    "imagen": "napalm-death.png",
+    "categoria": "Death Metal / Grindcore"
+  },
+  {
+    "banda": "Terrorizer",
+    "imagen": "terrorizer.png",
+    "categoria": "Death Metal / Grindcore"
+  },
+  {
+    "banda": "Whitechapel",
+    "imagen": "whitechapel.png",
+    "categoria": "Death Metal"
+  },
+  {
+    "banda": "Cattle Decapitation",
+    "imagen": "cattle-decapitation.png",
+    "categoria": "Death Metal / Grindcore"
+  },
+  {
+    "banda": "Suicide Silence",
+    "imagen": "suicide-silence.png",
+    "categoria": "Death Metal"
+  },
+  {
+    "banda": "Mastodon",
+    "imagen": "mastodon.png",
+    "categoria": "Progressive Metal"
+  },
+  {
+    "banda": "Killswitch Engage",
+    "imagen": "killswitch-engage.png",
+    "categoria": "Metalcore"
+  },
+  {
+    "banda": "Pestilence",
+    "imagen": "pestilence.png",
+    "categoria": "Death Metal"
+  },
+  {
+    "banda": "Samael",
+    "imagen": "samael.png",
+    "categoria": "Black / Industrial Metal"
+  },
+  {
+    "banda": "Behemoth Classic Logo",
+    "imagen": "behemoth-classic-logo.png",
+    "categoria": "Black/Death Metal"
+  },
+  {
+    "banda": "Obús",
+    "imagen": "obus.png",
+    "categoria": "Heavy Metal"
   }
 ]
