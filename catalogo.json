@@ -1054,11 +1054,6 @@
     "categoria": "Symphonic Black Metal"
   },
   {
-    "banda": "Witchtrap",
-    "imagen": "Witchtrap.png",
-    "categoria": "Thrash Metal"
-  },
-  {
     "banda": "Sorceress",
     "imagen": "Sorceress.png",
     "categoria": "Doom Metal"
@@ -1252,11 +1247,6 @@
     "banda": "Nile",
     "imagen": "Nile.png",
     "categoria": "Technical Death Metal"
-  },
-  {
-    "banda": "Masacre Logo",
-    "imagen": "Masacre-Logo.png",
-    "categoria": "Death Metal"
   },
   {
     "banda": "Goretrade",
