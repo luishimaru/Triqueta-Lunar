@@ -2292,5 +2292,86 @@
     "banda": "GWAR",
     "imagen": "GWAR.png",
     "categoria": "Thrash Metal"
+  },
+  {
+    "banda": "Lorna Shore",
+    "imagen": "Lorna-Shore.png",
+    "categoria": "Deathcore"
+  },
+  {
+    "banda": "Bullet for My Valentine Heart Skull Logo",
+    "imagen": "Bullet-for-My-Valentine-Heart-Skull-Logo.png",
+    "categoria": "Metalcore"
+  },
+  {
+    "banda": "Spiritbox",
+    "imagen": "Spiritbox.png",
+    "categoria": "Metalcore"
+  },
+  {
+    "banda": "Wage War",
+    "imagen": "Wage-War.png",
+    "categoria": "Metalcore"
+  },
+  {
+    "banda": "Polaris",
+    "imagen": "Polaris.png",
+    "categoria": "Metalcore"
+  },
+  {
+    "banda": "Bad Omens",
+    "imagen": "Bad-Omens.png",
+    "categoria": "Metalcore"
+  },
+  {
+    "banda": "Avenged Sevenfold Red Logo",
+    "imagen": "Avenged-Sevenfold-Red-Logo.png",
+    "categoria": "Metalcore / Heavy Metal"
+  },
+  {
+    "banda": "AI_x4_Bring Me The Horizon logo",
+    "imagen": "AI_x4_Bring-Me-The-Horizon-logo.png",
+    "categoria": "Metalcore"
+  },
+  {
+    "banda": "Converge",
+    "imagen": "Converge.png",
+    "categoria": "Mathcore"
+  },
+  {
+    "banda": "As i lay dying",
+    "imagen": "As-i-lay-dying.png",
+    "categoria": "Metalcore"
+  },
+  {
+    "banda": "Slaughter to Prevail",
+    "imagen": "Slaughter-to-Prevail.png",
+    "categoria": "Deathcore"
+  },
+  {
+    "banda": "Architects",
+    "imagen": "Architects.png",
+    "categoria": "Metalcore"
+  },
+  {
+    "banda": "LANDMVRKS marseille",
+    "imagen": "LANDMVRKS-marseille.png",
+    "categoria": "Metalcore"
+  },
+  {
+    "banda": "LANDMVRKS dagger",
+    "imagen": "LANDMVRKS-dagger.png",
+    "categoria": "Metalcore"
+  },
+  {
+    "banda": "LANDMVRKS 2026Tour",
+    "imagen": "LANDMVRKS-2026Tour.png",
+    "categoria": "Metalcore"
+  },
+  {
+    "banda": "LANDMVRKS",
+    "imagen": "LANDMVRKS.png",
+    "categoria": "Metalcore"
   }
+
 ]
