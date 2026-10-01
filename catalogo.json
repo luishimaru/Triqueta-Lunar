@@ -2452,6 +2452,31 @@
     "banda": "Ska Man",
     "imagen": "Ska-Man.png",
     "categoria": "Mesa Ska1"
+  },
+  {
+    "banda": "Misfits x A Nightmare on Elm Street",
+    "imagen": "Misfits-x-A-Nightmare-on-Elm-Street.png",
+    "categoria": "MesaMisfits"
+  },
+  {
+    "banda": "Misfits Crimson Ghost",
+    "imagen": "Misfits-Crimson-Ghost.png",
+    "categoria": "MesaMisfits"
+  },
+  {
+    "banda": "Misfits Skull",
+    "imagen": "Misfits-Skull.png",
+    "categoria": "MesaMisfits"
+  },
+  {
+    "banda": "Misfits Skull",
+    "imagen": "Misfits-Skull.png",
+    "categoria": "MesaMisfits"
+  },
+  {
+    "banda": "Misfits Skull Blood",
+    "imagen": "Misfits-Skull-Blood.png",
+    "categoria": "MesaMisfits"
   }
 
 ]
