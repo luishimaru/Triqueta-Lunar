@@ -600,7 +600,8 @@
                     if (cat.includes('black')) pin.macroCategorias.push('Black Metal');
                     if (cat.includes('death') || cat.includes('grindcore') || cat.includes('brutal')) pin.macroCategorias.push('Death Metal & Grindcore');
                     if (cat.includes('power') || cat.includes('progressive') || cat.includes('symphonic') || cat.includes('folk')) pin.macroCategorias.push('Power, Prog & Folk Metal');
-                    if (cat.includes('punk') || cat.includes('hardcore') || cat.includes('ska') || cat.includes('oi!')) pin.macroCategorias.push('Punk & Hardcore');
+                    if (cat.includes('punk') || cat.includes('hardcore') || cat.includes('oi!')) pin.macroCategorias.push('Punk & Hardcore');
+                    if (cat.includes('ska') || cat.includes('reggae')) pin.macroCategorias.push('Ska & Reggae');
                     if (cat.includes('rock') && !cat.includes('hard rock') && !cat.includes('punk rock') && !cat.includes('rock en español')) pin.macroCategorias.push('Rock Clásico & General');
                     if (pin.macroCategorias.length === 0) pin.macroCategorias.push('Metal & Variantes');
                 });

@@ -625,11 +625,6 @@
     "categoria": "Punk Rock"
   },
   {
-    "banda": "Ska-P",
-    "imagen": "Ska-P.png",
-    "categoria": "Ska Punk"
-  },
-  {
     "banda": "Eskorbuto",
     "imagen": "Eskorbuto.png",
     "categoria": "Punk Rock"
@@ -2016,11 +2011,6 @@
   {
     "banda": "Caifanes",
     "imagen": "Caifanes-seeklogo.png",
-    "categoria": "Rock en Español"
-  },
-  {
-    "banda": "Los Fabulosos Cadillacs",
-    "imagen": "Los-Fabulosos-Cadillacs.png",
     "categoria": "Rock en Español"
   },
   {
