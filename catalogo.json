@@ -2372,6 +2372,86 @@
     "banda": "LANDMVRKS",
     "imagen": "LANDMVRKS.png",
     "categoria": "Metalcore"
+  },
+  {
+    "banda": "Dr Krapula",
+    "imagen": "Dr-Krapula.png",
+    "categoria": "Mesa Ska1"
+  },
+  {
+    "banda": "Ska-P",
+    "imagen": "Ska-P.png",
+    "categoria": "Mesa Ska1"
+  },
+  {
+    "banda": "Los Fabulosos Cadilacs",
+    "imagen": "Los-Fabulosos-Cadilacs.png",
+    "categoria": "Mesa Ska1"
+  },
+  {
+    "banda": "Ska-p Classic Logo",
+    "imagen": "Ska-p-Classic-Logo.png",
+    "categoria": "Mesa Ska1"
+  },
+  {
+    "banda": "La mojiganga",
+    "imagen": "La-mojiganga.png",
+    "categoria": "Mesa Ska1"
+  },
+  {
+    "banda": "Rey Gordinflon",
+    "imagen": "Rey-Gordinflon.png",
+    "categoria": "Mesa Ska1"
+  },
+  {
+    "banda": "Calavera rasta",
+    "imagen": "Calavera-rasta.png",
+    "categoria": "Mesa Ska1"
+  },
+  {
+    "banda": "Todos Tus Muertos dale aborigen",
+    "imagen": "Todos-Tus-Muertos-dale-aborigen.png",
+    "categoria": "Mesa Ska1"
+  },
+  {
+    "banda": "Todos Tus Muertos Logo",
+    "imagen": "Todos-Tus-Muertos-Logo.png",
+    "categoria": "Mesa Ska1"
+  },
+  {
+    "banda": "Todos tus muertos Calaca",
+    "imagen": "Todos-tus-muertos-Calaca.png",
+    "categoria": "Mesa Ska1"
+  },
+  {
+    "banda": "Panteon Rococo",
+    "imagen": "Panteon-Rococo.png",
+    "categoria": "Mesa Ska1"
+  },
+  {
+    "banda": "Maldita Vecindad",
+    "imagen": "Maldita-Vecindad.png",
+    "categoria": "Mesa Ska1"
+  },
+  {
+    "banda": "Desorden Público",
+    "imagen": "Desorden-Público.png",
+    "categoria": "Mesa Ska1"
+  },
+  {
+    "banda": "Inspector",
+    "imagen": "Inspector.png",
+    "categoria": "Mesa Ska1"
+  },
+  {
+    "banda": "Ska logo",
+    "imagen": "Ska-logo.png",
+    "categoria": "Mesa Ska1"
+  },
+  {
+    "banda": "Ska Man",
+    "imagen": "Ska-Man.png",
+    "categoria": "Mesa Ska1"
   }
 
 ]
