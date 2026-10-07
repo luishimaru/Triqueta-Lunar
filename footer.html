@@ -1,0 +1,55 @@
+<style>
+    /* --- FOOTER --- */
+    .site-footer { width: 100%; background: #0a0a0a; border-top: 1px solid #333; padding: 2rem 1rem; text-align: center; margin-top: auto; z-index: 10; }
+    .social-icons { display: flex; justify-content: center; gap: 20px; margin-bottom: 15px; }
+    .social-icon { color: #b3b3b3; font-size: 1.8rem; transition: color 0.3s, transform 0.3s; text-decoration: none; }
+    .social-icon:hover { color: #882222; transform: translateY(-5px); }
+
+    /* --- CARRITO GLOBAL --- */
+    .floating-cart { position: fixed; bottom: 30px; right: 30px; background: linear-gradient(145deg, #882222 0%, #551111 100%); color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.8); border: 1px solid #ff4444; z-index: 1000; transition: transform 0.3s; }
+    .floating-cart:hover { transform: scale(1.1); }
+    .cart-badge { position: absolute; top: -5px; right: -5px; background: white; color: #882222; font-size: 12px; font-weight: bold; font-family: 'Oswald', sans-serif; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 5px rgba(0,0,0,0.5); }
+    
+    .cart-sidebar { position: fixed; top: 0; right: -100%; width: 350px; max-width: 100vw; height: 100vh; background: #111; border-left: 1px solid #333; z-index: 2000; transition: right 0.4s ease; padding: 20px; display: flex; flex-direction: column; }
+    .cart-sidebar.open { right: 0; }
+    .close-cart { align-self: flex-end; background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; margin-bottom: 20px; }
+    
+    .cart-item { display: flex; align-items: center; justify-content: space-between; background: #1a1a1a; padding: 10px; border-radius: 6px; margin-bottom: 10px; border: 1px solid #333; }
+    .cart-item img { width: 40px; height: 40px; object-fit: contain; margin-right: 10px; }
+    .cart-item-info { flex-grow: 1; }
+    .cart-item-title { font-family: 'Oswald', sans-serif; font-size: 0.9rem; text-transform: capitalize; overflow-wrap: break-word; word-break: break-word; line-height: 1.2; }
+    .cart-controls { display: flex; align-items: center; gap: 8px; }
+    .cart-btn { background: #333; color: white; border: none; width: 25px; height: 25px; border-radius: 4px; cursor: pointer; }
+    .cart-btn:hover { background: #882222; }
+    .add-to-cart-btn-final { width: 100%; background: #25D366; color: #111; border: none; padding: 12px; border-radius: 4px; cursor: pointer; font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 1.1rem; transition: all 0.3s; }
+    .add-to-cart-btn-final:hover { transform: scale(1.02); }
+</style>
+
+<footer class="site-footer">
+    <div class="social-icons">
+        <a href="https://www.instagram.com/triquetalunar/" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@triquetalunar" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.facebook.com/TriquetaLunar" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/573125935222" class="social-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p style="color: #666; font-size: 0.9rem; font-family: 'Oswald', sans-serif;">&copy; 2026 Triqueta Lunar. Hecho en Colombia.</p>
+</footer>
+
+<!-- EL CARRITO AHORA VIVE DENTRO DEL FOOTER -->
+<div class="floating-cart" id="openCartBtn">
+    <i class="fas fa-shopping-cart"></i>
+    <div class="cart-badge" id="cartCount">0</div>
+</div>
+
+<div class="cart-sidebar" id="cartSidebar">
+    <button class="close-cart" id="closeCartBtn"><i class="fas fa-times"></i></button>
+    <h2 style="font-family: 'Oswald'; text-align: center; border-bottom: 1px solid #333; padding-bottom: 15px; margin-bottom: 20px;">TU PEDIDO</h2>
+    <div id="cartItemsContainer" style="flex-grow: 1; overflow-y: auto;"></div>
+    <div style="border-top: 1px solid #333; padding-top: 20px;">
+        <p style="display: flex; justify-content: space-between; font-size: 1.2rem; margin-bottom: 15px;">
+            <strong>TOTAL <span id="cartTotalItems" style="font-size: 0.9rem; color: #888;"></span>:</strong> 
+            <span id="cartTotal">$0 COP</span>
+        </p>
+        <button class="add-to-cart-btn-final" onclick="finalizarCompra()"><i class="fab fa-whatsapp"></i> FINALIZAR COMPRA</button>
+    </div>
+</div>

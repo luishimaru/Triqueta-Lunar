@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Camisetas | Triqueta Lunar</title>
+    <meta name="description" content="Camisetas estampadas en alta resolución con tecnología DTF. Diseños personalizados y de catálogo.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --text-main: #ffffff;
+            --text-muted: #b3b3b3;
+            --accent-red: #882222;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: transparent; 
+            color: var(--text-main);
+            font-family: 'Roboto', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* --- FONDO ANIMADO --- */
+        .smoke-container { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; background: #050505; overflow: hidden; pointer-events: none; }
+        .smoke-blob { position: absolute; border-radius: 50%; filter: blur(55px); animation: moveSmoke 15s infinite alternate ease-in-out; }
+        .smoke-1 { background: radial-gradient(circle, rgba(160, 15, 15, 0.45) 0%, transparent 70%); width: 80vw; height: 80vw; top: -10%; left: -20%; }
+        .smoke-2 { background: radial-gradient(circle, rgba(120, 25, 25, 0.35) 0%, transparent 70%); width: 70vw; height: 70vw; top: 40%; right: -20%; animation-delay: -5s; }
+        .smoke-3 { background: radial-gradient(circle, rgba(60, 10, 10, 0.4) 0%, transparent 70%); width: 90vw; height: 90vw; bottom: -20%; left: 10%; animation-delay: -10s; }
+        @keyframes moveSmoke { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(40px, -40px) scale(1.15); } }
+
+        .container { position: relative; z-index: 10; max-width: 1100px; width: 100%; padding: 2rem 1rem; }
+
+        /* --- HEADER & BOTÓN WHATSAPP --- */
+        .header { text-align: center; margin-bottom: 2rem; }
+        .logo-img { width: 120px; height: auto; margin-bottom: 1rem; filter: drop-shadow(0 0 12px rgba(255,0,0,0.2)); }
+        h1 { font-family: 'Oswald', sans-serif; font-size: 2.2rem; letter-spacing: 2px; text-transform: uppercase; text-shadow: 0 2px 4px rgba(0,0,0,0.6); }
+        .subtitle { color: var(--text-muted); font-size: 1.1rem; margin-top: 5px; margin-bottom: 20px; }
+
+        .main-cta {
+            display: inline-flex; align-items: center; justify-content: center; background: linear-gradient(145deg, #252525 0%, #161616 50%, #0d0d0d 100%);
+            border: 1px solid #25D366; color: #fff; padding: 1rem 2rem; border-radius: 8px; font-family: 'Oswald', sans-serif; font-size: 1.1rem;
+            letter-spacing: 1px; text-decoration: none; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); transition: all 0.3s ease; margin-bottom: 2.5rem;
+        }
+        .main-cta i { margin-right: 10px; color: #25D366; font-size: 1.3rem; }
+        .main-cta:hover { border-color: #25D366; background: #111; transform: translateY(-3px); box-shadow: 0 0 15px rgba(37, 211, 102, 0.2), 0 6px 15px rgba(0, 0, 0, 0.8); }
+
+        /* --- BANNER DE PRECIOS CAMISETAS --- */
+        .pricing-banner { background: linear-gradient(145deg, #111 0%, #0a0a0a 100%); border: 1px solid #333; border-radius: 10px; padding: 20px; margin-bottom: 3rem; width: 100%; text-align: center; box-shadow: 0 8px 20px rgba(0,0,0,0.6); }
+        .pricing-banner h3 { font-family: 'Oswald', sans-serif; color: var(--accent-red); font-size: 1.5rem; margin-bottom: 15px; letter-spacing: 1px; }
+        .pricing-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; }
+        .price-item { background: #1a1a1a; padding: 15px; border-radius: 8px; border: 1px solid #2a2a2a; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+        .price-item.highlight { background: rgba(136, 34, 34, 0.15); border-color: var(--accent-red); box-shadow: inset 0 0 15px rgba(136, 34, 34, 0.2); }
+        .price-item h4 { font-family: 'Oswald', sans-serif; font-size: 1rem; color: #ccc; margin-bottom: 5px; width: 100%; }
+        .price-item .price { font-size: 1.6rem; font-weight: bold; color: white; margin-bottom: 5px; width: 100%; }
+        .price-item .price span { font-size: 0.9rem; color: #888; }
+        .price-item .note { font-size: 0.8rem; color: var(--text-muted); line-height: 1.2; width: 100%; }
+
+        /* --- CUADRÍCULA DE CAMISETAS --- */
+        .camisetas-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; margin-bottom: 3rem; }
+
+        /* --- TARJETA DE PRODUCTO --- */
+        .camisetas-card { background: rgba(17, 17, 17, 0.85); border: 1px solid #333; border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 4px 15px rgba(0,0,0,0.6); transition: transform 0.3s, border-color 0.3s; }
+        .camisetas-card:hover { transform: translateY(-5px); border-color: var(--accent-red); }
+        .camisetas-card.custom-card { border: 1px solid rgba(136, 34, 34, 0.8); background: linear-gradient(180deg, rgba(30,10,10,0.85) 0%, rgba(15,15,15,0.9) 100%); }
+
+        /* --- CARRUSEL DENTRO DE LA TARJETA --- */
+        .card-slider { position: relative; width: 100%; aspect-ratio: 1 / 1; background: #080808; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+        .card-slider img { width: 100%; height: 100%; object-fit: cover; cursor: pointer; transition: opacity 0.3s ease; }
+        .card-slider .slider-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0, 0, 0, 0.6); color: white; border: none; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1rem; transition: background 0.2s; z-index: 2; }
+        .card-slider .slider-btn:hover { background: var(--accent-red); }
+        .card-slider .btn-prev { left: 8px; }
+        .card-slider .btn-next { right: 8px; }
+        .slider-badge { position: absolute; bottom: 8px; right: 8px; background: rgba(0, 0, 0, 0.7); color: #ccc; font-size: 0.75rem; padding: 2px 8px; border-radius: 10px; font-family: 'Oswald', sans-serif; pointer-events: none; }
+
+        /* --- INFO DE LA TARJETA --- */
+        .card-info { padding: 18px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between; }
+        .card-title { font-family: 'Oswald', sans-serif; font-size: 1.3rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+        .card-variant { display: inline-block; color: #aaa; font-size: 0.9rem; margin-bottom: 15px; }
+        .card-variant span { color: #25D366; font-weight: bold; }
+
+        .card-price-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; border-top: 1px solid #222; padding-top: 12px; }
+        .card-price { font-family: 'Oswald', sans-serif; font-size: 1.4rem; color: white; }
+        .card-price small { font-size: 0.8rem; color: #888; }
+
+        .btn-add-cart { width: 100%; background: #1a1a1a; color: white; border: 1px solid #444; padding: 10px; border-radius: 5px; cursor: pointer; font-family: 'Oswald', sans-serif; font-size: 1rem; letter-spacing: 1px; text-transform: uppercase; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 8px; }
+        .btn-add-cart:hover { background: var(--accent-red); border-color: #ff4444; }
+
+        /* --- SELECTOR PERSONALIZADO --- */
+        .custom-selector { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 15px; }
+        .selector-btn { background: #1a1a1a; border: 1px solid #444; color: #ccc; padding: 8px 5px; border-radius: 4px; font-family: 'Oswald', sans-serif; font-size: 0.85rem; cursor: pointer; text-align: center; transition: all 0.2s; }
+        .selector-btn.active { background: var(--accent-red); border-color: #ff4444; color: white; }
+
+        /* --- MODAL LIGHTBOX (ZOOM FOTOS CON NAVEGACIÓN) --- */
+        .lightbox-modal { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.9); backdrop-filter: blur(8px); z-index: 3000; display: none; align-items: center; justify-content: center; padding: 20px; }
+        .lightbox-modal.open { display: flex; }
+        .lightbox-content { max-width: 90vw; max-height: 85vh; object-fit: contain; border-radius: 8px; box-shadow: 0 0 30px rgba(0,0,0,0.9); border: 1px solid #333; }
+        .lightbox-close { position: absolute; top: 20px; right: 25px; color: white; font-size: 2.2rem; cursor: pointer; background: none; border: none; transition: color 0.2s; z-index: 3002; }
+        .lightbox-close:hover { color: var(--accent-red); }
+        .lightbox-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0, 0, 0, 0.5); color: white; border: none; width: 50px; height: 50px; border-radius: 50%; font-size: 1.5rem; cursor: pointer; z-index: 3001; transition: background 0.3s; display: flex; align-items: center; justify-content: center; }
+        .lightbox-btn:hover { background: var(--accent-red); }
+        .lightbox-prev { left: 20px; }
+        .lightbox-next { right: 20px; }
+        @media (max-width: 768px) { .lightbox-btn { width: 40px; height: 40px; font-size: 1.2rem; } .lightbox-prev { left: 10px; } .lightbox-next { right: 10px; } }
+    </style>
+</head>
+<body>
+
+    <div id="global-header"></div>
+    <div class="smoke-container"><div class="smoke-blob smoke-1"></div><div class="smoke-blob smoke-2"></div><div class="smoke-blob smoke-3"></div></div>
+
+    <div class="container">
+        
+        <header class="header">
+            <img src="logo.png" alt="Triqueta Lunar Logo" class="logo-img">
+            <h1>Catálogo de Camisetas</h1>
+            <p class="subtitle">Estampados duraderos en alta resolución con tecnología DTF. Calidad premium.</p>
+            
+            <a href="https://wa.me/573125935222?text=¡Hola%20Triqueta%20Lunar!%20Quiero%20cotizar%20camisetas%20personalizadas." class="main-cta" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> COTIZAR DISEÑO PERSONALIZADO
+            </a>
+        </header>
+
+        <div class="pricing-banner">
+            <h3>🔥 PRECIOS POR VOLUMEN 🔥</h3>
+            <div class="pricing-cards">
+                <div class="price-item">
+                    <h4>SOLO FRENTE</h4>
+                    <p class="price">$35.000 <span>COP</span></p>
+                    <p class="note">(1 a 3 unidades)</p>
+                </div>
+                <div class="price-item highlight">
+                    <h4>SOLO FRENTE (MAYORISTA)</h4>
+                    <p class="price">$26.000 <span>COP</span></p>
+                    <p class="note">(A partir de 4 unidades iguales)</p>
+                </div>
+                <div class="price-item">
+                    <h4>FRENTE + ESPALDA</h4>
+                    <p class="price">$40.000 <span>COP</span></p>
+                    <p class="note">(1 a 3 unidades)</p>
+                </div>
+                <div class="price-item highlight">
+                    <h4>DOBLE (MAYORISTA)</h4>
+                    <p class="price">$30.000 <span>COP</span></p>
+                    <p class="note">(A partir de 4 unidades iguales)</p>
+                </div>
+            </div>
+            <p style="font-size: 0.8rem; color: #666; margin-top: 15px; grid-column: 1/-1;">*Tallas y especificaciones se coordinan por WhatsApp. El descuento por cantidad se aplica automáticamente al carrito.</p>
+        </div>
+
+        <div class="camisetas-grid" id="camisetasGrid">
+            
+            <!-- ARTÍCULO 1 FIJO: CAMISETA PERSONALIZADA -->
+            <div class="camisetas-card custom-card">
+                <div class="card-slider" id="slider-custom">
+                    <!-- Recuerda guardar esta imagen en la carpeta correspondiente -->
+                    <img id="img-custom" src="camisetas/1.png" alt="Camiseta Personalizada" onclick="ampliarImagen('custom')" onerror="this.src='logo.png'">
+                </div>
+                <div class="card-info">
+                    <div>
+                        <h2 class="card-title">Diseño Personalizado</h2>
+                        <span class="card-variant">Envíanos tu imagen y talla al finalizar</span>
+                        
+                        <!-- Selector Frontal vs Doble -->
+                        <div class="custom-selector">
+                            <button class="selector-btn active" id="btn-set-frontal" onclick="seleccionarEstampadoCustom('frontal')">SOLO FRENTE</button>
+                            <button class="selector-btn" id="btn-set-doble" onclick="seleccionarEstampadoCustom('doble')">FRENTE + ESPALDA</button>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="card-price-row">
+                            <span style="color: #aaa; font-size: 0.9rem;">Precio Base:</span>
+                            <span class="card-price" id="precio-custom">$35.000 <small>COP</small></span>
+                        </div>
+                        <button class="btn-add-cart" onclick="agregarCustomAlCarrito()">
+                            <i class="fas fa-cart-plus"></i> Añadir al Carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LOS DEMÁS DISEÑOS SE INYECTAN AQUÍ DESDE camisetas.json -->
+
+        </div>
+
+    </div>
+
+    <!-- MODAL LIGHTBOX PARA AMPLIAR FOTOS (Mantiene flechas funcionales con el slider) -->
+    <div class="lightbox-modal" id="lightboxModal" onclick="cerrarLightbox(event)">
+        <button class="lightbox-close" onclick="cerrarLightbox(event)">&times;</button>
+        <button class="lightbox-btn lightbox-prev" onclick="cambiarFotoLightbox(-1, event)">&#10094;</button>
+        <img class="lightbox-content" id="lightboxImg" src="" alt="Ampliación">
+        <button class="lightbox-btn lightbox-next" onclick="cambiarFotoLightbox(1, event)">&#10095;</button>
+    </div>
+
+    <div id="global-footer"></div>
+    <script src="carrito.js"></script>
+
+    <script>
+        // CONFIGURACIÓN DE PRECIOS BASE CAMISETAS
+        const PRECIO_FRONTAL = 35000;
+        const PRECIO_DOBLE = 40000;
+
+        // Estado del producto personalizado (Item 1)
+        let customConfig = {
+            tipo: 'frontal',
+            precio: PRECIO_FRONTAL,
+            fotos: [
+                "camisetas/1.png"
+            ],
+            fotoActual: 0
+        };
+
+        let sliderMemory = {};
+        let lightboxCurrentId = null;
+
+        // 1. CONTROL DEL PRODUCTO PERSONALIZADO
+        function seleccionarEstampadoCustom(tipo) {
+            customConfig.tipo = tipo;
+            if (tipo === 'frontal') {
+                customConfig.precio = PRECIO_FRONTAL;
+                document.getElementById('btn-set-frontal').classList.add('active');
+                document.getElementById('btn-set-doble').classList.remove('active');
+                document.getElementById('precio-custom').innerHTML = `$35.000 <small>COP</small>`;
+            } else {
+                customConfig.precio = PRECIO_DOBLE;
+                document.getElementById('btn-set-doble').classList.add('active');
+                document.getElementById('btn-set-frontal').classList.remove('active');
+                document.getElementById('precio-custom').innerHTML = `$40.000 <small>COP</small>`;
+            }
+        }
+
+        function cambiarFotoManual(id, delta) {
+            let item = (id === 'custom') ? customConfig : sliderMemory[id];
+            item.fotoActual += delta;
+            if (item.fotoActual >= item.fotos.length) item.fotoActual = 0;
+            if (item.fotoActual < 0) item.fotoActual = item.fotos.length - 1;
+
+            const imgEl = document.getElementById(`img-${id}`);
+            const badgeEl = document.getElementById(`badge-${id}`);
+            
+            imgEl.src = item.fotos[item.fotoActual];
+            if(badgeEl) badgeEl.innerText = `${item.fotoActual + 1} / ${item.fotos.length}`;
+        }
+
+        function agregarCustomAlCarrito() {
+            // El tipo se envía exacto para que el carrito sepa calcular el descuento de 4 unidades
+            let tipoCarrito = customConfig.tipo === 'doble' ? 'Camiseta Doble' : 'Camiseta Frontal';
+            let nombre = customConfig.tipo === 'doble' ? 'Diseño Personalizado (Frente + Espalda)' : 'Diseño Personalizado (Solo Frente)';
+            
+            agregarAlCarrito(nombre, customConfig.fotos[0], tipoCarrito, customConfig.precio, 'url');
+            document.getElementById('cartSidebar').classList.add('open');
+        }
+
+        // 2. CARGAR EL CATÁLOGO DESDE camisetas.json
+        document.addEventListener("DOMContentLoaded", () => {
+            const grid = document.getElementById('camisetasGrid');
+
+            fetch('camisetas.json')
+                .then(res => {
+                    if (!res.ok) throw new Error("Archivo camisetas.json no encontrado");
+                    return res.json();
+                })
+                .then(productos => {
+                    productos.sort((a, b) => a.nombre.localeCompare(b.nombre));
+                    productos.forEach((prod, index) => {
+                        let id = `prod-${index}`;
+                        
+                        // Determina precios y tipo de estampado según el JSON
+                        let esDoble = prod.tipo_estampado === 'doble';
+                        let precioBase = esDoble ? PRECIO_DOBLE : PRECIO_FRONTAL;
+                        let precioTexto = `$${precioBase.toLocaleString('es-CO')} <small>COP</small>`;
+                        let tipoCarrito = esDoble ? 'Camiseta Doble' : 'Camiseta Frontal';
+                        let badgeEstampado = esDoble ? 'FRENTE + ESPALDA' : 'SOLO FRENTE';
+
+                        let totalFotos = prod.total_fotos || 1;
+                        let fotosArray = [];
+                        for (let i = 1; i <= totalFotos; i++) {
+                            fotosArray.push(`camisetas/${prod.carpeta}/${i}.png`);
+                        }
+
+                        sliderMemory[id] = { fotos: fotosArray, fotoActual: 0 };
+
+                        const card = document.createElement('div');
+                        card.className = 'camisetas-card';
+                        card.innerHTML = `
+                            <div class="card-slider" id="slider-${id}">
+                                ${totalFotos > 1 ? `<button class="slider-btn btn-prev" onclick="cambiarFotoManual('${id}', -1)">&#10094;</button>` : ''}
+                                <img id="img-${id}" src="${fotosArray[0]}" alt="${prod.nombre}" onclick="ampliarImagen('${id}')" onerror="this.src='logo.png'">
+                                ${totalFotos > 1 ? `<button class="slider-btn btn-next" onclick="cambiarFotoManual('${id}', 1)">&#10095;</button>` : ''}
+                                ${totalFotos > 1 ? `<span class="slider-badge" id="badge-${id}">1 / ${totalFotos}</span>` : ''}
+                            </div>
+                            <div class="card-info">
+                                <div>
+                                    <h2 class="card-title">${prod.nombre}</h2>
+                                    <span class="card-variant">Estampado: <span>${badgeEstampado}</span></span>
+                                </div>
+                                <div>
+                                    <div class="card-price-row">
+                                        <span style="color: #aaa; font-size: 0.9rem;">Precio Base:</span>
+                                        <span class="card-price">${precioTexto}</span>
+                                    </div>
+                                    <button class="btn-add-cart" onclick="agregarAlCarrito('${prod.nombre.replace(/'/g, "\\'")}', '${fotosArray[0]}', '${tipoCarrito}', ${precioBase}, 'url'); document.getElementById('cartSidebar').classList.add('open');">
+                                        <i class="fas fa-cart-plus"></i> Añadir al Carrito
+                                    </button>
+                                </div>
+                            </div>
+                        `;
+                        grid.appendChild(card);
+                    });
+                })
+                .catch(err => console.log("Catálogo de camisetas vacío o archivo no encontrado."));
+        });
+
+        // 3. LIGHTBOX CON NAVEGACIÓN
+        function ampliarImagen(id) {
+            lightboxCurrentId = id;
+            let item = (id === 'custom') ? customConfig : sliderMemory[id];
+            
+            const modal = document.getElementById('lightboxModal');
+            const img = document.getElementById('lightboxImg');
+            
+            img.src = item.fotos[item.fotoActual];
+            
+            const flechas = document.querySelectorAll('.lightbox-btn');
+            if(item.fotos.length <= 1) {
+                flechas.forEach(f => f.style.display = 'none');
+            } else {
+                flechas.forEach(f => f.style.display = 'flex');
+            }
+            modal.classList.add('open');
+        }
+
+        function cambiarFotoLightbox(delta, event) {
+            if(event) event.stopPropagation();
+            let item = (lightboxCurrentId === 'custom') ? customConfig : sliderMemory[lightboxCurrentId];
+            
+            item.fotoActual += delta;
+            if (item.fotoActual >= item.fotos.length) item.fotoActual = 0;
+            if (item.fotoActual < 0) item.fotoActual = item.fotos.length - 1;
+
+            document.getElementById('lightboxImg').src = item.fotos[item.fotoActual];
+            document.getElementById(`img-${lightboxCurrentId}`).src = item.fotos[item.fotoActual];
+            
+            let badge = document.getElementById(`badge-${lightboxCurrentId}`);
+            if(badge) badge.innerText = `${item.fotoActual + 1} / ${item.fotos.length}`;
+        }
+
+        function cerrarLightbox(e) {
+            if (!e || e.target.id === 'lightboxModal' || e.target.classList.contains('lightbox-close')) {
+                document.getElementById('lightboxModal').classList.remove('open');
+                lightboxCurrentId = null;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Pines | Triqueta Lunar</title>
+    <meta name="description" content="Catálogo completo de pines de bandas en corte láser e impresión 3D.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --text-main: #ffffff;
+            --text-muted: #b3b3b3;
+            --accent-red: #882222;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: transparent; 
+            color: var(--text-main);
+            font-family: 'Roboto', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .smoke-container {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            z-index: -1;
+            background: #050505; 
+            overflow: hidden; pointer-events: none;
+        }
+        .smoke-blob {
+            position: absolute; border-radius: 50%; filter: blur(55px); 
+            animation: moveSmoke 15s infinite alternate ease-in-out; 
+        }
+        .smoke-1 { background: radial-gradient(circle, rgba(160, 15, 15, 0.45) 0%, transparent 70%); width: 80vw; height: 80vw; top: -10%; left: -20%; }
+        .smoke-2 { background: radial-gradient(circle, rgba(120, 25, 25, 0.35) 0%, transparent 70%); width: 70vw; height: 70vw; top: 40%; right: -20%; animation-delay: -5s; }
+        .smoke-3 { background: radial-gradient(circle, rgba(60, 10, 10, 0.4) 0%, transparent 70%); width: 90vw; height: 90vw; bottom: -20%; left: 10%; animation-delay: -10s; }
+
+        @keyframes moveSmoke {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(40px, -40px) scale(1.15); }
+        }
+
+        .container {
+            position: relative;
+            z-index: 10;
+            max-width: 1000px;
+            width: 100%;
+            padding: 2rem 1rem;
+        }
+
+        /* --- BOTÓN WHATSAPP PRINCIPAL ESTANDARIZADO --- */
+        .main-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(145deg, #252525 0%, #161616 50%, #0d0d0d 100%);
+            border: 1px solid #25D366; 
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+            transition: all 0.3s ease;
+            margin-bottom: 2rem;
+        }
+        .main-cta i { margin-right: 10px; color: #25D366; font-size: 1.3rem; transition: color 0.3s ease; }
+        .main-cta:hover {
+            border-color: #25D366;
+            background: #111;
+            transform: translateY(-3px);
+            box-shadow: 0 0 15px rgba(37, 211, 102, 0.2), 0 6px 15px rgba(0, 0, 0, 0.8);
+        }
+
+        /* --- CARRUSEL REAL CON FLECHAS --- */
+        .carousel-reales-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto 2rem auto;
+            display: flex;
+            align-items: center;
+        }
+        
+        .galeria-reales {
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+            padding: 15px 5px;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none; 
+            scroll-behavior: smooth; 
+            width: 100%;
+        }
+        .galeria-reales::-webkit-scrollbar { display: none; }
+        
+        .foto-real {
+            flex: 0 0 auto;
+            width: 260px;
+            height: 260px;
+            border-radius: 10px;
+            scroll-snap-align: center;
+            object-fit: cover;
+            border: 1px solid #333;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+            background-color: #111;
+            color: #666;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .foto-real:hover { transform: scale(1.02); }
+
+        .carousel-btn {
+            background: rgba(136, 34, 34, 0.9); 
+            color: white;
+            border: 1px solid #ff4444;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            position: absolute;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.8);
+        }
+        .carousel-btn:hover { background: #aa2222; transform: scale(1.1); }
+        .prev-btn { left: -20px; }
+        .next-btn { right: -20px; }
+
+        @media (max-width: 768px) {
+            .carousel-btn { display: none; }
+        }
+
+        /* --- RESTO DE ESTILOS EXISTENTES --- */
+        .header { text-align: center; margin-bottom: 2rem; }
+        .logo-img { width: 120px; height: auto; margin-bottom: 1rem; filter: drop-shadow(0 0 12px rgba(255,0,0,0.2)); }
+        h1 { font-family: 'Oswald', sans-serif; font-size: 2rem; letter-spacing: 2px; text-transform: uppercase; text-shadow: 0 2px 4px rgba(0,0,0,0.6); }
+
+        .tools-panel { background: rgba(10, 10, 10, 0.6); backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 10px; margin-bottom: 2rem; text-align: center; }
+        .search-bar { width: 100%; max-width: 400px; padding: 10px 15px; background: #111; border: 1px solid #333; color: white; border-radius: 5px; font-size: 1rem; margin-bottom: 1.5rem; outline: none; }
+        .search-bar:focus { border-color: var(--accent-red); }
+
+        .alphabet-filter { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
+        .letter-btn { background: #1a1a1a; border: 1px solid #333; color: var(--text-muted); padding: 5px 12px; border-radius: 4px; cursor: pointer; font-family: 'Oswald', sans-serif; font-size: 1rem; transition: all 0.2s; }
+        .letter-btn:hover, .letter-btn.active { background: var(--accent-red); border-color: #ff4444; color: white; }
+
+        .catalog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 15px; margin-bottom: 2rem; }
+        .pin-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 8px; padding: 15px; text-align: center; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.2s ease; }
+        .pin-card:hover { transform: translateY(-5px); background: rgba(255, 255, 255, 0.06); border-color: rgba(136, 34, 34, 0.5); }
+        .pin-card img { width: 100%; height: 160px; object-fit: contain; padding: 10px; margin-bottom: 10px; filter: drop-shadow(0px 8px 12px rgba(0, 0, 0, 0.6)); }
+        .pin-title { font-family: 'Oswald', sans-serif; font-size: 1.1rem; color: #fff; margin-bottom: 10px; letter-spacing: 1px; text-transform: capitalize; overflow-wrap: break-word; word-break: break-word; line-height: 1.3; }
+        
+        .add-to-cart-btn { width: 100%; background: #222; color: white; border: 1px solid #444; padding: 8px; border-radius: 4px; cursor: pointer; font-family: 'Roboto', sans-serif; font-weight: bold; transition: all 0.3s; }
+        .add-to-cart-btn:hover { background: var(--accent-red); border-color: #ff4444; }
+
+        .pagination { display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 2rem; width: 100%; }
+        .page-btn { background: #1a1a1a; color: white; border: 1px solid #333; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-family: 'Oswald', sans-serif; transition: all 0.3s; }
+        .page-btn:hover:not(:disabled) { background: var(--accent-red); border-color: #ff4444; }
+        .page-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+        .page-indicator { font-family: 'Oswald', sans-serif; color: var(--text-muted); font-size: 1.1rem; }
+
+        .pricing-banner { background: linear-gradient(145deg, #111 0%, #0a0a0a 100%); border: 1px solid #333; border-radius: 10px; padding: 20px; margin-bottom: 2rem; width: 100%; text-align: center; box-shadow: 0 8px 20px rgba(0,0,0,0.6); }
+        .pricing-banner h3 { font-family: 'Oswald', sans-serif; color: var(--accent-red); font-size: 1.5rem; margin-bottom: 15px; letter-spacing: 1px; }
+        .pricing-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .price-item { background: #1a1a1a; padding: 20px 15px; border-radius: 8px; border: 1px solid #2a2a2a; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+        .price-item.highlight { background: rgba(136, 34, 34, 0.15); border-color: var(--accent-red); box-shadow: inset 0 0 15px rgba(136, 34, 34, 0.2); }
+        .price-item h4 { font-family: 'Oswald', sans-serif; font-size: 1.1rem; color: #ccc; margin-bottom: 8px; width: 100%; }
+        .price-item .price { font-size: 1.8rem; font-weight: bold; color: white; margin-bottom: 8px; width: 100%; }
+        .price-item .price span { font-size: 1rem; color: #888; }
+        .price-item .note { font-size: 0.85rem; color: var(--text-muted); line-height: 1.3; margin-bottom: 15px; width: 100%; flex-grow: 1; display: flex; align-items: center; justify-content: center; }
+    
+    </style>
+</head>
+<body>
+
+    <div id="global-header"></div>
+
+    <div class="smoke-container">
+        <div class="smoke-blob smoke-1"></div>
+        <div class="smoke-blob smoke-2"></div>
+        <div class="smoke-blob smoke-3"></div>
+    </div>
+
+    <div class="container">
+        
+        <header class="header">
+            <img src="logo.png" alt="Triqueta Lunar Logo" class="logo-img">
+            <h1>Catálogo de Pines</h1>
+            
+            <!-- CARRUSEL REAL DE FOTOS ESTÁTICAS -->
+            <div class="carousel-reales-container">
+                <button class="carousel-btn prev-btn" onclick="moverCarruselReales('izq', this)">&#10094;</button>
+                
+                <div class="galeria-reales">
+                    <img src="fotos_reales/pines/1.png" class="foto-real" style="cursor: zoom-in;" onclick="ampliarImagenGlobal(this.src)">
+                    <img src="fotos_reales/pines/2.png" class="foto-real" style="cursor: zoom-in;" onclick="ampliarImagenGlobal(this.src)">
+                    <img src="fotos_reales/pines/3.png" class="foto-real" style="cursor: zoom-in;" onclick="ampliarImagenGlobal(this.src)">
+                    <img src="fotos_reales/pines/4.png" class="foto-real" style="cursor: zoom-in;" onclick="ampliarImagenGlobal(this.src)">
+                    <img src="fotos_reales/pines/5.png" class="foto-real" style="cursor: zoom-in;" onclick="ampliarImagenGlobal(this.src)">
+                    <img src="fotos_reales/pines/6.png" class="foto-real" style="cursor: zoom-in;" onclick="ampliarImagenGlobal(this.src)">
+                    <img src="fotos_reales/pines/7.png" class="foto-real" style="cursor: zoom-in;" onclick="ampliarImagenGlobal(this.src)"">
+                    <img src="fotos_reales/pines/8.png" class="foto-real" style="cursor: zoom-in;" onclick="ampliarImagenGlobal(this.src)">
+                    <img src="fotos_reales/pines/9.png" class="foto-real" style="cursor: zoom-in;" onclick="ampliarImagenGlobal(this.src)">
+                    <img src="fotos_reales/pines/10.png" class="foto-real" style="cursor: zoom-in;" onclick="ampliarImagenGlobal(this.src)">
+                    <img src="fotos_reales/pines/11.png" class="foto-real" style="cursor: zoom-in;" onclick="ampliarImagenGlobal(this.src)">
+                    <img src="fotos_reales/pines/12.png" class="foto-real" style="cursor: zoom-in;" onclick="ampliarImagenGlobal(this.src)">
+                    <img src="fotos_reales/pines/13.png" class="foto-real" style="cursor: zoom-in;" onclick="ampliarImagenGlobal(this.src)">
+                    <img src="fotos_reales/pines/14.png" class="foto-real" astyle="cursor: zoom-in;" onclick="ampliarImagenGlobal(this.src)">
+                    <img src="fotos_reales/pines/15.png" class="foto-real" style="cursor: zoom-in;" onclick="ampliarImagenGlobal(this.src)">
+                    <img src="fotos_reales/pines/16.png" class="foto-real" style="cursor: zoom-in;" onclick="ampliarImagenGlobal(this.src)">
+                    <img src="fotos_reales/pines/17.png" class="foto-real" style="cursor: zoom-in;" onclick="ampliarImagenGlobal(this.src)">
+                    <img src="fotos_reales/pines/18.png" class="foto-real" style="cursor: zoom-in;" onclick="ampliarImagenGlobal(this.src)">
+                </div>
+                
+                <button class="carousel-btn next-btn" onclick="moverCarruselReales('der', this)">&#10095;</button>
+            </div>
+
+            <a href="https://wa.me/573125935222?text=¡Hola%20Triqueta%20Lunar!%20Quiero%20cotizar%20la%20fabricación%20de%20un%20diseño%20personalizado." class="main-cta" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> COTIZAR DISEÑO PERSONALIZADO
+            </a>
+        </header>
+
+        <div class="tools-panel">
+            <input type="text" class="search-bar" id="searchInput" placeholder="Buscar banda o diseño...">
+
+            <select id="genreFilter" class="search-bar" style="margin-top: -5px; margin-bottom: 1.5rem; cursor: pointer; font-family: 'Oswald', sans-serif; text-transform: uppercase;">
+                <option value="TODOS">🤘 TODOS LOS GÉNEROS</option>
+            </select>   
+            
+            <div class="alphabet-filter" id="alphabetContainer">
+                <button class="letter-btn active">NUEVOS</button>
+                <button class="letter-btn">A</button><button class="letter-btn">B</button><button class="letter-btn">C</button>
+                <button class="letter-btn">D</button><button class="letter-btn">E</button><button class="letter-btn">F</button>
+                <button class="letter-btn">G</button><button class="letter-btn">H</button><button class="letter-btn">I</button>
+                <button class="letter-btn">J</button><button class="letter-btn">K</button><button class="letter-btn">L</button>
+                <button class="letter-btn">M</button><button class="letter-btn">N</button><button class="letter-btn">O</button>
+                <button class="letter-btn">P</button><button class="letter-btn">Q</button><button class="letter-btn">R</button>
+                <button class="letter-btn">S</button><button class="letter-btn">T</button><button class="letter-btn">U</button>
+                <button class="letter-btn">V</button><button class="letter-btn">W</button><button class="letter-btn">X</button>
+                <button class="letter-btn">Y</button><button class="letter-btn">Z</button>
+            </div>
+        </div>
+
+        <div class="pricing-banner">
+            <h3>🔥 PROMOCIONES DE FÁBRICA 🔥</h3>
+            <div class="pricing-cards">
+                <div class="price-item">
+                    <h4>1 PIN (UNIDAD)</h4>
+                    <p class="price">$10.000 <span>COP</span></p>
+                </div>
+                <div class="price-item highlight">
+                    <h4>DOCENA SURTIDA</h4>
+                    <p class="price">$60.000 <span>COP</span></p>
+                    <p class="note">($5.000 c/u - Llevas 12 diseños diferentes)</p>
+                </div>
+                
+                <div class="price-item" style="cursor: pointer; border-color: #882222; transition: all 0.3s;" onclick="agregarPromoPersonalizada()" onmouseover="this.style.background='rgba(136,34,34,0.1)'" onmouseout="this.style.background='#1a1a1a'">
+                    <h4>DOCENA X1 MODELO</h4>
+                    <p class="price">$25.000 <span>COP</span></p>
+                    <p class="note" style="margin-bottom: 10px;">(12 pines idénticos. Ideal para merch de bandas y empresas. Debes enviarnos tu logo al finalizar compra)</p>
+                    <button style="width: 100%; padding: 8px; background: #882222; color: white; border: none; border-radius: 4px; cursor: pointer; font-family: 'Oswald', sans-serif; font-size: 1rem;">
+                        <i class="fas fa-cart-plus"></i> AÑADIR AL CARRITO
+                    </button>
+                </div>
+            </div>
+            <p class="pricing-note">*Los descuentos se calculan automáticamente al añadir al carrito. No incluye costos de envío.</p>
+        </div>
+        
+        <div class="catalog-grid" id="catalogGrid">
+            <!-- Los pines se inyectan aquí -->
+        </div>
+
+        <div class="pagination" id="paginationControls"></div>
+    </div>
+
+    <div id="global-footer"></div>
+
+    <script src="carrito.js"></script>
+<script>
+    // Toda la lógica de lectura de pines y paginación original queda aquí
+    let pines = [];
+    let pinesRecientes = []; 
+    let paginaActual = 1;
+    const pinesPorPagina = 30;
+    let listaFiltroActual = [];
+    
+    const genreFilter = document.getElementById('genreFilter');
+    const grid = document.getElementById('catalogGrid');
+    const searchInput = document.getElementById('searchInput');
+    const letterBtns = document.querySelectorAll('.letter-btn');
+    let letraSeleccionada = localStorage.getItem('ultimaLetraCatalogo') || 'NUEVOS'; 
+
+    fetch('pines.json')
+        .then(response => response.json())
+        .then(data => {
+            pines = data;
+            pines.forEach(pin => {
+                let cat = (pin.categoria || "").toLowerCase();
+                pin.macroCategorias = []; 
+                if (cat.includes('rock en español')) pin.macroCategorias.push('Rock en Español');
+                if (cat.includes('gothic') || cat.includes('goth') || cat.includes('doom') || cat.includes('post-punk')) pin.macroCategorias.push('Gótico, Doom & Post-Punk');
+                if (cat.includes('ocultismo') || cat.includes('occult')) pin.macroCategorias.push('Ocultismo & Estética');
+                if (cat.includes('nu metal') || cat.includes('industrial') || cat.includes('alternative') || cat.includes('metalcore') || cat.includes('grunge')) pin.macroCategorias.push('Nu Metal & Alternativo');
+                if (cat.includes('heavy') || cat.includes('hard rock') || cat.includes('glam')) pin.macroCategorias.push('Heavy & Hard Rock');
+                if (cat.includes('thrash') || cat.includes('groove') || cat.includes('speed') || cat.includes('crossover')) pin.macroCategorias.push('Thrash & Speed Metal');
+                if (cat.includes('black')) pin.macroCategorias.push('Black Metal');
+                if (cat.includes('death') || cat.includes('grindcore') || cat.includes('brutal')) pin.macroCategorias.push('Death Metal & Grindcore');
+                if (cat.includes('power') || cat.includes('progressive') || cat.includes('symphonic') || cat.includes('folk')) pin.macroCategorias.push('Power, Prog & Folk Metal');
+                if (cat.includes('punk') || cat.includes('hardcore') || cat.includes('oi!')) pin.macroCategorias.push('Punk & Hardcore');
+                if (cat.includes('ska') || cat.includes('reggae')) pin.macroCategorias.push('Ska & Reggae');
+                if (cat.includes('rock') && !cat.includes('hard rock') && !cat.includes('punk rock') && !cat.includes('rock en español')) pin.macroCategorias.push('Rock Clásico & General');
+                if (pin.macroCategorias.length === 0) pin.macroCategorias.push('Metal & Variantes');
+            });
+
+            pinesRecientes = [...pines].reverse();
+            pines.sort((a, b) => a.banda.localeCompare(b.banda));
+            
+            let todosLosGeneros = [];
+            pines.forEach(pin => todosLosGeneros.push(...pin.macroCategorias));
+            const generosUnicos = [...new Set(todosLosGeneros)].sort();
+            
+            generosUnicos.forEach(genero => {
+                const option = document.createElement('option');
+                option.value = genero;
+                option.innerText = `🤘 ${genero}`;
+                genreFilter.appendChild(option);
+            });
+
+            marcarBotonActivo(letraSeleccionada);
+            filtrarPorLetra(letraSeleccionada);
+        });
+
+    function actualizarPaginacion() {
+        const inicio = (paginaActual - 1) * pinesPorPagina;
+        const pinesAMostrar = listaFiltroActual.slice(inicio, inicio + pinesPorPagina);
+        renderizarCatalogo(pinesAMostrar);
+        renderizarControlesPaginacion();
+    }
+
+    function renderizarControlesPaginacion() {
+        const container = document.getElementById('paginationControls');
+        container.innerHTML = ''; 
+        const totalPaginas = Math.ceil(listaFiltroActual.length / pinesPorPagina);
+        if (totalPaginas <= 1) return;
+
+        const btnPrev = document.createElement('button');
+        btnPrev.className = 'page-btn';
+        btnPrev.innerHTML = '<i class="fas fa-chevron-left"></i> Anterior';
+        btnPrev.disabled = paginaActual === 1;
+        btnPrev.onclick = () => { if (paginaActual > 1) { paginaActual--; actualizarPaginacion(); document.querySelector('.tools-panel').scrollIntoView(); }};
+        container.appendChild(btnPrev);
+
+        const indicador = document.createElement('span');
+        indicador.className = 'page-indicator';
+        indicador.innerText = `Página ${paginaActual} de ${totalPaginas}`;
+        container.appendChild(indicador);
+
+        const btnNext = document.createElement('button');
+        btnNext.className = 'page-btn';
+        btnNext.innerHTML = 'Siguiente <i class="fas fa-chevron-right"></i>';
+        btnNext.disabled = paginaActual === totalPaginas;
+        btnNext.onclick = () => { if (paginaActual < totalPaginas) { paginaActual++; actualizarPaginacion(); document.querySelector('.tools-panel').scrollIntoView(); }};
+        container.appendChild(btnNext);
+    }
+
+    function renderizarCatalogo(lista) {
+        grid.innerHTML = ''; 
+        if (lista.length === 0) { grid.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: #888;">No se encontraron diseños.</p>'; return; }
+
+        lista.forEach(pin => {
+            const card = document.createElement('div');
+            card.className = 'pin-card';
+            // NOTA: Aquí agregamos el tipo 'Pin', el precio 10000 y la carpeta 'pines'
+            card.innerHTML = `
+                <img src="pines/${pin.imagen}" alt="${pin.banda}" loading="lazy">
+                <h3 class="pin-title">${pin.banda}</h3>
+                <button class="add-to-cart-btn" onclick="agregarAlCarrito('${pin.banda.replace(/'/g, "\\'")}', '${pin.imagen}', 'Pin', 10000, 'pines')">
+                    <i class="fas fa-cart-plus"></i> Añadir
+                </button>
+            `;
+            grid.appendChild(card);
+        });
+    }
+
+    // Funciones de filtros
+    function filtrarPorLetra(letra) {
+        letraSeleccionada = letra;
+        localStorage.setItem('ultimaLetraCatalogo', letra); 
+        searchInput.value = ''; genreFilter.value = 'TODOS'; paginaActual = 1; 
+        listaFiltroActual = (letra === 'NUEVOS') ? pinesRecientes : pines.filter(pin => pin.banda.toUpperCase().startsWith(letra));
+        actualizarPaginacion();
+    }
+    searchInput.addEventListener('input', (e) => { genreFilter.value = 'TODOS'; const termino = e.target.value.toLowerCase(); if (termino === '') { filtrarPorLetra(letraSeleccionada); return; } letterBtns.forEach(b => b.classList.remove('active')); listaFiltroActual = pines.filter(pin => pin.banda.toLowerCase().includes(termino)); paginaActual = 1; actualizarPaginacion(); });
+    genreFilter.addEventListener('change', (e) => { const genero = e.target.value; searchInput.value = ''; paginaActual = 1; if (genero === 'TODOS') { marcarBotonActivo('NUEVOS'); filtrarPorLetra('NUEVOS'); } else { marcarBotonActivo(''); listaFiltroActual = pines.filter(pin => pin.macroCategorias.includes(genero)); actualizarPaginacion(); }});
+    letterBtns.forEach(btn => { btn.addEventListener('click', (e) => { const letra = e.target.innerText; marcarBotonActivo(letra); filtrarPorLetra(letra); });});
+    function marcarBotonActivo(letra) { letterBtns.forEach(btn => { if (btn.innerText === letra) btn.classList.add('active'); else btn.classList.remove('active'); });}
+
+    // Promo personalizada de Pines
+    function agregarPromoPersonalizada() {
+        agregarAlCarrito('Diseño Personalizado', 'https://via.placeholder.com/200x200/882222/ffffff?text=Tu+Logo', 'Pin', 25000, 'url');
+        carrito['Diseño Personalizado - Pin'].cantidad = 12; // Forzamos 12
+        guardarCarrito(); actualizarCarritoUI(); document.getElementById('cartSidebar').classList.add('open');
+    }
+
+    // Función para los botones del carrusel de fotos reales
+    function moverCarruselReales(direccion, boton) {
+        const contenedor = boton.parentElement.querySelector('.galeria-reales');
+        const cantidadDesplazamiento = 275; // Ancho de la foto + el margen
+        
+        if (direccion === 'der') {
+            contenedor.scrollLeft += cantidadDesplazamiento;
+        } else {
+            contenedor.scrollLeft -= cantidadDesplazamiento;
+        }
+    }
+
+</script>
+</body>
+</html>

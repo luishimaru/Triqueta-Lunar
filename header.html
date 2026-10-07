@@ -1,0 +1,52 @@
+<style>
+    .main-nav {
+        width: 100%;
+        background: rgba(10, 10, 10, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid #333;
+        padding: 12px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+    }
+    .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 0 15px;
+    }
+    .nav-link {
+        color: #ccc;
+        text-decoration: none;
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        padding: 5px 12px;
+        border-radius: 4px;
+        transition: all 0.3s;
+    }
+    .nav-link:hover, .nav-link.active {
+        color: white;
+        background: #882222;
+    }
+    .nav-link i { margin-right: 5px; }
+</style>
+
+<nav class="main-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-link" id="nav-inicio"><i class="fas fa-home"></i> Inicio</a>
+        <a href="pines.html" class="nav-link" id="nav-pines">Pines</a>
+        <a href="picks.html" class="nav-link" id="nav-picks">Picks (Púas)</a>
+        <a href="stickers.html" class="nav-link" id="nav-stickers">Stickers</a>
+        <a href="llaveros.html" class="nav-link" id="nav-llaveros">Llaveros</a>
+        <a href="posavasos.html" class="nav-link" id="nav-posavasos">Posavasos</a>
+        <a href="aretes.html" class="nav-link" id="nav-aretes">Aretes</a>
+        <a href="camisetas.html" class="nav-link" id="nav-camisetas">Camisetas</a>
+        <!--ciones.html" class="nav-link" id="nav-decoraciones">Decoración</a>-->
+    </div>
+</nav>

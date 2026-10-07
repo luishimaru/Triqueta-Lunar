@@ -1,0 +1,45 @@
+[
+  {
+    "nombre": "Better Call Saul",
+    "carpeta": "Better-Call-Saul",
+    "tipo_estampado": "frontal",
+    "total_fotos": 1
+  },
+  {
+    "nombre": "Hermética",
+    "carpeta": "Hermética",
+    "tipo_estampado": "frontal",
+    "total_fotos": 1
+  },
+  {
+    "nombre": "Hermética Otro Día Para Ser",
+    "carpeta": "Hermetica-Otro-Dia-Para-Ser",
+    "tipo_estampado": "frontal",
+    "total_fotos": 1
+  },
+  {
+    "nombre": "Blasphemous Crisanta",
+    "carpeta": "Blasphemous-Crisanta",
+    "tipo_estampado": "frontal",
+    "total_fotos": 1
+  },
+  {
+    "nombre": "Expedition 33 - Esquie",
+    "carpeta": "Expedition33-Esquie",
+    "tipo_estampado": "frontal",
+    "total_fotos": 1
+  },
+  {
+    "nombre": "Johnny Cash",
+    "carpeta": "Cash",
+    "tipo_estampado": "frontal",
+    "total_fotos": 1
+  }
+  ,
+  {
+    "nombre": "Transfer - San Francisco De Jachís",
+    "carpeta": "Transfer",
+    "tipo_estampado": "frontal",
+    "total_fotos": 1
+  }
+]

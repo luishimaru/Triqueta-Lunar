@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Posavasos | Triqueta Lunar</title>
+    <meta name="description" content="Posavasos personalizados y de bandas en PETG e impresión UV de alta resistencia. Sets de 4 y 6 puestos.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --text-main: #ffffff;
+            --text-muted: #b3b3b3;
+            --accent-red: #882222;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: transparent; 
+            color: var(--text-main);
+            font-family: 'Roboto', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* --- FONDO ANIMADO --- */
+        .smoke-container { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; background: #050505; overflow: hidden; pointer-events: none; }
+        .smoke-blob { position: absolute; border-radius: 50%; filter: blur(55px); animation: moveSmoke 15s infinite alternate ease-in-out; }
+        .smoke-1 { background: radial-gradient(circle, rgba(160, 15, 15, 0.45) 0%, transparent 70%); width: 80vw; height: 80vw; top: -10%; left: -20%; }
+        .smoke-2 { background: radial-gradient(circle, rgba(120, 25, 25, 0.35) 0%, transparent 70%); width: 70vw; height: 70vw; top: 40%; right: -20%; animation-delay: -5s; }
+        .smoke-3 { background: radial-gradient(circle, rgba(60, 10, 10, 0.4) 0%, transparent 70%); width: 90vw; height: 90vw; bottom: -20%; left: 10%; animation-delay: -10s; }
+        @keyframes moveSmoke { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(40px, -40px) scale(1.15); } }
+
+        .container { position: relative; z-index: 10; max-width: 1100px; width: 100%; padding: 2rem 1rem; }
+
+        /* --- HEADER & BOTÓN WHATSAPP --- */
+        .header { text-align: center; margin-bottom: 2rem; }
+        .logo-img { width: 120px; height: auto; margin-bottom: 1rem; filter: drop-shadow(0 0 12px rgba(255,0,0,0.2)); }
+        h1 { font-family: 'Oswald', sans-serif; font-size: 2.2rem; letter-spacing: 2px; text-transform: uppercase; text-shadow: 0 2px 4px rgba(0,0,0,0.6); }
+        .subtitle { color: var(--text-muted); font-size: 1.1rem; margin-top: 5px; margin-bottom: 20px; }
+
+        .main-cta {
+            display: inline-flex; align-items: center; justify-content: center; background: linear-gradient(145deg, #252525 0%, #161616 50%, #0d0d0d 100%);
+            border: 1px solid #25D366; color: #fff; padding: 1rem 2rem; border-radius: 8px; font-family: 'Oswald', sans-serif; font-size: 1.1rem;
+            letter-spacing: 1px; text-decoration: none; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); transition: all 0.3s ease; margin-bottom: 2.5rem;
+        }
+        .main-cta i { margin-right: 10px; color: #25D366; font-size: 1.3rem; }
+        .main-cta:hover { border-color: #25D366; background: #111; transform: translateY(-3px); box-shadow: 0 0 15px rgba(37, 211, 102, 0.2), 0 6px 15px rgba(0, 0, 0, 0.8); }
+
+        /* --- CUADRÍCULA DE POSAVASOS --- */
+        .posavasos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 3rem;
+        }
+
+        /* --- TARJETA DE PRODUCTO --- */
+        .posavasos-card {
+            background: rgba(17, 17, 17, 0.85);
+            border: 1px solid #333;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .posavasos-card:hover { transform: translateY(-5px); border-color: var(--accent-red); }
+        .posavasos-card.custom-card { border: 1px solid rgba(136, 34, 34, 0.8); background: linear-gradient(180deg, rgba(30,10,10,0.85) 0%, rgba(15,15,15,0.9) 100%); }
+
+        /* --- CARRUSEL DENTRO DE LA TARJETA --- */
+        .card-slider {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1 / 1; /* <-- ESTO HACE QUE EL CUADRO SEA SIEMPRE 1:1 */
+            background: #080808;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card-slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+        .card-slider .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            transition: background 0.2s;
+            z-index: 2;
+        }
+        .card-slider .slider-btn:hover { background: var(--accent-red); }
+        .card-slider .btn-prev { left: 8px; }
+        .card-slider .btn-next { right: 8px; }
+        .slider-badge {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #ccc;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-family: 'Oswald', sans-serif;
+            pointer-events: none;
+        }
+
+        /* --- INFO DE LA TARJETA --- */
+        .card-info {
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: space-between;
+        }
+        .card-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+        .card-variant {
+            display: inline-block;
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        .card-variant span {
+            color: #25D366;
+            font-weight: bold;
+        }
+
+        .card-price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            border-top: 1px solid #222;
+            padding-top: 12px;
+        }
+        .card-price {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.4rem;
+            color: white;
+        }
+        .card-price small {
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        .btn-add-cart {
+            width: 100%;
+            background: #1a1a1a;
+            color: white;
+            border: 1px solid #444;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .btn-add-cart:hover {
+            background: var(--accent-red);
+            border-color: #ff4444;
+        }
+
+        /* --- SELECTOR PERSONALIZADO --- */
+        .custom-selector {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+        .selector-btn {
+            background: #1a1a1a;
+            border: 1px solid #444;
+            color: #ccc;
+            padding: 8px 5px;
+            border-radius: 4px;
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.85rem;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s;
+        }
+        .selector-btn.active {
+            background: var(--accent-red);
+            border-color: #ff4444;
+            color: white;
+        }
+
+        /* --- MODAL LIGHTBOX (ZOOM FOTOS CON NAVEGACIÓN) --- */
+        .lightbox-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(8px);
+            z-index: 3000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .lightbox-modal.open { display: flex; }
+        .lightbox-content {
+            max-width: 90vw;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.9);
+            border: 1px solid #333;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            color: white;
+            font-size: 2.2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            transition: color 0.2s;
+            z-index: 3002;
+        }
+        .lightbox-close:hover { color: var(--accent-red); }
+        
+        .lightbox-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 3001;
+            transition: background 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .lightbox-btn:hover { background: var(--accent-red); }
+        .lightbox-prev { left: 20px; }
+        .lightbox-next { right: 20px; }
+
+        @media (max-width: 768px) {
+            .lightbox-btn { width: 40px; height: 40px; font-size: 1.2rem; }
+            .lightbox-prev { left: 10px; }
+            .lightbox-next { right: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="global-header"></div>
+    <div class="smoke-container"><div class="smoke-blob smoke-1"></div><div class="smoke-blob smoke-2"></div><div class="smoke-blob smoke-3"></div></div>
+
+    <div class="container">
+        
+        <header class="header">
+            <img src="logo.png" alt="Triqueta Lunar Logo" class="logo-img">
+            <h1>Catálogo de Posavasos</h1>
+            <p class="subtitle">Fabricados en PETG de alta densidad e impresión UV ultrarresistente. Fáciles de limpiar y duraderos.</p>
+            
+            <a href="https://wa.me/573125935222?text=¡Hola%20Triqueta%20Lunar!%20Quiero%20cotizar%20un%20set%20de%20posavasos%20personalizado." class="main-cta" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> COTIZAR DISEÑO PERSONALIZADO
+            </a>
+        </header>
+
+        <div class="posavasos-grid" id="posavasosGrid">
+            
+            <!-- ARTÍCULO 1 FIJO: POSAVASOS PERSONALIZADO -->
+            <div class="posavasos-card custom-card">
+                <div class="card-slider" id="slider-custom">
+                    <!-- Al hacer click manda el ID 'custom' -->
+                    <img id="img-custom" src="posavasos/1.png" alt="Posavasos Personalizado" onclick="ampliarImagen('custom')">
+                </div>
+                <div class="card-info">
+                    <div>
+                        <h2 class="card-title">Diseño Personalizado</h2>
+                        <span class="card-variant">Envíanos tus imágenes al finalizar compra</span>
+                        
+                        <!-- Selector 4 vs 6 puestos exclusivo de Personalizado -->
+                        <div class="custom-selector">
+                            <button class="selector-btn active" id="btn-set-4" onclick="seleccionarSetCustom(4)">4 PUESTOS</button>
+                            <button class="selector-btn" id="btn-set-6" onclick="seleccionarSetCustom(6)">6 PUESTOS</button>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="card-price-row">
+                            <span style="color: #aaa; font-size: 0.9rem;">Precio Set:</span>
+                            <span class="card-price" id="precio-custom">$35.000 <small>COP</small></span>
+                        </div>
+                        <button class="btn-add-cart" onclick="agregarCustomAlCarrito()">
+                            <i class="fas fa-cart-plus"></i> Añadir al Carrito
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LOS DEMÁS DISEÑOS SE INYECTAN AQUÍ DESDE posavasos.json -->
+
+        </div>
+
+    </div>
+
+    <!-- MODAL LIGHTBOX PARA AMPLIAR FOTOS (AHOA CON FLECHAS) -->
+    <div class="lightbox-modal" id="lightboxModal" onclick="cerrarLightbox(event)">
+        <button class="lightbox-close" onclick="cerrarLightbox(event)">&times;</button>
+        <button class="lightbox-btn lightbox-prev" onclick="cambiarFotoLightbox(-1, event)">&#10094;</button>
+        <img class="lightbox-content" id="lightboxImg" src="" alt="Ampliación de posavasos">
+        <button class="lightbox-btn lightbox-next" onclick="cambiarFotoLightbox(1, event)">&#10095;</button>
+    </div>
+
+    <div id="global-footer"></div>
+    <script src="carrito.js"></script>
+
+    <script>
+        // CONFIGURACIÓN DE PRECIOS BASE
+        const PRECIO_4 = 35000;
+        const PRECIO_6 = 45000;
+
+        // Estado del producto personalizado (Item 1)
+        let customConfig = {
+            puestos: 4,
+            precio: PRECIO_4,
+            fotos: [
+                "posavasos/1.png",
+                
+            ],
+            fotoActual: 0
+        };
+
+        // Memoria de fotos para los productos cargados dinámicamente y el lightbox
+        let sliderMemory = {};
+        let lightboxCurrentId = null; // Sabe qué producto está abierto en pantalla grande
+
+        // 1. CONTROL DEL PRODUCTO PERSONALIZADO
+        function seleccionarSetCustom(puestos) {
+            customConfig.puestos = puestos;
+            if (puestos === 4) {
+                customConfig.precio = PRECIO_4;
+                document.getElementById('btn-set-4').classList.add('active');
+                document.getElementById('btn-set-6').classList.remove('active');
+                document.getElementById('precio-custom').innerHTML = `$35.000 <small>COP</small>`;
+            } else {
+                customConfig.precio = PRECIO_6;
+                document.getElementById('btn-set-6').classList.add('active');
+                document.getElementById('btn-set-4').classList.remove('active');
+                document.getElementById('precio-custom').innerHTML = `$45.000 <small>COP</small>`;
+            }
+        }
+
+        function cambiarFotoManual(id, delta) {
+            let item = (id === 'custom') ? customConfig : sliderMemory[id];
+            item.fotoActual += delta;
+            if (item.fotoActual >= item.fotos.length) item.fotoActual = 0;
+            if (item.fotoActual < 0) item.fotoActual = item.fotos.length - 1;
+
+            const imgEl = document.getElementById(`img-${id}`);
+            const badgeEl = document.getElementById(`badge-${id}`);
+            
+            imgEl.src = item.fotos[item.fotoActual];
+            if(badgeEl) badgeEl.innerText = `${item.fotoActual + 1} / ${item.fotos.length}`;
+        }
+
+        function agregarCustomAlCarrito() {
+            let nombre = `Posavasos Personalizado (Set ${customConfig.puestos} Puestos)`;
+            let primeraFoto = customConfig.fotos[0];
+            agregarAlCarrito(nombre, primeraFoto, 'Posavasos', customConfig.precio, 'url');
+            document.getElementById('cartSidebar').classList.add('open');
+        }
+
+        // 2. CARGAR EL CATÁLOGO DESDE posavasos.json
+        document.addEventListener("DOMContentLoaded", () => {
+            const grid = document.getElementById('posavasosGrid');
+
+            fetch('posavasos.json')
+                .then(res => {
+                    if (!res.ok) throw new Error("Archivo posavasos.json no encontrado");
+                    return res.json();
+                })
+                .then(productos => {
+                    productos.forEach((prod, index) => {
+                        let id = `prod-${index}`;
+                        let precio = prod.puestos === 6 ? PRECIO_6 : PRECIO_4;
+                        let precioTexto = `$${precio.toLocaleString('es-CO')} <small>COP</small>`;
+
+                        // Genera lista de imágenes .png según el conteo de fotos
+                        let totalFotos = prod.total_fotos || 1;
+                        let fotosArray = [];
+                        for (let i = 1; i <= totalFotos; i++) {
+                            fotosArray.push(`posavasos/${prod.carpeta}/${i}.png`);
+                        }
+
+                        // Guardamos en memoria para el carrusel y el lightbox
+                        sliderMemory[id] = {
+                            fotos: fotosArray,
+                            fotoActual: 0
+                        };
+
+                        // Crear tarjeta de catálogo
+                        const card = document.createElement('div');
+                        card.className = 'posavasos-card';
+                        card.innerHTML = `
+                            <div class="card-slider" id="slider-${id}">
+                                ${totalFotos > 1 ? `<button class="slider-btn btn-prev" onclick="cambiarFotoManual('${id}', -1)">&#10094;</button>` : ''}
+                                <!-- Al hacer click manda el ID al Lightbox -->
+                                <img id="img-${id}" src="${fotosArray[0]}" alt="${prod.nombre}" onclick="ampliarImagen('${id}')" onerror="this.src='logo.png'">
+                                ${totalFotos > 1 ? `<button class="slider-btn btn-next" onclick="cambiarFotoManual('${id}', 1)">&#10095;</button>` : ''}
+                                ${totalFotos > 1 ? `<span class="slider-badge" id="badge-${id}">1 / ${totalFotos}</span>` : ''}
+                            </div>
+                            <div class="card-info">
+                                <div>
+                                    <h2 class="card-title">${prod.nombre}</h2>
+                                    <span class="card-variant">Configuración: <span>Set de ${prod.puestos} Puestos</span></span>
+                                </div>
+                                <div>
+                                    <div class="card-price-row">
+                                        <span style="color: #aaa; font-size: 0.9rem;">Precio Set:</span>
+                                        <span class="card-price">${precioTexto}</span>
+                                    </div>
+                                    <button class="btn-add-cart" onclick="agregarAlCarrito('Posavasos ${prod.nombre.replace(/'/g, "\\'")} (${prod.puestos} Puestos)', '${fotosArray[0]}', 'Posavasos', ${precio}, 'url'); document.getElementById('cartSidebar').classList.add('open');">
+                                        <i class="fas fa-cart-plus"></i> Añadir al Carrito
+                                    </button>
+                                </div>
+                            </div>
+                        `;
+                        grid.appendChild(card);
+                    });
+                })
+                .catch(err => {
+                    console.log("Aviso:", err.message);
+                });
+        });
+
+        // 3. LIGHTBOX CON NAVEGACIÓN
+        function ampliarImagen(id) {
+            lightboxCurrentId = id;
+            let item = (id === 'custom') ? customConfig : sliderMemory[id];
+            
+            const modal = document.getElementById('lightboxModal');
+            const img = document.getElementById('lightboxImg');
+            
+            // Carga la foto actual que el usuario estaba viendo en la miniatura
+            img.src = item.fotos[item.fotoActual];
+            
+            // Oculta flechas en lightbox si la tarjeta solo tiene 1 foto
+            const flechas = document.querySelectorAll('.lightbox-btn');
+            if(item.fotos.length <= 1) {
+                flechas.forEach(f => f.style.display = 'none');
+            } else {
+                flechas.forEach(f => f.style.display = 'flex');
+            }
+
+            modal.classList.add('open');
+        }
+
+        function cambiarFotoLightbox(delta, event) {
+            // Evita que el clic en la flecha cierre el Lightbox
+            if(event) event.stopPropagation();
+
+            let item = (lightboxCurrentId === 'custom') ? customConfig : sliderMemory[lightboxCurrentId];
+            
+            item.fotoActual += delta;
+            if (item.fotoActual >= item.fotos.length) item.fotoActual = 0;
+            if (item.fotoActual < 0) item.fotoActual = item.fotos.length - 1;
+
+            // Actualiza la imagen gigante
+            document.getElementById('lightboxImg').src = item.fotos[item.fotoActual];
+            
+            // Sincroniza la tarjeta miniatura en el fondo para que coincida
+            document.getElementById(`img-${lightboxCurrentId}`).src = item.fotos[item.fotoActual];
+            let badge = document.getElementById(`badge-${lightboxCurrentId}`);
+            if(badge) badge.innerText = `${item.fotoActual + 1} / ${item.fotos.length}`;
+        }
+
+        function cerrarLightbox(e) {
+            // Cierra solo si hace clic en la X, o en el fondo oscuro
+            if (!e || e.target.id === 'lightboxModal' || e.target.classList.contains('lightbox-close')) {
+                document.getElementById('lightboxModal').classList.remove('open');
+                lightboxCurrentId = null;
+            }
+        }
+    </script>
+</body>
+</html>

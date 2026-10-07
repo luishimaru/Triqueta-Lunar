@@ -1,0 +1,21 @@
+[
+    {
+    "nombre": "The Big 4 Thrash Metal",
+    "carpeta": "The_Big_Four_Thrash_Metal",
+    "puestos": 4,
+    "total_fotos": 5
+  },
+  {
+    "nombre": "Brujas",
+    "carpeta": "Brujas",
+    "puestos": 6,
+    "total_fotos": 4
+  },
+  
+  {
+    "nombre": "Satanic",
+    "carpeta": "Satanic",
+    "puestos": 4,
+    "total_fotos": 5
+  }
+]
