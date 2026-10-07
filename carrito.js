@@ -268,16 +268,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 position: fixed;
                 bottom: 25px;
                 left: 25px;
-                background: rgba(15, 15, 15, 0.9);
+                /* Degradado vino tinto a negro */
+                background: linear-gradient(135deg, rgba(136, 34, 34, 0.95) 0%, rgba(10, 10, 10, 0.95) 100%);
                 backdrop-filter: blur(10px);
-                border: 1px solid #333;
+                border: 1px solid rgba(255, 68, 68, 0.4);
                 border-radius: 50px;
                 padding: 10px 20px;
                 display: flex;
                 align-items: center;
                 gap: 15px;
                 z-index: 2000;
-                box-shadow: 0 5px 20px rgba(0,0,0,0.8);
+                /* Sombra con un ligero resplandor rojo */
+                box-shadow: 0 5px 20px rgba(0,0,0,0.8), 0 0 15px rgba(136, 34, 34, 0.4);
                 animation: slideUpFade 1s ease-out forwards;
                 opacity: 0;
                 transform: translateY(20px);
@@ -292,23 +294,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 letter-spacing: 1px;
                 text-transform: uppercase;
                 margin-right: 5px;
-                border-right: 1px solid #444;
+                border-right: 1px solid rgba(255, 255, 255, 0.3);
                 padding-right: 15px;
             }
             .fsw-icon {
-                color: #b3b3b3;
+                color: #fff; /* Blanco para que resalte en el fondo rojo */
                 font-size: 1.4rem;
                 text-decoration: none;
                 transition: all 0.3s ease;
+                filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
             }
             .fsw-icon:hover {
-                color: #882222;
+                color: #25D366; /* Verde WhatsApp al pasar el mouse */
                 transform: translateY(-3px) scale(1.1);
             }
             .fsw-close {
                 background: none;
                 border: none;
-                color: #666;
+                color: rgba(255, 255, 255, 0.6);
                 font-size: 1.5rem;
                 cursor: pointer;
                 margin-left: 5px;
@@ -317,35 +320,27 @@ document.addEventListener("DOMContentLoaded", () => {
                 align-items: center;
                 line-height: 0;
             }
-            .fsw-close:hover { color: #ff4444; }
+            .fsw-close:hover { color: #fff; }
             
-            /* Ajuste centrado para celulares */
+            /* Ajuste para celulares: Alineado a la izquierda, compacto y sin chocar con el carrito */
             @media (max-width: 768px) {
                 .floating-social-widget {
-                    bottom: 15px;
-                    left: 50%;
-                    transform: translateX(-50%) translateY(20px);
-                    width: 90%;
-                    max-width: 350px;
-                    justify-content: center;
-                    padding: 10px 15px;
+                    bottom: 20px;
+                    left: 20px;
+                    width: auto;
+                    padding: 8px 15px;
+                    gap: 12px;
                 }
-                @keyframes slideUpFade {
-                    to { opacity: 1; transform: translateX(-50%) translateY(0); }
-                }
-                .fsw-text { font-size: 0.85rem; padding-right: 10px; }
-                .fsw-icon { font-size: 1.3rem; }
+                .fsw-text { font-size: 0.85rem; padding-right: 10px; margin-right: 0; }
+                .fsw-icon { font-size: 1.2rem; }
             }
         </style>
         
         <div class="floating-social-widget" id="socialWidget">
             <span class="fsw-text">¡Síguenos!</span>
-            
-            <!-- REEMPLAZA LOS ENLACES CON TUS REDES REALES -->
             <a href="https://www.instagram.com/triquetalunar/" target="_blank" class="fsw-icon"><i class="fab fa-instagram"></i></a>
             <a href="https://www.tiktok.com/@triquetalunar" target="_blank" class="fsw-icon"><i class="fab fa-tiktok"></i></a>
             <a href="https://www.facebook.com/TriquetaLunar" target="_blank" class="fsw-icon"><i class="fab fa-facebook-f"></i></a>
-            
             <button class="fsw-close" onclick="document.getElementById('socialWidget').style.display='none'">&times;</button>
         </div>
     `;
