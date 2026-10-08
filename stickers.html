@@ -307,18 +307,10 @@
         const HOJA_W = 29;
         const HOJA_H = 39;
         const CORTE = 0.5;
-        const PRECIO_HOJA = 20000;
         const tamañosBase = [ { w: 3, h: 3 }, { w: 4, h: 4 }, { w: 5, h: 5 }, { w: 6, h: 6 }, { w: 7, h: 7 }, { w: 8, h: 8 } ];
 
-        let cfg = { w: 0, h: 0, qtyPorHoja: 0, hojas: 1, diseñosSurtidos: {} };
-
-        // VARIABLES DE PAGINACIÓN Y FILTROS
-        let catalogoPines = [];
-        let pinesRecientes = []; 
-        let paginaActual = 1;
-        const pinesPorPagina = 30;
-        let listaFiltroActual = [];
-        let letraSeleccionada = 'NUEVOS';
+        // Se añade 'precioHojaActual' para que el sistema sepa cuánto cobrar según el tamaño
+        let cfg = { w: 0, h: 0, qtyPorHoja: 0, hojas: 1, diseñosSurtidos: {}, precioHojaActual: 20000 };
 
         // 1. INICIALIZAR LA CUADRÍCULA DE TAMAÑOS
         function initSizes() {
@@ -334,12 +326,13 @@
         }
 
         function calcularCantidad(w, h) {
-            let cols = Math.floor(HOJA_W / (w + CORTE));
-            let rows = Math.floor(HOJA_H / (h + CORTE));
+            // Inteligencia de márgenes para que no de 0
+            let cols = Math.floor((HOJA_W + CORTE) / (w + CORTE));
+            let rows = Math.floor((HOJA_H + CORTE) / (h + CORTE));
             return cols * rows;
         }
 
-        // 2. SELECCIÓN DE TAMAÑO
+        // 2. SELECCIÓN DE TAMAÑO Y PRECIO DINÁMICO
         function seleccionarTamaño(w, h, btnElement) {
             document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
             if(btnElement) {
@@ -350,11 +343,19 @@
             cfg.w = parseFloat(w); cfg.h = parseFloat(h);
             cfg.qtyPorHoja = calcularCantidad(cfg.w, cfg.h);
             cfg.hojas = 1; cfg.diseñosSurtidos = {}; 
+
+            // --- SISTEMA DE PRECIOS POR TAMAÑO (CONSUMO DE TINTA) ---
+            if (cfg.qtyPorHoja <= 2) {
+                cfg.precioHojaActual = 45000; // Gigantes (mucha tinta)
+            } else if (cfg.qtyPorHoja <= 8) {
+                cfg.precioHojaActual = 35000; // Grandes (tinta media-alta)
+            } else {
+                cfg.precioHojaActual = 20000; // Estándar (precio base)
+            }
             
             document.getElementById('catalogSection').style.display = 'none';
             document.getElementById('progressBar').style.display = 'none';
             
-            // Regresa el carrito a su posición original
             let cartBtn = document.getElementById('openCartBtn');
             if(cartBtn) cartBtn.style.bottom = '30px';
             
@@ -365,7 +366,26 @@
         function seleccionarPersonalizado() {
             let cw = parseFloat(document.getElementById('customW').value);
             let ch = parseFloat(document.getElementById('customH').value);
-            if(cw >= 3 && ch >= 3) seleccionarTamaño(cw, ch, null);
+            
+            if(isNaN(cw) || isNaN(ch) || cw < 3 || ch < 3) return;
+
+            // Rota el sticker automáticamente si lo escriben al revés
+            let widthToTest = cw;
+            let heightToTest = ch;
+            if (cw > 28.5 && ch <= 28.5) {
+                widthToTest = ch;
+                heightToTest = cw;
+            }
+
+            // Alerta si excede el máximo permitido
+            if (widthToTest > 28.5 || heightToTest > 38.5) {
+                alert("El tamaño máximo de impresión por paquete es de 28.5 x 38.5 cm.");
+                document.getElementById('customW').value = '';
+                document.getElementById('customH').value = '';
+                return;
+            }
+
+            seleccionarTamaño(widthToTest, heightToTest, null);
         }
 
         // 3. MULTIPLICADOR
@@ -375,14 +395,16 @@
                 cfg.diseñosSurtidos = {}; 
                 actualizarResumenUI();
                 if(document.getElementById('catalogSection').style.display === 'block') {
-                    actualizarPaginacion(); // Re-renderiza para borrar los inputs visualmente
+                    actualizarPaginacion(); 
                 }
             }
         }
 
         function actualizarResumenUI() {
             let totalQty = cfg.qtyPorHoja * cfg.hojas;
-            let totalPrice = PRECIO_HOJA * cfg.hojas;
+            // El resumen ahora multiplica por el precio ajustado
+            let totalPrice = cfg.precioHojaActual * cfg.hojas; 
+            
             document.getElementById('sheetDisplay').innerText = `${cfg.hojas} PAQUETE${cfg.hojas > 1 ? 'S' : ''}`;
             document.getElementById('lblMedida').innerText = `Medida seleccionada: ${cfg.w}x${cfg.h} cm`;
             document.getElementById('lblTotalStickers').innerText = `${totalQty} STICKERS`;
@@ -394,64 +416,10 @@
         function añadirDisenoPropio() {
             let totalQty = cfg.qtyPorHoja * cfg.hojas;
             let desc = `Medida ${cfg.w}x${cfg.h}cm (${totalQty} uds) - Diseño Propio`;
-            agregarAlCarrito(desc, 'https://via.placeholder.com/200x200/222222/ffffff?text=Tu+Logo', 'Paquete Stickers', PRECIO_HOJA * cfg.hojas, 'url');
+            // Envia el precio actualizado al carrito
+            agregarAlCarrito(desc, 'logo.png', 'Paquete Stickers', cfg.precioHojaActual * cfg.hojas, '');
             document.getElementById('cartSidebar').classList.add('open');
         }
-
-        function abrirCatalogo() {
-            document.getElementById('catalogSection').style.display = 'block';
-            document.getElementById('progressBar').style.display = 'flex';
-            document.getElementById('catalogSection').scrollIntoView({ behavior: 'smooth' });
-            
-            // Sube el carrito para que no estorbe con la barra
-            let cartBtn = document.getElementById('openCartBtn');
-            if(cartBtn) cartBtn.style.bottom = '100px';
-            
-            if(catalogoPines.length === 0) cargarJSONPines();
-        }
-
-        function cargarJSONPines() {
-            fetch('pines.json')
-                .then(r => r.json())
-                .then(data => {
-                    let pinesData = data;
-                    pinesData.forEach(pin => {
-                        let cat = (pin.categoria || "").toLowerCase();
-                        pin.macroCategorias = []; 
-                        if (cat.includes('rock en español')) pin.macroCategorias.push('Rock en Español');
-                        if (cat.includes('gothic') || cat.includes('goth') || cat.includes('doom') || cat.includes('post-punk')) pin.macroCategorias.push('Gótico, Doom & Post-Punk');
-                        if (cat.includes('ocultismo') || cat.includes('occult')) pin.macroCategorias.push('Ocultismo & Estética');
-                        if (cat.includes('nu metal') || cat.includes('industrial') || cat.includes('alternative') || cat.includes('metalcore') || cat.includes('grunge')) pin.macroCategorias.push('Nu Metal & Alternativo');
-                        if (cat.includes('heavy') || cat.includes('hard rock') || cat.includes('glam')) pin.macroCategorias.push('Heavy & Hard Rock');
-                        if (cat.includes('thrash') || cat.includes('groove') || cat.includes('speed') || cat.includes('crossover')) pin.macroCategorias.push('Thrash & Speed Metal');
-                        if (cat.includes('black')) pin.macroCategorias.push('Black Metal');
-                        if (cat.includes('death') || cat.includes('grindcore') || cat.includes('brutal')) pin.macroCategorias.push('Death Metal & Grindcore');
-                        if (cat.includes('power') || cat.includes('progressive') || cat.includes('symphonic') || cat.includes('folk')) pin.macroCategorias.push('Power, Prog & Folk Metal');
-                        if (cat.includes('punk') || cat.includes('hardcore') || cat.includes('oi!')) pin.macroCategorias.push('Punk & Hardcore');
-                        if (cat.includes('ska') || cat.includes('reggae')) pin.macroCategorias.push('Ska & Reggae');
-                        if (cat.includes('rock') && !cat.includes('hard rock') && !cat.includes('punk rock') && !cat.includes('rock en español')) pin.macroCategorias.push('Rock Clásico & General');
-                        if (pin.macroCategorias.length === 0) pin.macroCategorias.push('Metal & Variantes');
-                    });
-
-                    pinesRecientes = [...pinesData].reverse();
-                    pinesData.sort((a, b) => a.banda.localeCompare(b.banda));
-                    catalogoPines = pinesData;
-
-                    // Inyectar opciones de género
-                    let todosLosGeneros = [];
-                    catalogoPines.forEach(p => todosLosGeneros.push(...p.macroCategorias));
-                    [...new Set(todosLosGeneros)].sort().forEach(g => {
-                        let opt = document.createElement('option');
-                        opt.value = g; opt.innerText = `🤘 ${g}`;
-                        document.getElementById('genreFilter').appendChild(opt);
-                    });
-
-                    listaFiltroActual = pinesRecientes;
-                    actualizarPaginacion();
-                    inicializarFiltros();
-                });
-        }
-
         // 5. RENDERIZADO POR PÁGINAS Y CONTROLES
         function actualizarPaginacion() {
             const inicio = (paginaActual - 1) * pinesPorPagina;
@@ -620,7 +588,9 @@
             let totalActual = Object.values(cfg.diseñosSurtidos).reduce((a,b) => a+b, 0);
             if (totalActual !== maxPermitido) return; 
 
-            let totalPrice = PRECIO_HOJA * cfg.hojas;
+            // CAMBIA ESTA LÍNEA
+            let totalPrice = cfg.precioHojaActual * cfg.hojas; 
+            
             let resumenBandas = Object.entries(cfg.diseñosSurtidos)
                                 .map(([banda, cant]) => `${cant}x ${banda}`)
                                 .join(', ');
@@ -632,7 +602,6 @@
             document.getElementById('catalogSection').style.display = 'none';
             document.getElementById('progressBar').style.display = 'none';
             
-            // Regresa el carrito a su posición original
             let cartBtn = document.getElementById('openCartBtn');
             if(cartBtn) cartBtn.style.bottom = '30px';
             
