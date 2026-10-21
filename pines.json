@@ -2467,6 +2467,103 @@
     "banda": "Amorphis",
     "imagen": "Amorphis.png",
     "categoria": "Melodic Death Metal / Progressive Metal"
+  },
+  [
+  {
+    "banda": "Tygers of Pan Tang",
+    "imagen": "Tygers-of-Pan-Tang.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "Angel Witch",
+    "imagen": "Angel-Witch.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "Tank",
+    "imagen": "Tank.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "Girlschool",
+    "imagen": "Girlschool.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "Blitzkrieg",
+    "imagen": "Blitzkrieg.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "Exciter",
+    "imagen": "Exciter.png",
+    "categoria": "Speed Metal"
+  },
+  {
+    "banda": "Anvil",
+    "imagen": "Anvil.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "Diamond Head",
+    "imagen": "Diamond-Head.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "Praying Mantis",
+    "imagen": "Praying-Mantis.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "Jaguar",
+    "imagen": "Jaguar.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "Saxon Classic Logo",
+    "imagen": "Saxon-Classic-Logo.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "Cinderella",
+    "imagen": "Cinderella.png",
+    "categoria": "Glam Metal"
+  },
+  {
+    "banda": "Foreigner",
+    "imagen": "Foreigner.png",
+    "categoria": "Hard Rock"
+  },
+  {
+    "banda": "Def leppard Classic Logo",
+    "imagen": "Def-leppard-Classic-Logo.png",
+    "categoria": "Hard Rock"
+  },
+  {
+    "banda": "U2",
+    "imagen": "U2.png",
+    "categoria": "Rock"
+  },
+  {
+    "banda": "Raven Speed Metal Strike",
+    "imagen": "Raven-Speed-Metal-Strike.png",
+    "categoria": "Speed Metal"
+  },
+  {
+    "banda": "Raven Classic Logo2",
+    "imagen": "Raven-Classic-Logo2.png",
+    "categoria": "Speed Metal"
+  },
+  {
+    "banda": "Raven Metal Logo",
+    "imagen": "Raven-Metal-Logo.png",
+    "categoria": "Speed Metal"
+  },
+  {
+    "banda": "Raven",
+    "imagen": "Raven.png",
+    "categoria": "Speed Metal"
   }
+]
 
 ]
