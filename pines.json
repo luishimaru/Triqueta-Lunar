@@ -2562,6 +2562,56 @@
     "banda": "Raven",
     "imagen": "Raven.png",
     "categoria": "Speed Metal"
+  },
+  {
+    "banda": "Ratt",
+    "imagen": "Ratt.png",
+    "categoria": "Glam Metal"
+  },
+  {
+    "banda": "Warrant",
+    "imagen": "Warrant.png",
+    "categoria": "Glam Metal"
+  },
+  {
+    "banda": "Mötley Crüe Logo",
+    "imagen": "Mötley-Crüe-Logo.png",
+    "categoria": "Glam Metal"
+  },
+  {
+    "banda": "Poison Classic Logo",
+    "imagen": "Poison-Classic-Logo.png",
+    "categoria": "Glam Metal"
+  },
+  {
+    "banda": "Quiet Riot Classic Logo",
+    "imagen": "Quiet-Riot-Classic-Logo.png",
+    "categoria": "Glam Metal"
+  },
+  {
+    "banda": "Twisted Sister Graffiti",
+    "imagen": "Twisted-Sister-Graffiti.png",
+    "categoria": "Glam Metal"
+  },
+  {
+    "banda": "Dokken Fenix",
+    "imagen": "Dokken-Fenix.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "W.A.S.P Classic Logo",
+    "imagen": "W.A.S.P-Classic-Logo.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "Faster Pussycat",
+    "imagen": "Faster-Pussycat.png",
+    "categoria": "Glam Metal"
+  },
+  {
+    "banda": "L.A. Guns",
+    "imagen": "L.A.-Guns.png",
+    "categoria": "Glam Metal"
   }
 
 ]
