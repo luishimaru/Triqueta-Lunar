@@ -47,7 +47,8 @@
         .size-btn:hover { border-color: #666; background: #252525; }
         .size-btn.active { border-color: var(--accent-red); background: rgba(136, 34, 34, 0.2); box-shadow: inset 0 0 10px rgba(136, 34, 34, 0.5); }
         .size-btn .dim { font-size: 1.4rem; font-weight: bold; display: block; margin-bottom: 5px; font-family: 'Oswald', sans-serif; }
-        .size-btn .qty { font-size: 0.85rem; color: #aaa; }
+        .size-btn .qty { font-size: 0.85rem; color: #aaa; display: block; }
+        .size-btn .unit-cost { font-size: 0.8rem; color: #25D366; font-weight: bold; margin-top: 4px; display: block; }
 
         .qty-controls { display: flex; align-items: center; justify-content: center; gap: 15px; font-size: 1.2rem; margin: 20px 0; }
         .ctrl-btn { background: #333; color: white; border: none; width: 40px; height: 40px; border-radius: 5px; font-size: 1.5rem; cursor: pointer; transition: 0.2s; }
@@ -251,6 +252,7 @@
                 <span id="lblMedida" style="color: #ccc;">Medida seleccionada: --</span>
                 <span id="lblTotalStickers" class="highlight">0 STICKERS</span>
                 <span id="lblPrecioTotal" style="font-size: 1.2rem;">Por $0 COP</span>
+                <span id="lblPrecioUnidad" style="font-size: 0.95rem; color: #aaa; margin-top: 4px;">(Cada sticker te sale a $0 COP)</span>
             </div>
 
             <div class="action-btns">
@@ -309,24 +311,45 @@
         const CORTE = 0.5;
         const tamañosBase = [ { w: 3, h: 3 }, { w: 4, h: 4 }, { w: 5, h: 5 }, { w: 6, h: 6 }, { w: 7, h: 7 }, { w: 8, h: 8 } ];
 
-        // Se añade 'precioHojaActual' para que el sistema sepa cuánto cobrar según el tamaño
         let cfg = { w: 0, h: 0, qtyPorHoja: 0, hojas: 1, diseñosSurtidos: {}, precioHojaActual: 20000 };
+
+        // Variables globales para el catálogo y paginación
+        let catalogoPines = [];
+        let pinesRecientes = [];
+        let listaFiltroActual = [];
+        let paginaActual = 1;
+        const pinesPorPagina = 24;
+        let letraSeleccionada = 'NUEVOS';
+        let filtrosInicializados = false;
+
+        // Función auxiliar para obtener el precio del paquete según la cantidad de stickers
+        function obtenerPrecioPaquete(qty) {
+            if (qty <= 2) return 45000; // Gigantes (mucha tinta)
+            if (qty <= 8) return 35000; // Grandes (tinta media-alta)
+            return 20000;               // Estándar (precio base)
+        }
 
         // 1. INICIALIZAR LA CUADRÍCULA DE TAMAÑOS
         function initSizes() {
             const grid = document.getElementById('sizeGrid');
             tamañosBase.forEach(t => {
                 let qty = calcularCantidad(t.w, t.h);
+                let precioPaquete = obtenerPrecioPaquete(qty);
+                let costoUnitario = Math.round(precioPaquete / qty);
+                
                 let btn = document.createElement('div');
                 btn.className = 'size-btn';
-                btn.innerHTML = `<span class="dim">${t.w}x${t.h} cm</span><span class="qty">${qty} unds.</span>`;
+                btn.innerHTML = `
+                    <span class="dim">${t.w}x${t.h} cm</span>
+                    <span class="qty">${qty} unds.</span>
+                    <span class="unit-cost">$${costoUnitario.toLocaleString('es-CO')} c/u</span>
+                `;
                 btn.onclick = () => seleccionarTamaño(t.w, t.h, btn);
                 grid.appendChild(btn);
             });
         }
 
         function calcularCantidad(w, h) {
-            // Inteligencia de márgenes para que no de 0
             let cols = Math.floor((HOJA_W + CORTE) / (w + CORTE));
             let rows = Math.floor((HOJA_H + CORTE) / (h + CORTE));
             return cols * rows;
@@ -337,21 +360,16 @@
             document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
             if(btnElement) {
                 btnElement.classList.add('active');
-                document.getElementById('customW').value = ''; document.getElementById('customH').value = '';
+                document.getElementById('customW').value = '';
+                document.getElementById('customH').value = '';
             }
 
-            cfg.w = parseFloat(w); cfg.h = parseFloat(h);
+            cfg.w = parseFloat(w);
+            cfg.h = parseFloat(h);
             cfg.qtyPorHoja = calcularCantidad(cfg.w, cfg.h);
-            cfg.hojas = 1; cfg.diseñosSurtidos = {}; 
-
-            // --- SISTEMA DE PRECIOS POR TAMAÑO (CONSUMO DE TINTA) ---
-            if (cfg.qtyPorHoja <= 2) {
-                cfg.precioHojaActual = 45000; // Gigantes (mucha tinta)
-            } else if (cfg.qtyPorHoja <= 8) {
-                cfg.precioHojaActual = 35000; // Grandes (tinta media-alta)
-            } else {
-                cfg.precioHojaActual = 20000; // Estándar (precio base)
-            }
+            cfg.hojas = 1;
+            cfg.diseñosSurtidos = {}; 
+            cfg.precioHojaActual = obtenerPrecioPaquete(cfg.qtyPorHoja);
             
             document.getElementById('catalogSection').style.display = 'none';
             document.getElementById('progressBar').style.display = 'none';
@@ -369,7 +387,6 @@
             
             if(isNaN(cw) || isNaN(ch) || cw < 3 || ch < 3) return;
 
-            // Rota el sticker automáticamente si lo escriben al revés
             let widthToTest = cw;
             let heightToTest = ch;
             if (cw > 28.5 && ch <= 28.5) {
@@ -377,7 +394,6 @@
                 heightToTest = cw;
             }
 
-            // Alerta si excede el máximo permitido
             if (widthToTest > 28.5 || heightToTest > 38.5) {
                 alert("El tamaño máximo de impresión por paquete es de 28.5 x 38.5 cm.");
                 document.getElementById('customW').value = '';
@@ -402,13 +418,15 @@
 
         function actualizarResumenUI() {
             let totalQty = cfg.qtyPorHoja * cfg.hojas;
-            // El resumen ahora multiplica por el precio ajustado
             let totalPrice = cfg.precioHojaActual * cfg.hojas; 
+            let unitPrice = cfg.qtyPorHoja > 0 ? Math.round(cfg.precioHojaActual / cfg.qtyPorHoja) : 0;
             
             document.getElementById('sheetDisplay').innerText = `${cfg.hojas} PAQUETE${cfg.hojas > 1 ? 'S' : ''}`;
-            document.getElementById('lblMedida').innerText = `Medida seleccionada: ${cfg.w}x${cfg.h} cm`;
+            document.getElementById('lblMedida').innerText = `Medida seleccionada: ${cfg.w}x${cfg.h} cm (${cfg.qtyPorHoja} unds. por paquete)`;
             document.getElementById('lblTotalStickers').innerText = `${totalQty} STICKERS`;
             document.getElementById('lblPrecioTotal').innerText = `Por $${totalPrice.toLocaleString('es-CO')} COP`;
+            document.getElementById('lblPrecioUnidad').innerText = `Cada sticker te sale a $${unitPrice.toLocaleString('es-CO')} COP`;
+            
             actualizarProgresoSurtido();
         }
 
@@ -416,10 +434,56 @@
         function añadirDisenoPropio() {
             let totalQty = cfg.qtyPorHoja * cfg.hojas;
             let desc = `Medida ${cfg.w}x${cfg.h}cm (${totalQty} uds) - Diseño Propio`;
-            // Envia el precio actualizado al carrito
             agregarAlCarrito(desc, 'logo.png', 'Paquete Stickers', cfg.precioHojaActual * cfg.hojas, '');
             document.getElementById('cartSidebar').classList.add('open');
         }
+
+        function abrirCatalogo() {
+            document.getElementById('catalogSection').style.display = 'block';
+            document.getElementById('progressBar').style.display = 'flex';
+            
+            let cartBtn = document.getElementById('openCartBtn');
+            if (cartBtn) cartBtn.style.bottom = '90px';
+
+            actualizarProgresoSurtido();
+            document.getElementById('catalogSection').scrollIntoView({ behavior: 'smooth' });
+
+            if (catalogoPines.length === 0) {
+                fetch('pines.json')
+                    .then(res => res.json())
+                    .then(data => {
+                        catalogoPines = data;
+                        pinesRecientes = [...data].reverse();
+
+                        // Llenar selector de géneros musicales dinámicamente
+                        const genreSelect = document.getElementById('genreFilter');
+                        const generosSet = new Set();
+                        data.forEach(p => {
+                            if (Array.isArray(p.macroCategorias)) {
+                                p.macroCategorias.forEach(g => generosSet.add(g));
+                            } else if (p.categoria) {
+                                generosSet.add(p.categoria);
+                            }
+                        });
+                        Array.from(generosSet).sort().forEach(genero => {
+                            let opt = document.createElement('option');
+                            opt.value = genero;
+                            opt.textContent = genero;
+                            genreSelect.appendChild(opt);
+                        });
+
+                        if (!filtrosInicializados) {
+                            inicializarFiltros();
+                            filtrosInicializados = true;
+                        }
+                        filtrarPorLetra('NUEVOS');
+                    })
+                    .catch(err => console.error('Error cargando el catálogo:', err));
+            } else {
+                actualizarPaginacion();
+            }
+        }
+
         // 5. RENDERIZADO POR PÁGINAS Y CONTROLES
         function actualizarPaginacion() {
             const inicio = (paginaActual - 1) * pinesPorPagina;
@@ -460,7 +524,6 @@
             if (lista.length === 0) { grid.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: #888;">No se encontraron diseños.</p>'; return; }
 
             lista.forEach(pin => {
-                // Al cargar la página, lee si ya habíamos asignado stickers a esta banda antes
                 let currentQty = cfg.diseñosSurtidos[pin.banda] || 0;
                 let safeName = pin.banda.replace(/'/g, "\\'"); 
                 
@@ -498,7 +561,10 @@
                 if(e.target.value === 'TODOS') { filtrarPorLetra('NUEVOS'); }
                 else { 
                     letterBtns.forEach(b => b.classList.remove('active'));
-                    listaFiltroActual = catalogoPines.filter(p => p.macroCategorias.includes(e.target.value));
+                    listaFiltroActual = catalogoPines.filter(p => {
+                        if (Array.isArray(p.macroCategorias)) return p.macroCategorias.includes(e.target.value);
+                        return p.categoria === e.target.value;
+                    });
                     actualizarPaginacion();
                 }
             });
@@ -588,7 +654,6 @@
             let totalActual = Object.values(cfg.diseñosSurtidos).reduce((a,b) => a+b, 0);
             if (totalActual !== maxPermitido) return; 
 
-            // CAMBIA ESTA LÍNEA
             let totalPrice = cfg.precioHojaActual * cfg.hojas; 
             
             let resumenBandas = Object.entries(cfg.diseñosSurtidos)
@@ -613,10 +678,9 @@
 
         document.addEventListener("DOMContentLoaded", initSizes);
 
-        // Función para los botones del carrusel de fotos reales
         function moverCarruselReales(direccion, boton) {
             const contenedor = boton.parentElement.querySelector('.galeria-reales');
-            const cantidadDesplazamiento = 275; // Ancho de la foto + el margen
+            const cantidadDesplazamiento = 275;
             
             if (direccion === 'der') {
                 contenedor.scrollLeft += cantidadDesplazamiento;
