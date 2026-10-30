@@ -1,0 +1,11 @@
+# Temporales de Google Drive
+.tmp.drivedownload/
+.tmp.driveupload/
+
+# Windows / macOS
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Node
+node_modules/

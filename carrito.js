@@ -48,9 +48,9 @@ function aplicarDescuentosEspeciales() {
             else item.precio = 10000;
         } 
         else if (item.tipo === 'Llavero') {
-            if (item.cantidad >= 12) item.precio = 3000;
-            else if (totales.Llavero >= 12) item.precio = 4000;
-            else item.precio = 5000;
+            if (item.cantidad >= 12) item.precio = 48000 / 12;      // Docena x1 modelo: $48.000
+            else if (totales.Llavero >= 12) item.precio = 80000 / 12; // Docena surtida: $80.000
+            else item.precio = 15000;
         }
         else if (item.tipo === 'Camiseta Frontal') {
             item.precio = (totales.Camiseta >= 4) ? 26000 : 35000;
