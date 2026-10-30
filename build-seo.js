@@ -132,7 +132,7 @@ const imagenesPorPagina = {
   'aretes.html': aretes.map(a => ({
     loc: absUrl(`aretes/${a.imagen}`),
     title: `Aretes ${a.nombre} | Triqueta Lunar`,
-    caption: `Aretes ${a.nombre} con corte láser e impresión UV. Hechos en Bogotá, Colombia.`,
+    caption: `Aretes ${a.nombre} en madera con impresión UV de alta definición. Hechos en Bogotá, Colombia.`,
   })),
   'camisetas.html': camisetas.flatMap(c => c.fotos.map((f, i) => ({
     loc: absUrl(f),
@@ -252,7 +252,7 @@ function bloquesPorPagina() {
       ns: noscriptBandas('Llavero', 'Llaveros', PRECIO.llavero),
     },
     'aretes.html': {
-      ld: itemList('Aretes con corte láser e impresión UV', 'aretes.html',
+      ld: itemList('Aretes en madera con impresión UV de alta definición', 'aretes.html',
         aretes.map(a => ({ name: `Aretes ${a.nombre}`, image: absUrl('aretes/' + a.imagen), price: PRECIO.arete }))),
       ns: [
         `<h2>Catálogo de aretes: ${aretes.length} diseños</h2>`,
