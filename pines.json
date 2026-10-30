@@ -2612,6 +2612,21 @@
     "banda": "L.A. Guns",
     "imagen": "L.A.-Guns.png",
     "categoria": "Glam Metal"
+  },
+  {
+    "banda": "Inmolation",
+    "imagen": "Inmolation.png",
+    "categoria": "Death Metal"
+  },
+  {
+    "banda": "Inquisition",
+    "imagen": "Inquisition.png",
+    "categoria": "Black Metal"
+  },
+  {
+    "banda": "Inmortal Classic Logo",
+    "imagen": "Inmortal-Classic-Logo.png",
+    "categoria": "Black Metal"
   }
 
 ]
