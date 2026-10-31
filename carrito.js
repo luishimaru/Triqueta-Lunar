@@ -212,6 +212,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .lightbox-unv-close { position: absolute; top: 20px; right: 25px; color: white; font-size: 2.2rem; cursor: pointer; background: none; border: none; transition: color 0.2s; z-index: 10000; }
             .lightbox-unv-close:hover { color: #882222; }
             .foto-real, .pin-card img, .carousel img { cursor: zoom-in !important; }
+            .category-card img { cursor: pointer !important; }
         </style>
         
         <div class="lightbox-unv" id="lb-unv-modal">
@@ -224,6 +225,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.insertAdjacentHTML('beforeend', lightboxHTML);
 
     document.body.addEventListener('click', function(e) {
+        // Las tarjetas de categorías del index son enlaces: sin zoom, van directo a su página
+        if (e.target.closest('.category-card')) return;
+
         if (e.target.matches('.foto-real') || e.target.matches('.pin-card img') || e.target.matches('.carousel img')) {
             const imgModal = document.getElementById('lb-unv-img');
             const videoModal = document.getElementById('lb-unv-video');
