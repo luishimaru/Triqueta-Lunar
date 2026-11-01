@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" sizes="48x48">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <title>Política de Privacidad | Triqueta Lunar</title>
+    <meta name="description" content="Política de privacidad y tratamiento de datos personales de Triqueta Lunar (Bogotá, Colombia): qué datos recibimos, para qué los usamos y cómo ejercer tus derechos.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://triquetalunar.com/privacidad.html">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --text-main: #ffffff;
+            --text-muted: #b3b3b3;
+            --accent-red: #882222;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: transparent;
+            color: var(--text-main);
+            font-family: 'Roboto', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* --- FONDO ANIMADO --- */
+        .smoke-container { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; background: #050505; overflow: hidden; pointer-events: none; }
+        .smoke-blob { position: absolute; border-radius: 50%; filter: blur(55px); animation: moveSmoke 15s infinite alternate ease-in-out; }
+        .smoke-1 { background: radial-gradient(circle, rgba(160, 15, 15, 0.45) 0%, transparent 70%); width: 80vw; height: 80vw; top: -10%; left: -20%; }
+        .smoke-2 { background: radial-gradient(circle, rgba(120, 25, 25, 0.35) 0%, transparent 70%); width: 70vw; height: 70vw; top: 40%; right: -20%; animation-delay: -5s; }
+        .smoke-3 { background: radial-gradient(circle, rgba(60, 10, 10, 0.4) 0%, transparent 70%); width: 90vw; height: 90vw; bottom: -20%; left: 10%; animation-delay: -10s; }
+        @keyframes moveSmoke { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(40px, -40px) scale(1.15); } }
+
+        .container { position: relative; z-index: 10; max-width: 820px; width: 100%; padding: 2rem 1rem 3rem; }
+
+        .header { text-align: center; margin-bottom: 2rem; }
+        .logo-img { width: 120px; height: auto; margin-bottom: 1rem; filter: drop-shadow(0 0 12px rgba(255,0,0,0.2)); }
+        h1 { font-family: 'Oswald', sans-serif; font-size: 2rem; letter-spacing: 2px; text-transform: uppercase; text-shadow: 0 2px 4px rgba(0,0,0,0.6); }
+        .subtitle { color: var(--text-muted); font-size: 1rem; margin-top: 6px; }
+
+        .policy { background: linear-gradient(145deg, #111 0%, #0a0a0a 100%); border: 1px solid #333; border-radius: 10px; padding: 2rem 1.6rem; box-shadow: 0 8px 20px rgba(0,0,0,0.6); }
+        .policy h2 { font-family: 'Oswald', sans-serif; font-size: 1.25rem; letter-spacing: 1px; color: #fff; margin: 2rem 0 0.7rem; padding-left: 12px; border-left: 3px solid var(--accent-red); scroll-margin-top: 90px; }
+        .policy h2:first-of-type { margin-top: 0; }
+        .policy p, .policy li { color: #d6d6d6; font-weight: 300; line-height: 1.65; font-size: 1rem; }
+        .policy p { margin-bottom: 0.8rem; }
+        .policy ul { margin: 0 0 0.9rem 1.3rem; }
+        .policy li { margin-bottom: 0.35rem; }
+        .policy strong { color: #fff; font-weight: 400; }
+        .policy a { color: #ff6b6b; text-decoration: none; border-bottom: 1px solid rgba(255,107,107,0.35); }
+        .policy a:hover { color: #fff; border-color: #fff; }
+        .policy .updated { color: var(--text-muted); font-size: 0.9rem; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #2a2a2a; }
+
+        .contact-cta {
+            display: inline-flex; align-items: center; justify-content: center; background: linear-gradient(145deg, #252525 0%, #161616 50%, #0d0d0d 100%);
+            border: 1px solid #25D366; color: #fff !important; padding: 0.8rem 1.6rem; border-radius: 8px; font-family: 'Oswald', sans-serif; font-size: 1rem;
+            letter-spacing: 1px; text-decoration: none; margin: 0.4rem 0 1rem; transition: all 0.3s ease;
+        }
+        .contact-cta i { margin-right: 10px; color: #25D366; font-size: 1.2rem; }
+        .contact-cta:hover { background: #111; transform: translateY(-2px); box-shadow: 0 0 15px rgba(37, 211, 102, 0.2); }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.6rem; }
+            .policy { padding: 1.4rem 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="global-header"></div>
+    <div class="smoke-container"><div class="smoke-blob smoke-1"></div><div class="smoke-blob smoke-2"></div><div class="smoke-blob smoke-3"></div></div>
+
+    <div class="container">
+        <header class="header">
+            <img src="logo.png" alt="Triqueta Lunar Logo" class="logo-img">
+            <h1>Política de Privacidad</h1>
+            <p class="subtitle">Tratamiento de datos personales de Triqueta Lunar</p>
+        </header>
+
+        <article class="policy">
+            <h2>1. Quiénes somos</h2>
+            <p><strong>Triqueta Lunar</strong> es un taller de merch personalizado y artículos de colección de rock, metal y punk ubicado en <strong>Bogotá, Colombia</strong>. Somos responsables del tratamiento de los datos personales que nos compartes a través de este sitio web y de nuestros canales de atención.</p>
+            <p>Puedes contactarnos por WhatsApp al <a href="https://wa.me/573125935222" target="_blank" rel="noopener noreferrer">+57 312 593 5222</a> o por Instagram en <a href="https://www.instagram.com/triquetalunar/" target="_blank" rel="noopener noreferrer">@triquetalunar</a>.</p>
+
+            <h2>2. Qué datos recibimos</h2>
+            <ul>
+                <li><strong>Cuando nos escribes o haces un pedido</strong> por WhatsApp, Instagram o Facebook Messenger: tu nombre, número de teléfono o usuario, el contenido de tus mensajes y, si compras, la dirección y ciudad de entrega.</li>
+                <li><strong>Archivos que nos envías</strong> para fabricar tu pedido: logos, diseños, imágenes o fotos de referencia.</li>
+                <li><strong>En este sitio web</strong>: el carrito de compras se guarda únicamente en tu propio navegador (almacenamiento local). No lo recibimos hasta que tú decides enviar el pedido por WhatsApp. No usamos formularios de registro, cookies de rastreo ni herramientas de analítica.</li>
+            </ul>
+            <p>Para mostrar la tipografía y los íconos, el sitio carga recursos de Google Fonts y de cdnjs (Cloudflare). Estos servicios pueden registrar datos técnicos como tu dirección IP según sus propias políticas.</p>
+
+            <h2>3. Para qué los usamos</h2>
+            <ul>
+                <li>Responder tus preguntas y enviarte cotizaciones.</li>
+                <li>Diseñar, fabricar y entregar tus pedidos.</li>
+                <li>Coordinar pagos, envíos y garantías.</li>
+                <li>Mejorar nuestra atención y nuestros productos.</li>
+            </ul>
+            <p>No vendemos, alquilamos ni cedemos tus datos personales a terceros.</p>
+
+            <h2>4. Con quién los compartimos</h2>
+            <ul>
+                <li><strong>Empresas de envío</strong>: solo el nombre, teléfono y dirección necesarios para entregar tu pedido.</li>
+                <li><strong>Plataformas de mensajería y redes sociales</strong> (WhatsApp, Instagram y Facebook, de Meta): tus conversaciones con nosotros ocurren en esas plataformas y se rigen también por sus propias políticas de privacidad.</li>
+            </ul>
+
+            <h2>5. Publicidad en Facebook e Instagram</h2>
+            <p>Publicamos anuncios en Facebook e Instagram. Si nos escribes desde uno de ellos, Meta nos muestra únicamente estadísticas agregadas del anuncio (por ejemplo, cuántas conversaciones se iniciaron). Para administrar nuestros anuncios usamos una herramienta interna conectada a la API de Marketing de Meta que solo consulta y gestiona los anuncios de nuestra propia cuenta publicitaria; no accede a datos personales de los usuarios de Facebook o Instagram ni los almacena.</p>
+
+            <h2>6. Tus diseños y las fotos de nuestro trabajo</h2>
+            <p>Usamos tus archivos solo para fabricar tu pedido. Las fotos de productos terminados pueden aparecer en nuestras redes y anuncios como muestra de nuestro trabajo. Si no quieres que tu pedido aparezca, avísanos y no lo publicaremos o lo retiraremos.</p>
+
+            <h2>7. Cuánto tiempo los guardamos</h2>
+            <p>Conservamos tus datos mientras sean necesarios para atender tu pedido, cumplir garantías y nuestras obligaciones legales y contables. Después los eliminamos.</p>
+
+            <h2>8. Tus derechos</h2>
+            <p>De acuerdo con la Ley 1581 de 2012 y el Decreto 1377 de 2013 de Colombia, tienes derecho a:</p>
+            <ul>
+                <li>Conocer, actualizar y rectificar tus datos personales.</li>
+                <li>Pedir prueba de la autorización que nos diste.</li>
+                <li>Ser informado sobre el uso que les damos.</li>
+                <li>Revocar la autorización y pedir que eliminemos tus datos.</li>
+                <li>Presentar quejas ante la Superintendencia de Industria y Comercio (SIC).</li>
+            </ul>
+            <p>Para ejercerlos, escríbenos por WhatsApp. Respondemos las consultas en un máximo de 10 días hábiles y los reclamos en un máximo de 15 días hábiles.</p>
+
+            <h2 id="eliminar-datos">9. Cómo pedir que eliminemos tus datos</h2>
+            <p>Escríbenos por WhatsApp con el mensaje <strong>"Eliminar mis datos"</strong> indicando el número o usuario con el que nos contactaste. Eliminaremos tus conversaciones, archivos y datos de nuestros registros, salvo los que debamos conservar por obligación legal, y te confirmaremos cuando esté hecho.</p>
+            <a class="contact-cta" href="https://wa.me/573125935222?text=Eliminar%20mis%20datos" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> SOLICITAR POR WHATSAPP</a>
+            <p>Los datos que guardan WhatsApp, Instagram o Facebook sobre tu cuenta los administras directamente en la configuración de esas aplicaciones.</p>
+
+            <h2>10. Menores de edad</h2>
+            <p>Si eres menor de edad, te pedimos que un padre, madre o acudiente te acompañe al hacer un pedido.</p>
+
+            <h2>11. Cambios a esta política</h2>
+            <p>Podemos actualizar esta política. La versión vigente es siempre la publicada en esta página.</p>
+
+            <p class="updated">Última actualización: 31 de octubre de 2026.</p>
+        </article>
+    </div>
+
+    <div id="global-footer"></div>
+    <script src="carrito.js"></script>
+</body>
+</html>
