@@ -2632,6 +2632,21 @@
     "banda": "Benediction",
     "imagen": "Benediction.png",
     "categoria": "Death Metal"
+  },
+  {
+    "banda": "Ángeles del Infierno Classic Logo",
+    "imagen": "Angeles-Del-infierno-Classic-Logo.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "Ángeles del Infierno Alas",
+    "imagen": "Angeles-del-infierno-Alas.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "Ángeles del Infierno Logo",
+    "imagen": "Angeles-del-infierno-Logo.png",
+    "categoria": "Heavy Metal"
   }
 
 ]

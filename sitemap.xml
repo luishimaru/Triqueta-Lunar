@@ -3,13 +3,13 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://triquetalunar.com/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://triquetalunar.com/pines.html</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -116,6 +116,21 @@
       <image:loc>https://triquetalunar.com/pines/%C3%81ngeles-del-Infierno.png</image:loc>
       <image:title>Pin de Ángeles del Infierno | Triqueta Lunar</image:title>
       <image:caption>Pin de Ángeles del Infierno (Heavy Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/Angeles-del-infierno-Alas.png</image:loc>
+      <image:title>Pin de Ángeles del Infierno Alas | Triqueta Lunar</image:title>
+      <image:caption>Pin de Ángeles del Infierno Alas (Heavy Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/Angeles-Del-infierno-Classic-Logo.png</image:loc>
+      <image:title>Pin de Ángeles del Infierno Classic Logo | Triqueta Lunar</image:title>
+      <image:caption>Pin de Ángeles del Infierno Classic Logo (Heavy Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/Angeles-del-infierno-Logo.png</image:loc>
+      <image:title>Pin de Ángeles del Infierno Logo | Triqueta Lunar</image:title>
+      <image:caption>Pin de Ángeles del Infierno Logo (Heavy Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://triquetalunar.com/pines/Angra.png</image:loc>
@@ -2650,25 +2665,25 @@
   </url>
   <url>
     <loc>https://triquetalunar.com/llaveros.html</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://triquetalunar.com/picks.html</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://triquetalunar.com/stickers.html</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://triquetalunar.com/aretes.html</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -2739,7 +2754,7 @@
   </url>
   <url>
     <loc>https://triquetalunar.com/camisetas.html</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -2780,7 +2795,7 @@
   </url>
   <url>
     <loc>https://triquetalunar.com/posavasos.html</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-11-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
