@@ -9,3 +9,11 @@ desktop.ini
 
 # Node
 node_modules/
+
+# Auditoría de inventario (privado, nunca se publica)
+Auditoria-Inventario/
+
+# Scripts de mantenimiento (solo locales)
+Actualizar-Web.bat
+sync-catalog.js
+build-seo.js
