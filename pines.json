@@ -2802,6 +2802,21 @@
     "banda": "Masacre 68",
     "imagen": "Masacre-68.png",
     "categoria": "Hardcore Punk"
+  },
+  {
+    "banda": "Anti Flag",
+    "imagen": "Anti-Flag.png",
+    "categoria": "Punk Rock"
+  },
+  {
+    "banda": "Blink 182 classic Logo",
+    "imagen": "Blink-182-classic-Logo.png",
+    "categoria": "Pop Punk"
+  },
+  {
+    "banda": "Sum41",
+    "imagen": "Sum41.png",
+    "categoria": "Pop Punk"
   }
 
 ]
