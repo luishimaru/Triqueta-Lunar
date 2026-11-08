@@ -2817,6 +2817,21 @@
     "banda": "Sum41",
     "imagen": "Sum41.png",
     "categoria": "Pop Punk"
+  },
+  {
+    "banda": "Abelardo Whiplash",
+    "imagen": "Abelardo-Whiplash.png",
+    "categoria": "Thrash Metal"
+  },
+  {
+    "banda": "Whiplash Power and Pain",
+    "imagen": "Whiplash-poer-nad-Pain.png",
+    "categoria": "Thrash Metal"
+  },
+  {
+    "banda": "whiplash classic logo",
+    "imagen": "whiplash-classic-logo.png",
+    "categoria": "Thrash Metal"
   }
 
 ]
