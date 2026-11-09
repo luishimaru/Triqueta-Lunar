@@ -3,13 +3,13 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://triquetalunar.com/</loc>
-    <lastmod>2026-11-01</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://triquetalunar.com/pines.html</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -21,6 +21,11 @@
       <image:loc>https://triquetalunar.com/pines/Abbath.png</image:loc>
       <image:title>Pin de Abbath | Triqueta Lunar</image:title>
       <image:caption>Pin de Abbath (Black Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/Abelardo-Whiplash.png</image:loc>
+      <image:title>Pin de Abelardo Whiplash | Triqueta Lunar</image:title>
+      <image:caption>Pin de Abelardo Whiplash (Thrash Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://triquetalunar.com/pines/Accept.png</image:loc>
@@ -148,9 +153,19 @@
       <image:caption>Pin de Animal (Groove Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://triquetalunar.com/pines/Animales-Muerto.png</image:loc>
+      <image:title>Pin de Animales Muerto | Triqueta Lunar</image:title>
+      <image:caption>Pin de Animales Muerto (Punk Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://triquetalunar.com/pines/Anthrax.png</image:loc>
       <image:title>Pin de Anthrax | Triqueta Lunar</image:title>
       <image:caption>Pin de Anthrax (Thrash Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/Anti-Flag.png</image:loc>
+      <image:title>Pin de Anti Flag | Triqueta Lunar</image:title>
+      <image:caption>Pin de Anti Flag (Punk Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://triquetalunar.com/pines/Anvil.png</image:loc>
@@ -348,6 +363,11 @@
       <image:caption>Pin de Blind Guardian (Power Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://triquetalunar.com/pines/Blink-182-classic-Logo.png</image:loc>
+      <image:title>Pin de Blink 182 classic Logo | Triqueta Lunar</image:title>
+      <image:caption>Pin de Blink 182 classic Logo (Pop Punk) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://triquetalunar.com/pines/Blink-182.png</image:loc>
       <image:title>Pin de Blink-182 | Triqueta Lunar</image:title>
       <image:caption>Pin de Blink-182 (Pop Punk) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
@@ -478,6 +498,16 @@
       <image:caption>Pin de Children of Bodom Classic Logo (Melodic Death Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://triquetalunar.com/pines/Chite.png</image:loc>
+      <image:title>Pin de Chite | Triqueta Lunar</image:title>
+      <image:caption>Pin de Chite (Punk Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/Choking-Victim.png</image:loc>
+      <image:title>Pin de Choking Victim | Triqueta Lunar</image:title>
+      <image:caption>Pin de Choking Victim (Ska Punk) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://triquetalunar.com/pines/Cicatriz.png</image:loc>
       <image:title>Pin de Cicatriz | Triqueta Lunar</image:title>
       <image:caption>Pin de Cicatriz (Punk Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
@@ -491,6 +521,11 @@
       <image:loc>https://triquetalunar.com/pines/Circle-Jerks.png</image:loc>
       <image:title>Pin de Circle Jerks | Triqueta Lunar</image:title>
       <image:caption>Pin de Circle Jerks (Punk Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/Cock-Sparrer.png</image:loc>
+      <image:title>Pin de Cock Sparrer | Triqueta Lunar</image:title>
+      <image:caption>Pin de Cock Sparrer (Street Punk / Oi!) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://triquetalunar.com/pines/Converge.png</image:loc>
@@ -511,6 +546,11 @@
       <image:loc>https://triquetalunar.com/pines/Cradle-od-filth.png</image:loc>
       <image:title>Pin de Cradle od filth | Triqueta Lunar</image:title>
       <image:caption>Pin de Cradle od filth (Symphonic Black Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/Crass.png</image:loc>
+      <image:title>Pin de Crass | Triqueta Lunar</image:title>
+      <image:caption>Pin de Crass (Punk Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://triquetalunar.com/pines/Crematory.png</image:loc>
@@ -603,6 +643,11 @@
       <image:caption>Pin de DECENDENTS (Punk Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://triquetalunar.com/pines/Decibelios.png</image:loc>
+      <image:title>Pin de Decibelios | Triqueta Lunar</image:title>
+      <image:caption>Pin de Decibelios (Street Punk / Oi!) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://triquetalunar.com/pines/Deeds-of-Flesh.png</image:loc>
       <image:title>Pin de Deeds of Flesh | Triqueta Lunar</image:title>
       <image:caption>Pin de Deeds of Flesh (Technical Death Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
@@ -656,6 +701,11 @@
       <image:loc>https://triquetalunar.com/pines/Devourment.png</image:loc>
       <image:title>Pin de Devourment | Triqueta Lunar</image:title>
       <image:caption>Pin de Devourment (Brutal Death Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/Dexkoncierto.png</image:loc>
+      <image:title>Pin de Dexkoncierto | Triqueta Lunar</image:title>
+      <image:caption>Pin de Dexkoncierto (Punk Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://triquetalunar.com/pines/Diamond-Head.png</image:loc>
@@ -813,6 +863,11 @@
       <image:caption>Pin de Expulsados (Punk Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://triquetalunar.com/pines/Extreme-Noise-Terror.png</image:loc>
+      <image:title>Pin de Extreme Noise Terror | Triqueta Lunar</image:title>
+      <image:caption>Pin de Extreme Noise Terror (Hardcore Punk) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://triquetalunar.com/pines/Faith-No-More.png</image:loc>
       <image:title>Pin de Faith No More | Triqueta Lunar</image:title>
       <image:caption>Pin de Faith No More (Alternative Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
@@ -858,9 +913,19 @@
       <image:caption>Pin de Foreigner (Hard Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://triquetalunar.com/pines/Fugazi.png</image:loc>
+      <image:title>Pin de Fugazi | Triqueta Lunar</image:title>
+      <image:caption>Pin de Fugazi (Hardcore Punk) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://triquetalunar.com/pines/Fun-People.png</image:loc>
       <image:title>Pin de Fun People | Triqueta Lunar</image:title>
       <image:caption>Pin de Fun People (Hardcore Punk) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/G.B.H.png</image:loc>
+      <image:title>Pin de G.B.H | Triqueta Lunar</image:title>
+      <image:caption>Pin de G.B.H (Hardcore Punk) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://triquetalunar.com/pines/Gamma-Ray.png</image:loc>
@@ -916,6 +981,11 @@
       <image:loc>https://triquetalunar.com/pines/Gorillaz-hoz.png</image:loc>
       <image:title>Pin de Gorillaz | Triqueta Lunar</image:title>
       <image:caption>Pin de Gorillaz (Alternative Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/GP.png</image:loc>
+      <image:title>Pin de GP | Triqueta Lunar</image:title>
+      <image:caption>Pin de GP (Punk Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://triquetalunar.com/pines/Green-Day.png</image:loc>
@@ -1053,6 +1123,11 @@
       <image:caption>Pin de Inverted Cross Nun (Gothic / Ocultismo) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://triquetalunar.com/pines/Ira.png</image:loc>
+      <image:title>Pin de Ira | Triqueta Lunar</image:title>
+      <image:caption>Pin de Ira (Punk Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://triquetalunar.com/pines/IronMaiden_ClassicLogo.png</image:loc>
       <image:title>Pin de IronMaiden_ClassicLogo | Triqueta Lunar</image:title>
       <image:caption>Pin de IronMaiden_ClassicLogo (Heavy Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
@@ -1141,6 +1216,11 @@
       <image:loc>https://triquetalunar.com/pines/Kamelot.png</image:loc>
       <image:title>Pin de Kamelot | Triqueta Lunar</image:title>
       <image:caption>Pin de Kamelot (Power Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/Kaos-Urbano.png</image:loc>
+      <image:title>Pin de Kaos Urbano | Triqueta Lunar</image:title>
+      <image:caption>Pin de Kaos Urbano (Punk Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://triquetalunar.com/pines/Kaotiko.png</image:loc>
@@ -1353,6 +1433,11 @@
       <image:caption>Pin de Los Fabulosos Cadilacs (Rock en Español) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://triquetalunar.com/pines/Los-Miserabkes.png</image:loc>
+      <image:title>Pin de Los Miserabkes | Triqueta Lunar</image:title>
+      <image:caption>Pin de Los Miserabkes (Punk Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://triquetalunar.com/pines/Los-Muertos-de-Cristo.png</image:loc>
       <image:title>Pin de Los Muertos de Cristo | Triqueta Lunar</image:title>
       <image:caption>Pin de Los Muertos de Cristo (Punk Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
@@ -1361,6 +1446,21 @@
       <image:loc>https://triquetalunar.com/pines/Los-Peores-de-Chile.png</image:loc>
       <image:title>Pin de Los Peores de Chile | Triqueta Lunar</image:title>
       <image:caption>Pin de Los Peores de Chile (Punk Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/Los-Saicos.png</image:loc>
+      <image:title>Pin de Los Saicos | Triqueta Lunar</image:title>
+      <image:caption>Pin de Los Saicos (Punk Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/Los-Sordos.png</image:loc>
+      <image:title>Pin de Los Sordos | Triqueta Lunar</image:title>
+      <image:caption>Pin de Los Sordos (Punk Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/Los-Suziox.png</image:loc>
+      <image:title>Pin de Los Suziox | Triqueta Lunar</image:title>
+      <image:caption>Pin de Los Suziox (Punk Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://triquetalunar.com/pines/Los-Violadores.png</image:loc>
@@ -1376,6 +1476,11 @@
       <image:loc>https://triquetalunar.com/pines/Lucifera-Classic-Logo.png</image:loc>
       <image:title>Pin de Lucifera Classic Logo | Triqueta Lunar</image:title>
       <image:caption>Pin de Lucifera Classic Logo (Black / Thrash Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/Lupus.png</image:loc>
+      <image:title>Pin de Lupus | Triqueta Lunar</image:title>
+      <image:caption>Pin de Lupus (Punk Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://triquetalunar.com/pines/M.C.D.png</image:loc>
@@ -1408,6 +1513,11 @@
       <image:caption>Pin de Maldita Vecindad (Ska / Rock en Español) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://triquetalunar.com/pines/Manolo-Kabezabolo.png</image:loc>
+      <image:title>Pin de Manolo Kabezabolo | Triqueta Lunar</image:title>
+      <image:caption>Pin de Manolo Kabezabolo (Punk Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://triquetalunar.com/pines/Manowar-Classic-Logo.png</image:loc>
       <image:title>Pin de Manowar Classic Logo | Triqueta Lunar</image:title>
       <image:caption>Pin de Manowar Classic Logo (Heavy Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
@@ -1436,6 +1546,11 @@
       <image:loc>https://triquetalunar.com/pines/Marilyn-Manson.png</image:loc>
       <image:title>Pin de Marilyn Manson | Triqueta Lunar</image:title>
       <image:caption>Pin de Marilyn Manson (Industrial Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/Masacre-68.png</image:loc>
+      <image:title>Pin de Masacre 68 | Triqueta Lunar</image:title>
+      <image:caption>Pin de Masacre 68 (Hardcore Punk) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://triquetalunar.com/pines/Mastodon.png</image:loc>
@@ -1501,6 +1616,11 @@
       <image:loc>https://triquetalunar.com/pines/Metallica-Star.png</image:loc>
       <image:title>Pin de Metallica Star | Triqueta Lunar</image:title>
       <image:caption>Pin de Metallica Star (Thrash Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/Ministerio-de-Vagancia.png</image:loc>
+      <image:title>Pin de Ministerio de Vagancia | Triqueta Lunar</image:title>
+      <image:caption>Pin de Ministerio de Vagancia (Punk Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://triquetalunar.com/pines/Ministry.png</image:loc>
@@ -1583,6 +1703,11 @@
       <image:caption>Pin de Municipal Waste (Crossover Thrash) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://triquetalunar.com/pines/Muro.png</image:loc>
+      <image:title>Pin de Muro | Triqueta Lunar</image:title>
+      <image:caption>Pin de Muro (Speed Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://triquetalunar.com/pines/My-Chemical-Romance.png</image:loc>
       <image:title>Pin de My Chemical Romance | Triqueta Lunar</image:title>
       <image:caption>Pin de My Chemical Romance (Alternative Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
@@ -1596,6 +1721,11 @@
       <image:loc>https://triquetalunar.com/pines/nachtblut.png</image:loc>
       <image:title>Pin de nachtblut | Triqueta Lunar</image:title>
       <image:caption>Pin de nachtblut (Gothic / Black Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/Nadie.png</image:loc>
+      <image:title>Pin de Nadie | Triqueta Lunar</image:title>
+      <image:caption>Pin de Nadie (Punk Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://triquetalunar.com/pines/Nameless.png</image:loc>
@@ -1616,6 +1746,11 @@
       <image:loc>https://triquetalunar.com/pines/Nargaroth.png</image:loc>
       <image:title>Pin de Nargaroth | Triqueta Lunar</image:title>
       <image:caption>Pin de Nargaroth (Black Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/Nausea.png</image:loc>
+      <image:title>Pin de Nausea | Triqueta Lunar</image:title>
+      <image:caption>Pin de Nausea (Hardcore Punk) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://triquetalunar.com/pines/Necrophagist.png</image:loc>
@@ -1683,6 +1818,11 @@
       <image:caption>Pin de Obús (Heavy Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://triquetalunar.com/pines/Odio-a-botero.png</image:loc>
+      <image:title>Pin de Odio a botero | Triqueta Lunar</image:title>
+      <image:caption>Pin de Odio a botero (Punk Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://triquetalunar.com/pines/OI-boots.png</image:loc>
       <image:title>Pin de Oi! Boots | Triqueta Lunar</image:title>
       <image:caption>Pin de Oi! Boots (Street Punk / Oi!) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
@@ -1736,6 +1876,11 @@
       <image:loc>https://triquetalunar.com/pines/Panteon-Rococo.png</image:loc>
       <image:title>Pin de Panteon Rococo | Triqueta Lunar</image:title>
       <image:caption>Pin de Panteon Rococo (Ska) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/pantera-abelardo.png</image:loc>
+      <image:title>Pin de pantera abelardo | Triqueta Lunar</image:title>
+      <image:caption>Pin de pantera abelardo (Groove Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://triquetalunar.com/pines/Pantera_ClassicLogo.png</image:loc>
@@ -1798,6 +1943,11 @@
       <image:caption>Pin de Pentagram (Doom Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://triquetalunar.com/pines/Peste-Mutantex.png</image:loc>
+      <image:title>Pin de Peste Mutantex | Triqueta Lunar</image:title>
+      <image:caption>Pin de Peste Mutantex (Punk Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://triquetalunar.com/pines/pestilence.png</image:loc>
       <image:title>Pin de Pestilence | Triqueta Lunar</image:title>
       <image:caption>Pin de Pestilence (Death Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
@@ -1821,6 +1971,11 @@
       <image:loc>https://triquetalunar.com/pines/Polaris.png</image:loc>
       <image:title>Pin de Polaris | Triqueta Lunar</image:title>
       <image:caption>Pin de Polaris (Metalcore) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/Polikarpa-Y-sus-viciosas.png</image:loc>
+      <image:title>Pin de Polikarpa Y sus viciosas | Triqueta Lunar</image:title>
+      <image:caption>Pin de Polikarpa Y sus viciosas (Punk Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://triquetalunar.com/pines/Porretas.png</image:loc>
@@ -2303,6 +2458,11 @@
       <image:caption>Pin de Stryper (Heavy Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://triquetalunar.com/pines/Subhumans.png</image:loc>
+      <image:title>Pin de Subhumans | Triqueta Lunar</image:title>
+      <image:caption>Pin de Subhumans (Hardcore Punk) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://triquetalunar.com/pines/Suffocation.png</image:loc>
       <image:title>Pin de Suffocation | Triqueta Lunar</image:title>
       <image:caption>Pin de Suffocation (Technical Death Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
@@ -2316,6 +2476,11 @@
       <image:loc>https://triquetalunar.com/pines/Suicide-Silence.png</image:loc>
       <image:title>Pin de Suicide Silence | Triqueta Lunar</image:title>
       <image:caption>Pin de Suicide Silence (Death Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/Sum41.png</image:loc>
+      <image:title>Pin de Sum41 | Triqueta Lunar</image:title>
+      <image:caption>Pin de Sum41 (Pop Punk) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://triquetalunar.com/pines/Symphony-X.png</image:loc>
@@ -2443,6 +2608,11 @@
       <image:caption>Pin de The Smashing Pumpkins (Alternative Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://triquetalunar.com/pines/The-Stooges.png</image:loc>
+      <image:title>Pin de The Stooges | Triqueta Lunar</image:title>
+      <image:caption>Pin de The Stooges (Punk Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://triquetalunar.com/pines/The-Toy-Dolls.png</image:loc>
       <image:title>Pin de The Toy Dolls | Triqueta Lunar</image:title>
       <image:caption>Pin de The Toy Dolls (Punk Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
@@ -2521,6 +2691,11 @@
       <image:loc>https://triquetalunar.com/pines/Tugsteno.png</image:loc>
       <image:title>Pin de Tugsteno | Triqueta Lunar</image:title>
       <image:caption>Pin de Tugsteno (Thrash Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/Turnstile.png</image:loc>
+      <image:title>Pin de Turnstile | Triqueta Lunar</image:title>
+      <image:caption>Pin de Turnstile (Hardcore Punk) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://triquetalunar.com/pines/Twisted-Sister.png</image:loc>
@@ -2628,6 +2803,16 @@
       <image:caption>Pin de Weeping Saint (Gothic / Ocultismo) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://triquetalunar.com/pines/whiplash-classic-logo.png</image:loc>
+      <image:title>Pin de whiplash classic logo | Triqueta Lunar</image:title>
+      <image:caption>Pin de whiplash classic logo (Thrash Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/Whiplash-power-and-Pain.png</image:loc>
+      <image:title>Pin de Whiplash power and Pain | Triqueta Lunar</image:title>
+      <image:caption>Pin de Whiplash power and Pain (Thrash Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://triquetalunar.com/pines/Whitechapel.png</image:loc>
       <image:title>Pin de Whitechapel | Triqueta Lunar</image:title>
       <image:caption>Pin de Whitechapel (Death Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
@@ -2665,19 +2850,19 @@
   </url>
   <url>
     <loc>https://triquetalunar.com/llaveros.html</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://triquetalunar.com/picks.html</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://triquetalunar.com/stickers.html</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
