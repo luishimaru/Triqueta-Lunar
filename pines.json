@@ -2832,6 +2832,21 @@
     "banda": "whiplash classic logo",
     "imagen": "whiplash-classic-logo.png",
     "categoria": "Thrash Metal"
+  },
+  {
+    "banda": "Def Leppard Logo",
+    "imagen": "Def-Leppard-Logo.png",
+    "categoria": "Hard Rock"
+  },
+  {
+    "banda": "Def Leppard England",
+    "imagen": "Def-Leppard-England.png",
+    "categoria": "Hard Rock"
+  },
+  {
+    "banda": "Def Leppard Leopardo",
+    "imagen": "Def-Leppard-Leopardo.png",
+    "categoria": "Hard Rock"
   }
 
 ]
