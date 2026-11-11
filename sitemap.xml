@@ -3,13 +3,13 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://triquetalunar.com/</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://triquetalunar.com/pines.html</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -666,6 +666,21 @@
       <image:loc>https://triquetalunar.com/pines/Def-leppard-Classic-Logo.png</image:loc>
       <image:title>Pin de Def leppard Classic Logo | Triqueta Lunar</image:title>
       <image:caption>Pin de Def leppard Classic Logo (Hard Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/Def-Leppard-England.png</image:loc>
+      <image:title>Pin de Def Leppard England | Triqueta Lunar</image:title>
+      <image:caption>Pin de Def Leppard England (Hard Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/Def-Leppard-Leopardo.png</image:loc>
+      <image:title>Pin de Def Leppard Leopardo | Triqueta Lunar</image:title>
+      <image:caption>Pin de Def Leppard Leopardo (Hard Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/Def-Leppard-Logo.png</image:loc>
+      <image:title>Pin de Def Leppard Logo | Triqueta Lunar</image:title>
+      <image:caption>Pin de Def Leppard Logo (Hard Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://triquetalunar.com/pines/Deicide.png</image:loc>
@@ -2850,19 +2865,19 @@
   </url>
   <url>
     <loc>https://triquetalunar.com/llaveros.html</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://triquetalunar.com/picks.html</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://triquetalunar.com/stickers.html</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
