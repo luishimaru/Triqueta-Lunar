@@ -2862,6 +2862,31 @@
     "banda": "Bloodletter",
     "imagen": "bloodletter.png",
     "categoria": "Thrash Metal"
+  },
+  {
+    "banda": "Sonata Arctica 2026 Latin America Tour",
+    "imagen": "Sonata-Arctica-2026-latin-america-tour.png",
+    "categoria": "Power Metal"
+  },
+  {
+    "banda": "Sonata Arctica Ecliptica",
+    "imagen": "sonata-Arctica-Ecliptica.png",
+    "categoria": "Power Metal"
+  },
+  {
+    "banda": "Sonata Arctica For The Sake Of Revenge",
+    "imagen": "Sonata-Arctica-For-The-Sake-Of-Revenge.png",
+    "categoria": "Power Metal"
+  },
+  {
+    "banda": "Sonata Arctica Stones Grow Her Name",
+    "imagen": "Sonata-Arctica-Stones-Grow-Her-Name.png",
+    "categoria": "Power Metal"
+  },
+  {
+    "banda": "Sonata Arctica Unia",
+    "imagen": "Sonata-arctica-Unia.png",
+    "categoria": "Power Metal"
   }
 
 ]
