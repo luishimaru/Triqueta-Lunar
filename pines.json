@@ -2847,6 +2847,21 @@
     "banda": "Def Leppard Leopardo",
     "imagen": "Def-Leppard-Leopardo.png",
     "categoria": "Hard Rock"
+  },
+  {
+    "banda": "Absurd",
+    "imagen": "Absurd.png",
+    "categoria": "Black Metal"
+  },
+  {
+    "banda": "Benighted",
+    "imagen": "benighted.png",
+    "categoria": "Brutal Death Metal"
+  },
+  {
+    "banda": "Bloodletter",
+    "imagen": "bloodletter.png",
+    "categoria": "Thrash Metal"
   }
 
 ]

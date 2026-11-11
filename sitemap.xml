@@ -28,6 +28,11 @@
       <image:caption>Pin de Abelardo Whiplash (Thrash Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://triquetalunar.com/pines/Absurd.png</image:loc>
+      <image:title>Pin de Absurd | Triqueta Lunar</image:title>
+      <image:caption>Pin de Absurd (Black Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://triquetalunar.com/pines/Accept.png</image:loc>
       <image:title>Pin de Accept | Triqueta Lunar</image:title>
       <image:caption>Pin de Accept (Heavy Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
@@ -333,6 +338,11 @@
       <image:caption>Pin de Benediction (Death Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://triquetalunar.com/pines/benighted.png</image:loc>
+      <image:title>Pin de Benighted | Triqueta Lunar</image:title>
+      <image:caption>Pin de Benighted (Brutal Death Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://triquetalunar.com/pines/Bien-Desocupados.png</image:loc>
       <image:title>Pin de Bien Desocupados | Triqueta Lunar</image:title>
       <image:caption>Pin de Bien Desocupados (Punk Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
@@ -381,6 +391,11 @@
       <image:loc>https://triquetalunar.com/pines/Bloodbath.png</image:loc>
       <image:title>Pin de Bloodbath | Triqueta Lunar</image:title>
       <image:caption>Pin de Bloodbath (Death Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/bloodletter.png</image:loc>
+      <image:title>Pin de Bloodletter | Triqueta Lunar</image:title>
+      <image:caption>Pin de Bloodletter (Thrash Metal) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://triquetalunar.com/pines/Boikot.png</image:loc>
@@ -2877,7 +2892,7 @@
   </url>
   <url>
     <loc>https://triquetalunar.com/stickers.html</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
