@@ -9,7 +9,7 @@
   </url>
   <url>
     <loc>https://triquetalunar.com/pines.html</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -1011,6 +1011,21 @@
       <image:loc>https://triquetalunar.com/pines/Gorillaz-hoz.png</image:loc>
       <image:title>Pin de Gorillaz | Triqueta Lunar</image:title>
       <image:caption>Pin de Gorillaz (Alternative Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/Gorillaz-Classic-Logo.png</image:loc>
+      <image:title>Pin de Gorillaz Classic Logo | Triqueta Lunar</image:title>
+      <image:caption>Pin de Gorillaz Classic Logo (Alternative Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/Gorillaz-Crew.png</image:loc>
+      <image:title>Pin de Gorillaz Crew | Triqueta Lunar</image:title>
+      <image:caption>Pin de Gorillaz Crew (Alternative Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://triquetalunar.com/pines/Gorillaz-Smile.png</image:loc>
+      <image:title>Pin de Gorillaz Smile | Triqueta Lunar</image:title>
+      <image:caption>Pin de Gorillaz Smile (Alternative Rock) con corte láser e impresión UV. Envíos desde Bogotá a toda Colombia.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://triquetalunar.com/pines/GP.png</image:loc>
@@ -2905,19 +2920,19 @@
   </url>
   <url>
     <loc>https://triquetalunar.com/llaveros.html</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://triquetalunar.com/picks.html</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://triquetalunar.com/stickers.html</loc>
-    <lastmod>2026-11-11</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

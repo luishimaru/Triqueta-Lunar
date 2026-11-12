@@ -2887,6 +2887,22 @@
     "banda": "Sonata Arctica Unia",
     "imagen": "Sonata-arctica-Unia.png",
     "categoria": "Power Metal"
+  },
+  {
+    "banda": "Gorillaz Classic Logo",
+    "imagen": "Gorillaz-Classic-Logo.png",
+    "categoria": "Alternative Rock"
+  },
+  {
+    "banda": "Gorillaz Crew",
+    "imagen": "Gorillaz-Crew.png",
+    "categoria": "Alternative Rock"
+
+  },
+  {
+    "banda": "Gorillaz Smile",
+    "imagen": "Gorillaz-Smile.png",
+    "categoria": "Alternative Rock"
   }
 
 ]
