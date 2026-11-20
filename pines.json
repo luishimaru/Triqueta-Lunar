@@ -2903,6 +2903,31 @@
     "banda": "Gorillaz Smile",
     "imagen": "Gorillaz-Smile.png",
     "categoria": "Alternative Rock"
+  },
+  {
+    "banda": "Hugo Lobo",
+    "imagen": "Hugo-Lobo.png",
+    "categoria": "Ska"
+  },
+  {
+    "banda": "Los Intocables",
+    "imagen": "Los-Intocables.png",
+    "categoria": "Ska"
+  },
+  {
+    "banda": "Lujuria",
+    "imagen": "Lujuria.png",
+    "categoria": "Heavy Metal"
+  },
+  {
+    "banda": "Rude Boys",
+    "imagen": "Rude-Boys.png",
+    "categoria": "Ska"
+  },
+  {
+    "banda": "Violator",
+    "imagen": "Violator.png",
+    "categoria": "Thrash Metal"
   }
 
 ]
